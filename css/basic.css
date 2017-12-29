@@ -1,0 +1,48 @@
+/*basic*/
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+	margin: 0px;
+	font-size: 20px;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	font-family: Microsoft Yahei, "微软雅黑", Arial;
+}
+::-webkit-input-placeholder {
+color:#999;
+}
+input, button, select, textarea {
+	outline: none;
+	-webkit-appearance: none;
+}
+input[type="submit"], input[type="reset"], input[type="text"], input[type="button"], select, button {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type=button] {
+	-webkit-appearance: none;
+	outline: none
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+img {
+	border: none;
+}
+li {
+	list-style: none;
+}
+
+.center {
+	text-align: center;
+}
+.clear {
+	clear: both;
+}
