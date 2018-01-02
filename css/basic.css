@@ -46,3 +46,13 @@ li {
 .clear {
 	clear: both;
 }
+#header{
+	background-image:url(../images/top_bg.jpg);
+	background-size:16rem 2.148148rem;
+	width:100%;
+	height:2.148148rem;
+	line-height:2.148148rem;
+	text-align:center;
+	color:#ffffff;
+	font-size:0.7111rem;
+}
