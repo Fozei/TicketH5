@@ -1,0 +1,321 @@
+/*ul, ol, li, div {*/
+/*margin: 0;*/
+/*padding: 0;*/
+/*}*/
+
+/*ul, ol {*/
+/*list-style: none;*/
+/*}*/
+
+.clear-clear {
+    clear: both;
+}
+
+.totalWidth {
+    width: 16rem;
+}
+
+.header_r_no_bg {
+    background: none;
+}
+
+.header_r {
+    /*background: url("../images/header_bg.jpg") no-repeat;*/
+    height: 2.3851rem;
+    line-height: 2.3851rem;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7111rem;
+    overflow: hidden;
+    /*background: url("../images/header_bg.jpg") no-repeat;*/
+    /*height: 161px;*/
+    /*line-height: 161px;*/
+    /*position: relative;*/
+    /*text-align: center;*/
+    /*color: #ffffff;*/
+    /*font-size: 48px;*/
+    /*overflow: hidden;*/
+}
+
+.header_r .back {
+    position: absolute;
+    left: 0.5777rem;
+    top: 0.8888rem;
+}
+
+.ft-cancel {
+    position: absolute;
+    right: 0.68148rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.tab-order {
+    width: 14.4592rem;
+    /*height: 960px;*/
+    background: #FFFFFF;
+    margin-left: 0.7703rem;
+    margin-right: 0.7703rem;
+    border-radius: 0.2962rem;
+    box-shadow: 0px 0.0888rem 0.5185rem 0px rgba(44, 112, 225, 0.25);
+    /*overflow: hidden;*/
+}
+
+.order-details {
+    width: 2.2962rem;
+    height: 0.5629rem;
+    margin-left: 0.9481rem;
+    padding-top: 0.7407rem;
+    font-size: 0.5629rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1.037rem;
+    letter-spacing: 0rem;
+    color: #2a6fe1;
+
+}
+
+.tab-order .tab-order-details-all {
+    margin-top: 0.5333rem;
+    margin-left: 0.9481rem;
+    width: 12.2666rem;
+    height: 6.7703rem;
+    position: relative;
+    padding-bottom: 0.8888rem;
+}
+
+.tab-order .tab-order-details-all .order-title {
+    font-size: 0.5629rem;
+    font-weight: normal;
+    letter-spacing: 0rem;
+    color: #1a1a1a;
+}
+
+.tab-order .tab-order-details-all .tab-order-li {
+    height: 1.0666rem;
+}
+
+.tab-order .tab-order-details-all .tab-order-competition-schedule {
+    font-size: 0.474rem;
+    font-weight: normal;
+    letter-spacing: 0rem;
+    color: #545454;
+    float: left;
+}
+
+.tab-order .tab-order-details-all .tab-order-competition-schedule-details {
+    font-size: 0.474rem;
+    margin-left: 0.4296rem;
+    font-weight: normal;
+    letter-spacing: 0rem;
+    color: #1a1a1a;
+    float: left;
+}
+
+.tab-order .tab-order-details-all .tab-order-competition-schedule-price {
+    font-size: 0.474rem;
+    margin-left: 0.4296rem;
+    font-weight: normal;
+    letter-spacing: 0rem;
+    color: #ec1c63;
+    float: left;
+}
+
+.tab-order .tab-order-details-all .img-oder-line {
+    position: absolute;
+    bottom: 0;
+    left: -1.0074rem;
+    width: 14.6074rem;
+    height: 0.8rem;
+
+}
+
+.margin-top {
+    margin-top: 28px;
+}
+
+.order-confimBox {
+    width: 14.4592rem;
+    margin: 0 auto;
+    margin-top: 0.28148rem;
+
+    background-color: #ffffff;
+    box-shadow: 0rem 0rem 0.5185rem 0rem rgba(44, 112, 225, 0.35);
+    border-radius: 0.148148rem;
+    overflow: hidden;
+}
+
+.order-confimBox .order-play-classfiy {
+    width: 3.4518rem;
+    height: 0.5629rem;
+    margin-top: 0.5185rem;
+    margin-left: 0.9481rem;
+    font-size: 0.5629rem;
+    line-height: 1.03703rem;
+    /*letter-spacing: 0px;*/
+    color: #2a6fe1;
+}
+
+.order-confimBox .order-pay {
+    /*margin-left: 142px;*/
+    margin-top: 0.4444rem;
+    margin-left: 1.7037rem;
+    margin-bottom: 0.6666rem;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.order-confimBox .order-pay .dl-ft-left1 {
+
+}
+
+.order-confimBox .order-pay .dl-ft-left2 {
+    margin-left: 0.9777rem;
+}
+
+.order-confimBox .order-pay .dd-font-size-false {
+    background-image: url("../images/play-select-false.jpg");
+    background-size: 0.4581rem 0.5481rem;
+    font-size: 0.5629rem;
+    padding-left: 0.6518rem;
+    margin-left: 0.22222rem;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    color: #545454;
+    line-height: 1.38rem;
+
+}
+
+.order-confimBox .order-pay .dd-font-size-true {
+    background-image: url("../images/play-select-true.jpg");
+    background-size: 0.4581rem 0.5481rem;
+    font-size: 0.5629rem;
+    padding-left: 0.6518rem;
+    margin-left: 0.26666rem;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    color: #2c70e1;
+    line-height: 1.38rem;
+}
+
+.confimBox .title1 {
+    color: #2a6fe1;
+
+}
+
+.order-input-tel {
+    width: 800px;
+    height: 120px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    border: 0;
+    font-size: 38px;
+    margin-left: 88px;
+    margin-right: 88px;
+    text-indent: 51px;
+    outline: none;
+}
+
+.order-confimBox .img-imput-tel {
+    position: absolute;
+    text-align: center;
+    top: 37px;
+    right: 116px;
+    line-height: 120px;
+}
+
+.order-confimBox .getcode {
+    position: absolute;
+    top: 0px;
+    right: 88px;
+    background-color: #2c70e1;
+    color: #fff;
+    width: 234px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    border-radius: 5px;
+    border: 0;
+    font-size: 38px;
+    z-index: 999;
+}
+
+.order-confimBox .order-play-input-tel {
+    margin-top: 50px;
+    position: relative;
+}
+
+.order-confimBox .order-play-input-code {
+    margin-top: 24px;
+    position: relative;
+}
+
+.order-confimBox .order-pay .play-li-alipay {
+    float: left;
+}
+
+.order-confimBox .order-pay .play-li-alipay-s {
+    float: none;
+}
+
+.p-with {
+    width: 192px;
+    height: 37px;
+    margin-left: 7px;
+    font-size: 38px;
+    line-height: 70px;
+    letter-spacing: 0px;
+    color: #545454;
+}
+
+.li-with {
+    width: 243px;
+}
+
+.price-info {
+    margin-top: 0.9185rem;
+    display: block;
+    width: 14.4592rem;
+    text-align: center;
+}
+
+.totalPrice {
+    font-size: 1.1555rem;
+    color: #ec1c63;
+}
+
+.button-play {
+    margin-top: 0.9185rem;
+    text-align: center;
+}
+
+#successTips {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 12.6074rem;
+    background: url("../images/successTips.png") no-repeat;
+    background-size: 12.6074rem 11.7333rem;
+    width: 12.6074rem;
+}
+
+#seconds {
+    font-family: "display_free_tfbregular", serif;
+    color: #1E9FFF;
+    font-size: 0.7111rem;
+    padding-top: 10.3703rem;
+    padding-left: 7.4074rem;
+}
+
+.submit-img {
+    width: 12.28148rem;
+    height: 2.37037rem;
+    padding-bottom: 0.88888rem;
+}
+
