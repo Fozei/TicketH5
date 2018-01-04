@@ -23,8 +23,8 @@
 
 #portrait {
     float: left;
-    max-height: 2.9rem;
-    max-width: 2.9rem;
+    height: 2.9rem;
+    width: 2.9rem;
     border-radius: 2.9rem;
 }
 
@@ -143,4 +143,10 @@ footer li img {
 
 footer li p {
     margin-top: -1.5rem;
+}
+
+#imgSelector {
+    position: absolute;
+    opacity: 0;
+    filter: Alpha(opacity=0);
 }
