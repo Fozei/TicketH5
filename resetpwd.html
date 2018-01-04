@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,init-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/basic.css"/>
+    <link rel="stylesheet" href="css/changepwd.css"/>
+    <script src="js/auto.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/register.js"></script>
+</head>
+
+<body>
+<header id="header">
+    <img onclick="history.back()" src="images/prev.png"/>
+    重置密码
+</header>
+
+<!--手机号-->
+<div class="inputBox-p firstbox">
+    <div class="inputBox">
+        <img src="images/shouji.jpg" style="">
+        <input id="phone" placeholder="请输入手机号"/>
+
+    </div>
+</div>
+<!--再次输入密码-->
+<div class="inputBox-p">
+    <div class="inputBox">
+        <img src="images/mima.jpg" style="">
+        <input id="pwd2" type="password" placeholder="再次输入登录密码"/>
+
+    </div>
+</div>
+<!--下一步-->
+<div class="inputBox-p">
+    <div onclick="register()" class="submit inputBox">
+        完成
+    </div>
+</div>
+<div class="induction">
+    <p>技术支持：易威德（北京）信息技术有限公司</p>
+</div>
+</body>
+</html>

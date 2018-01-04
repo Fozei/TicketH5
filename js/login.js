@@ -9,9 +9,9 @@ function login() {
 }
 
 function goRegister() {
-    location.href = "register.html"
+    location.href = "register.html";
 }
 
 function forgetPwd() {
-
+    location.href = "changepwd.html";
 }
