@@ -1,0 +1,90 @@
+
+.back {
+    position: absolute;
+    left: 0.5777rem;
+    top: 0.8888rem;
+}
+
+.back-img {
+    width: 0.4444rem;
+    height: 0.7111rem;
+}
+
+.tab-order {
+    width: 14.2518rem;
+    /*height: 960px;*/
+    background: #FFFFFF;
+    margin-left: 0.874rem;
+    margin-right: 0.874rem;
+    box-shadow: 0rem 0rem 0.5185rem 0rem rgba(44, 112, 225, 0.35);
+    border-radius: 0.2222rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.tab-order .settting-picture {
+    margin-left: 1.17037rem;
+    margin-right: 1.0222rem;
+    margin-top: 0.7259rem;
+    height: 2.9333rem;
+    line-height: 2.9333rem;
+    overflow: hidden;
+    border-bottom: 0.029629rem solid #cccccc;
+}
+
+.tab-order .img-picture {
+    width: 1.8666rem;
+    height: 1.8666rem;
+    margin-top: 0.53335rem;
+    margin-right: 1.037rem;
+}
+
+.tab-order .img-picture-jt {
+    width: 0.2666rem;
+    height: 0.2666rem;
+    margin-top: 1.33335rem;
+}
+
+.tab-order .img-picture-jt-name {
+    width: 0.2666rem;
+    height: 0.2666rem;
+    margin-top: 0.9703rem;
+}
+
+.sp-ft-pb{
+    font-size: 0.56296rem;
+    color: #2c70e1;
+}
+
+.tab-order .real-name {
+    height: 2.237rem;
+    line-height: 2.237rem;
+    margin-left: 1.17037rem;
+    margin-right: 1.0222rem;
+    overflow: hidden;
+    border-bottom: 0.029629rem solid #cccccc;
+}
+.tab-order .real-name-border-bottom-hide {
+    height: 2.237rem;
+    line-height: 2.237rem;
+    margin-left: 1.17037rem;
+    margin-right: 1.0222rem;
+    margin-bottom: 0.78518rem;
+    overflow: hidden;
+}
+
+.select-type {
+    float: left;
+    font-size: 0.5629rem;
+}
+
+.button-play {
+    margin-top: 2.1185rem;
+    text-align: center;
+}
+
+.submit-img {
+    width: 12.28148rem;
+    height: 2.37037rem;
+    padding-bottom: 0.88888rem;
+}

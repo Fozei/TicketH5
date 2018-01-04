@@ -44,6 +44,11 @@
     top: 0.8888rem;
 }
 
+.back-img {
+    width: 0.4444rem;
+    height: 0.7111rem;
+}
+
 .ft-cancel {
     position: absolute;
     right: 0.68148rem;
