@@ -1,0 +1,32 @@
+header img {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+}
+
+div {
+    height: 20rem;
+}
+
+.container img {
+    display: block;
+    margin-top: 5.98rem;
+    margin-left: 2rem;
+    height: 8.95rem;
+    width: 11.55rem;
+}
+
+.container p {
+    margin-top: 3rem;
+    line-height: 0.56rem;
+    height: 0.56rem;
+    width: 16rem;
+    text-align: center;
+    color: #2d70e1;
+    font-size: 0.56rem;
+}
+
+
+

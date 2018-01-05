@@ -1,8 +1,8 @@
 #header {
     background-image: url(../images/bg4.jpg);
-    background-size: 16rem 4.25rem;
+    background-size: 16rem 2.148148rem;
     width: 100%;
-    height: 4.25rem;
+    height: 2.148148rem;
     line-height: 2.148148rem;
     text-align: center;
     color: #ffffff;
@@ -22,10 +22,10 @@ header img {
     width: 14.4rem;
     margin-left: 0.8rem;
     margin-right: 0.8rem;
-    margin-top: -1.75rem;
+    margin-top: 0.37rem;
     padding-bottom: 0.5rem;
     border-radius: 0.25rem;
-    box-shadow: 0rem 0.3rem 0.6rem black;
+    box-shadow: 0rem 0.3rem 0.6rem grey;
     background-color: white;
 }
 
