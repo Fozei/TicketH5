@@ -18,31 +18,24 @@ header img {
 }
 
 .dataBox {
-    height: 14.4rem;
+    height: 14.9rem;
     width: 14.4rem;
     margin-left: 0.8rem;
     margin-right: 0.8rem;
     margin-top: -1.75rem;
     border-radius: 0.25rem;
     box-shadow: 0rem 0.3rem 0.6rem black;
-}
-
-.dataBox div {
-    padding-left: 1.15rem;
-    padding-right: 1.15rem;
-    height: 2.4rem;
-    width: 12.1rem;
     background-color: white;
 }
 
-.topRadios {
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
-}
-
-.bottomRadios {
-    border-bottom-left-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
+.dataBox div {
+    margin-left: 1.15rem;
+    margin-right: 1.15rem;
+    height: 2.4rem;
+    width: 12.1rem;
+    background-color: transparent;
+    border-top: solid #545454;
+    border-width: 0.05rem;
 }
 
 .dataBox p {
