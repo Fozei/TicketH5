@@ -43,7 +43,7 @@ header img {
     margin-left: 1rem;
     line-height: 1.8rem;
     border-top: solid #545454;
-    border-width: 0.03rem;
+    border-width: 0.02rem;
 }
 
 /*审核中 #fdb73d*/
@@ -58,6 +58,7 @@ header img {
     text-align: center;
     line-height: 0.8rem;
     color: white;
+    border-radius: 0.15rem;
 }
 
 .normalP {

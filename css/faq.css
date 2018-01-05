@@ -18,66 +18,39 @@ header img {
 }
 
 .dataBox {
-    height: 14.9rem;
+    height: auto;
     width: 14.4rem;
     margin-left: 0.8rem;
     margin-right: 0.8rem;
     margin-top: -1.75rem;
+    padding-bottom: 0.5rem;
     border-radius: 0.25rem;
-    box-shadow: 0rem 0.3rem 0.6rem grey;
+    box-shadow: 0rem 0.3rem 0.6rem black;
     background-color: white;
 }
 
 .dataBox div {
     margin-left: 1.15rem;
     margin-right: 1.15rem;
-    height: 2.4rem;
     width: 12.1rem;
     background-color: transparent;
     border-top: solid #545454;
     border-width: 0.02rem;
+    margin-bottom: 0.3rem;
 }
 
-.dataBox p {
-    line-height: 2.4rem;
-    text-align: center;
+.question {
+    height: 1.3rem;
+    line-height: 1.3rem;
     font-size: 0.56rem;
-}
-
-div input {
-    height: 0.56rem;
-    margin-top: 0.92rem;
-    margin-left: 1rem;
-    vertical-align: middle;
-    border: none;
-    font-size: 0.56rem;
-}
-
-.value {
     color: #2d70e1;
 }
 
-.submit {
-    margin-top: 1.5rem;
-    margin-left: 1.9rem;
-    margin-right: 1.9rem;
-    background-color: #2d70e1;
-    height: 1.83rem;
-    border-radius: 1.83rem;
-    text-align: center;
-    font-size: 0.56rem;
-    color: white;
-    line-height: 1.83rem;
-}
-
-.induction {
-    margin-left: 0.8rem;
-    margin-right: 0.8rem;
-    margin-top: 1rem;
-}
-
-.induction p {
+.answer {
+    font-size: 0.46rem;
     color: #545454;
+    line-height: 0.65rem;
+    text-indent: 2em;
 }
 
 
