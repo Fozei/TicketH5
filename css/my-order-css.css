@@ -1,0 +1,84 @@
+.header-head {
+    background-image: url(../images/top_bg.jpg);
+    background-size: 16rem 2.148148rem;
+    width: 100%;
+    height: 2.148148rem;
+    line-height: 2.148148rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7111rem;
+}
+
+.back {
+    position: absolute;
+    left: 0.5777rem;
+    top: 0.8888rem;
+}
+
+.back-img {
+    width: 0.4444rem;
+    height: 0.7111rem;
+}
+
+.page {
+    height: 7.5rem;
+    width: 14.2666rem;
+    margin-right: 0.8592rem;
+    margin-left: 0.874rem;
+    margin-top: 0.3407rem;
+    overflow: hidden;
+    box-shadow: 0rem 0.08888rem 0.5185rem 0rem rgba(44, 112, 225, 0.25);
+    border-radius: 0.1888rem;
+    position: relative;
+}
+.page-1 {
+    height: 7.5rem;
+    width: 14.2666rem;
+    margin-right: 0.8592rem;
+    margin-left: 0.874rem;
+    margin-top: 0.25185rem;
+    overflow: hidden;
+    box-shadow: 0rem 0.08888rem 0.5185rem 0rem rgba(44, 112, 225, 0.25);
+    border-radius: 0.1888rem;
+    position: relative;
+}
+
+.sp-ft-title {
+    color: #1a1a1a;
+    font-size: 0.56296rem;
+    margin-left: 1.18518rem;
+    margin-right: 1.1259rem;
+    margin-top: 0.474rem;
+    display: block;
+}
+
+.sp-ft-game {
+    color: #545454;
+}
+
+.sp-ft-details {
+    color: #545454;
+    font-size: 0.474rem;
+}
+
+.sp-ft-edg {
+    color: #1a1a1a;
+    font-size: 0.474rem;
+}
+
+.img-line {
+    width: 14.2666rem;
+}
+
+.img-pictrue {
+    width: 3.175rem;
+    height: 2.7111rem;
+    margin-left: 1.437rem;
+}
+
+.d-details {
+    margin-top: 0.3111rem;
+    /*width: 6.4888rem;*/
+    float: left;
+    margin-left: 0.4444rem;
+}
