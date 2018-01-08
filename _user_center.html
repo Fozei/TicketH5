@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,init-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/basic.css"/>
+    <link rel="stylesheet" href="css/usercenter.css"/>
+    <script src="js/auto.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/user_center.js"></script>
+</head>
+
+<body>
+<header id="header">
+    个人中心
+</header>
+
+<div class="basicInfo clear">
+    <img id="portrait" class="clear" src="images/portrait.png" onclick="selectImage()">
+    <div>
+        <p>手机号</p>
+        <p>youhui</p>
+    </div>
+</div>
+
+<ul id="list">
+    <li>
+        <div class="firstItem">
+            <div class="accountSummary money">
+                <p>账户余额(元)</p>
+                <p>2000</p>
+            </div>
+            <div class="accountSummary">
+                <p>累计收益(元)</p>
+                <p>2000</p>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="dataBox">
+            <img class="catLogo" src="images/cash.png">
+            <span>我要提现</span>
+        </div>
+    </li>
+    <li>
+        <div class="dataBox">
+            <img class="catLogo" src="images/orderlist.png">
+            <span>我的订单</span>
+        </div>
+    </li>
+
+    <li>
+        <div class="dataBox">
+            <img class="catLogo" src="images/msg.png">
+            <span>系统消息</span>
+        </div>
+    </li>
+
+    <li>
+        <div class="dataBox">
+            <img class="catLogo" src="images/faq.png">
+            <span>常见问题</span>
+        </div>
+    </li>
+
+    <li>
+        <div class="dataBox" style="background: none">
+            <img class="catLogo" src="images/hotline.png">
+            <span>联系我们</span>
+            <span style="float: right;margin-right: 1rem">400-188-6065</span>
+        </div>
+    </li>
+
+    <li>
+        <div class="dataBox">
+            <img class="catLogo" src="images/myagent.png">
+            <span>我的代理商</span>
+        </div>
+    </li>
+</ul>
+
+<footer class="footer">
+    <ul>
+        <li style="border:0px;">
+            <img src="images/homepage.png"/>
+            <p>首页</p>
+        </li>
+        <li class="active" style="border:0px;">
+            <img src="images/mine.png"/>
+            <p>我的</p>
+        </li>
+    </ul>
+</footer>
+<!--action为要请求的路径-->
+<form id="uploadForm" enctype="multipart/form-data" method="post" action="XXXXXX">
+    <input type="file" id="imgSelector" onchange="javascript:setNewImage();"/>
+</form>
+</body>
+<script type="text/javascript">
+    function selectImage() {
+        console.log("click")
+        $("#imgSelector").click();
+    }
+
+    function upLoadFile() {
+        var file = document.getElementById('imgSelector').files[0];    //读取文件
+        var reader = new FileReader(), image = new Image(),
+            canvas = document.createElement("canvas"), ctx = canvas.getContext("2d");
+        startFileLoad(reader, image, canvas, ctx);
+    }
+
+    function startFileLoad(file, reader, image, canvas, ctx) {    //文件加载
+        /*开始进行网络加载*/
+        reader.onload = function () {        //文件加载完成
+            var url = reader.result;
+            image.src = url;
+        };
+        image.onload = function () {        //图片加载完成
+            var w = image.naturalWidth, h = image.naturalHeight,
+                scale = 3;        //图片缩放比例，这里是把图片大小高宽均缩小3倍
+            canvas.width = w / scale;
+            canvas.height = h / scale;
+            ctx.drawImage(image, 0, 0, w, h,
+                0, 0, canvas.width, canvas.height);
+            fileUpload();
+        };
+        reader.readAsDataURL(file);        //用文件加载器加载文件
+
+        function fileUpload() {        //文件上传方法
+            var quality = 0.3;        //图片的质量，这里设置的是0.3
+            var data = canvas.toDataURL("image/jpeg", quality);//获取画布图片，并且要jpg格式
+            data = data.split(',')[1];
+            data = window.atob(data);
+            var ia = new Uint8Array(data.length);
+            for (var i = 0; i < data.length; i++) {
+                ia[i] = data.charCodeAt(i);
+            }
+            var blob = new Blob([ia], {            //以上均为二进制参数处理，从而获取一个blob对象
+                type: "image/jpeg"
+            });
+            var fd = new FormData(document.getElementById("uploadForm"));
+
+            fd.append("XXX", blob, "upload.jpg");    //向form中加入图片数据，name属性是XXX，文件名是upload.jpg
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener('load', function (resUpload) {
+                //请求成功
+            }, false);
+            xhr.addEventListener('error', function () {
+                //请求失败
+            }, false);
+            xhr.addEventListener('abort', function () {
+                //上传终止
+            }, false);
+            xhr.open('POST', "http://XXXXXXXXXXXXX");//请求地址
+            xhr.send(fd);//发送
+        }
+    }
+
+    function setNewImage() {
+        var imageSelector = document.getElementById("imgSelector");
+        console.log(imageSelector.value);
+        console.log(imageSelector.files);
+
+        var picture;
+        picture = imageSelector.value;
+        if (!picture.match(/.jpg|.gif|.png|.bmp/i)) {
+            return alert("您上传的图片格式不正确，请重新选择！");
+        }
+        if (imageSelector.files && imageSelector.files[0]) {
+            var isChrOrSaf = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1;
+            document.getElementById("portrait").src = isChrOrSaf ? window.webkitURL.createObjectURL(imageSelector.files[0]) : window.URL.createObjectURL(imageSelector.files[0]);
+            upLoadFile(picture)
+        } else {
+            return alert("您上传的图片格式不正确，请重新选择！");
+        }
+    }
+
+
+</script>
+</html>

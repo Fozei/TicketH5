@@ -22,3 +22,4 @@ var APPLY_AGENT = '/applyagent.php';
 var INCOME = '/income.php';
 var GET_REG_CODE = '/regsendcode.php';
 var REG = '/reg.php';
+var USER_INDEX = '/userindex.php';

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/usercenter.css"/>
     <script src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/user_center.js"></script>
 </head>
 
 <body>
@@ -18,8 +21,8 @@
 <div class="basicInfo clear">
     <img id="portrait" class="clear" src="images/portrait.png" onclick="selectImage()">
     <div>
-        <p>手机号</p>
-        <p>youhui</p>
+        <p id="phone">手机号</p>
+        <p id="discount">youhui</p>
     </div>
 </div>
 
@@ -28,17 +31,17 @@
         <div class="firstItem">
             <div class="accountSummary money">
                 <p>账户余额(元)</p>
-                <p>2000</p>
+                <p class="fontColorGrey" id="balance">2000</p>
             </div>
             <div class="accountSummary">
                 <p>累计收益(元)</p>
-                <p>2000</p>
+                <p class="fontColorGrey" id="income">2000</p>
             </div>
         </div>
     </li>
 
     <li>
-        <div class="dataBox">
+        <div onclick="goCashRequest()" class="dataBox">
             <img class="catLogo" src="images/cash.png">
             <span>我要提现</span>
         </div>
@@ -59,7 +62,7 @@
 
     <li>
         <div class="dataBox">
-            <img class="catLogo" src="images/faq.png">
+            <img onclick="goFaq()" class="catLogo" src="images/faq.png">
             <span>常见问题</span>
         </div>
     </li>
