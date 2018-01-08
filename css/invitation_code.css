@@ -1,0 +1,8 @@
+/* head start */
+.head{padding-top: 0.8888888888888889rem;background-size:16rem 2.148148148148148rem;background-repeat: no-repeat;background-position: left top;}
+.header{height: 1.007407407407407rem;line-height: 1.007407407407407rem;text-align: center;font-size: 0.7111111111111111rem;color: #fff;position: relative}
+.head .backUp{position: absolute;left:0.5481481481481481rem;width: 0.8592592592592593rem;height: 1.007407407407407rem;top:0;bottom: 0;margin: auto;}
+.head .backUp:after,.head .backUp:before{content: '';position: absolute;left: 0;width:0.4444444444444444rem ;height: 0.0444444444444444rem;background-color: #fff;transform-origin: left  center;}
+.head .backUp:after{top: 0.4962962962962963rem;transform: rotate(-45deg);bottom: 0;}
+.head .backUp:before{transform: rotate(45deg);bottom: 0.4962962962962963rem;}
+/* head end */

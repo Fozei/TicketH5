@@ -1,0 +1,37 @@
+/*
+作者：987089337@qq.com
+时间：2018-01-08
+描述：赛事信息
+-->*/
+.event_info{width: 100%;}
+.event_info .head{padding-bottom: 2.385185185185185rem;}
+.event_info .head .header{position: fixed;top: 0;left:0;width: 16rem;height: 2.385185185185185rem;line-height: 2.385185185185185rem;text-align: center;color: #fff;font-size: 0.7111111111111111rem;background-image: url("../images/header_bg.jpg");background-size: cover;background-position: left top;background-repeat: no-repeat;}
+.head .backUp{position: absolute;left:0.5481481481481481rem;width: 0.8592592592592593rem;height: 1.007407407407407rem;top:0;bottom: 0;margin: auto;}
+.head .backUp:after,.head .backUp:before{content: '';position: absolute;left: 0;width:0.4444444444444444rem ;height: 0.0444444444444444rem;background-color: #fff;transform-origin: left  center;}
+.head .backUp:after{top: 0.4962962962962963rem;transform: rotate(-45deg);bottom: 0;}
+.head .backUp:before{transform: rotate(45deg);bottom: 0.4962962962962963rem;}
+/* banner start */
+.banner{width: 16rem;height: 7.540740740740741rem;background-color: #ccc}
+.banner img{width: 16rem;height: 7.540740740740741rem;display: block;}
+/* banner end */
+/* content start */
+.eventMain{height: 16.44444444444444rem;overflow-y: auto;padding-bottom: 0.4740740740740741rem;box-shadow: 0 0 40px 0.4444444444444444rem #f2f5fc}
+.contentTit{height: 1.57037037037037rem;line-height: 1.57037037037037rem;text-align: center;color: #171717;font-size:0.562962962962963rem }
+.content{background-color: #f2f5fc;width: 100%;}
+.content>div:nth-child(odd){margin-bottom: 0.4148148148148148rem;}
+.eventsList{display: flex;width: 15.06666666666667rem;height: 8.014814814814815rem;background-color: #fff;margin: 0 auto;    -webkit-justify-content: center; justify-content: center; -webkit-align-items: center;
+    align-items: center;box-shadow: 0 0 40px 0.4444444444444444rem #f2f5fc}
+.eventsList a{display:block;height: 6.903703703703704rem;}
+.eventsList dl{
+    width: 4.192592592592593rem;
+    overflow: hidden;
+}
+.eventsList a:nth-of-type(2){margin: 0 0.637037037037037rem;}
+.eventsList dl dt{width: 100%;height: 4.607407407407407rem;overflow: hidden;}
+.eventsList dl dt img{width: 100%;height: 4.607407407407407rem;display: block;}
+.eventsList dl dd{width: 100%;}
+.eventsList dl dd:nth-of-type(1){height: 1.333333333333333rem;line-height:0.6666666666666667rem;color: #1a1a1a;font-size: 0.4740740740740741rem;padding:0.1481481481481481rem 0;    display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: 2;  overflow: hidden;}
+.eventsList dl dd:nth-of-type(2){line-height:0.6666666666666667rem;color: #eb2225;font-size: 0.4148148148148148rem;text-align: center}
+.eventsList dl dd:nth-of-type(2) em{font-style: normal;padding-left: 0.2962962962962963rem;}
+/* content end */
+

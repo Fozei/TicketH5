@@ -69,7 +69,20 @@ li {
     float: right;
     display: inline;
 }
+/* pgc start */
+.clearFix:after {
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both
+}
 
+.clearFix {
+	zoom: 1;
+}
+/* end */
 #header {
     background-image: url(../images/bg5.jpg);
     background-size: 16rem 2.148148rem;
