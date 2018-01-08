@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="订票系统" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name = "format-detection" content = "telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui"/>
+    <title>订票系统</title>
+    <link rel="stylesheet" type="text/css" href="css/basic.css"/>
+  	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery-1.12.0.min.js"></script>
+	  <script src="js/auto.js"></script>
+	<script src="js/common.js"></script>
+    <script src="js/layer/layer.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/index.js"></script>
+
+  </head>
+  <style>
+	body{
+		font-size: 0.29629rem;
+		width: 16rem;
+		background:url("images/bg.png") no-repeat top left;
+		background-size: 16rem;
+	}
+  </style>
+	<body>
+		<div class="totalWidth ">
+			<div class="areaDiv">
+				<div class="citySelect">
+					<p>蓬莱</p>
+					<ul id="selectValue" style="display:none;">
+						<!-- <li>蓬莱</li>
+						<li>烟台</li> -->
+					</ul>
+				</div>
+				<div class="seatchBox">
+					<input type="text" id="keyword" placeholder="搜素体育，演出，景点，美食" />
+					<img src="images/serch_bg.png" class="s_button" alt="" onclick="requestSearchResult()"/>
+				</div>
+				<div class="weatherBox">
+          <!-- <iframe allowtransparency="true" frameborder="0" width="180" height="60" scrolling="no" src="//tianqi.eastday.com/plugin/widget_v1.html?sc=3&z=3&t=0&v=0&d=2&bd=0&k=&f=&q=1&a=1&c=54511&w=180&h=60&align=left"></iframe> -->
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="mainContent totalWidth">
+			<div class="classDiv">
+				<ul class="cat-list">
+					<!-- <li>
+						<img src="images/icon1.png"  alt="" />
+						<p><a href="#">体育</a></p>
+					</li>
+					<li>
+						<img src="images/icon2.png"  alt="" />
+						<p><a href="#">演出</a></p>
+					</li>
+					<li>
+						<img src="images/icon3.png"  alt="" />
+						<p>景点</p>
+					</li>
+					<li>
+						<img src="images/icon4.png"  alt="" />
+						<p>酒店</p>
+					</li>
+					<li>
+						<img src="images/icon5.png"  alt="" />
+						<p>体育</p>
+					</li>
+					<li>
+						<img src="images/icon6.png"  alt="" />
+						<p>长颈乐商场</p>
+					</li> -->
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="bitTitle">热门推荐</div>
+			<!-- <div class="listBox">
+        <div class="l-left">
+          <img src="images/nvlan.png"  alt="" />
+        </div>
+				<div class="l-right">
+          <div class="title" href="#">GGGGWCBA联赛竞赛规程和有关情况介绍</div>
+  				<p class="desc">FFFFWCBA联赛（常规赛）有12家俱乐部参赛，揭幕战定于10月16日周五......</p>
+  				<p class="button" >
+  					<img matchId="" onclick="goToDetail('5')" src="images/seebutton.jpg"  alt="" />
+  					<img matchId="" onclick="goToDetail('5')" src="images/bookingbutton.jpg" class="bookingbutton"  alt="" />
+  				</p>
+        </div>
+        <div class="clear"></div>
+			</div> -->
+      <!-- <div class="listBox">
+
+        <div class="l-left">
+          <img src="images/nvlan.png"  alt="" />
+        </div>
+
+				<div class="l-right">
+          <div class="title" href="#">WCBA联赛竞赛规程和有关情况介绍</div>
+  				<p class="desc">WCBA联赛（常规赛）有12家俱乐部参赛，揭幕战定于10月16日周五......</p>
+  				<p class="button">
+  					<img src="images/seebutton.jpg"  alt="" />
+  					<img src="images/bookingbutton.jpg" class="bookingbutton"  alt="" />
+  				</p>
+        </div>
+        <div class="clear"></div>
+			</div>
+      <div class="listBox">
+
+        <div class="l-left">
+          <img src="images/nvlan.png"  alt="" />
+        </div>
+
+				<div class="l-right">
+          <div class="title" href="#">WCBA联赛竞赛规程和有关情况介绍</div>
+  				<p class="desc">WCBA联赛（常规赛）有12家俱乐部参赛，揭幕战定于10月16日周五......</p>
+  				<p class="button">
+  					<img src="images/seebutton.jpg"  alt="" />
+  					<img src="images/bookingbutton.jpg" class="bookingbutton"  alt="" />
+  				</p>
+        </div>
+        <div class="clear"></div>
+			</div> -->
+		</div>
+
+		
+	</body>
+	 <script src="js/jquery-1.12.0.min.js">
+    </script>
+	 <script type="text/javascript">
+	 <!--
+		$(function(){
+			$('.citySelect p').click(function(){
+				$('#selectValue').show();
+			})
+			$('#selectValue li').click(function(){
+				$('.citySelect p').html($(this).html());
+				$('#selectValue').hide();
+			})
+		})
+	 //-->
+	 </script>
+</html>

@@ -1,0 +1,170 @@
+/**{margin: 0;padding: 0;}*/
+ul, ol, li, div {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+body {
+    font-size: 0.2074rem;
+    font-family: Microsoft Yahei, "微软雅黑", Arial;
+    color: #333;
+    width: 16rem;
+
+}
+
+.clear-clear{
+    clear: both;
+}
+
+.totalWidth{
+    width: 16rem;
+}
+.header_r_no_bg{
+    background:none;
+}
+.header_r{
+    background:url("../images/header_bg.jpg") no-repeat;
+    height: 2.38518rem;
+    line-height: 2.38518rem;
+    position:relative;
+    text-align:center;
+    color:#ffffff;
+    font-size: 0.7111rem;
+    overflow:hidden;
+}
+.header_r .back{
+    position:absolute;
+    left: 0.5777rem;
+    top: 0.8888rem;
+    width: 0.4444rem;
+    height: 0.7111rem;
+}
+
+
+.dev-font-box{
+    border-radius: 0.296296rem;
+    box-shadow: 0 0 0.59259rem 0.148148rem #dee8f9;
+
+}
+.ft-carousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.ft-carousel .carousel-inner {
+    width: 22.7555rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.ft-carousel .carousel-inner .carousel-item {
+    width: 3.79259rem;
+    float: left;
+    height: 100%;
+}
+.ft-carousel .carousel-item img {
+    width: 100%;
+}
+
+.ft-carousel .carousel-indicators {
+    position: absolute;
+    left: 0;
+    bottom: 0.148148rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+
+
+.ft-carousel .carousel-indicators span {
+    display: inline-block;
+
+    width: 0.237rem;
+    height: 0.237rem;
+    background-color: #fff;
+    margin-left: 0.296296rem;
+    margin-right: 0.296296rem;
+    margin-bottom: 0.25185rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+.ft-carousel .carousel-indicators span.active {
+    background-color: #de3a3a;
+}
+
+.ft-carousel .carousel-prev-btn {
+    left: 0;
+    background: url(../images/prev.png) no-repeat;
+}
+
+.ft-carousel .carousel-next-btn {
+    right: 0;
+    background: url(../images/next.png) no-repeat;
+}
+
+
+.title-info{
+    font-size: 0.56296rem;
+    margin: 0 auto;
+    width: 2.96296rem;
+    margin-top: 0.5333rem;
+}
+.tab-classfiy{
+    margin-left: 0.4444rem;
+    margin-right: 0.4444rem;
+    margin-top: 0.459259rem;
+}
+.tab-classfiy-second{
+    margin-left: 0.4444rem;
+    margin-right: 0.4444rem;
+    margin-top: 0.2074rem;
+}
+.tab-basketball{
+    float: left;
+}
+.tab-classfiy .tab-classfiy-basketball{
+    width: 4.2074rem;
+    height: 1.2rem;
+    /*text-align: center;*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.tab-classfiy .tab-classfiy-basketball .tab-img{
+    float: left;
+    width: 0.459259rem;
+    height:0.4444rem;
+}
+
+.tab-classfiy .tab-classfiy-basketball .tab-txt-backetball{
+    font-size: 0.4596rem;
+    float: left;
+    margin-left: 0.074rem;
+    color: #1A1A1A;
+}
+.tab-left{
+    margin-left: 0.6074rem;
+    width: 4.19259rem;
+    height: 5.037rem;
+}
+.tab-left-details{
+    margin-left: 0.8148rem;
+    text-align: left;
+    margin-bottom: 0.2rem;
+}
+
+.tab-txt-details{
+    width: 3.8518rem;
+    /*height: 1.1555rem;*/
+    font-size: 0.474rem;
+
+}

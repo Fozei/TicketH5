@@ -1,0 +1,235 @@
+.areaDiv {
+    margin: 1.1111rem 0 0 0.59259rem;
+    color: #ffffff;
+}
+
+.areaDiv .citySelect {
+    font-size: 0.7111rem;
+    float: left;
+    width: 2.8148rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.header {
+    background-image: url(../images/bg5.jpg);
+    background-size: 16rem 2.148148rem;
+    width: 100%;
+    height: 2.148148rem;
+    line-height: 2.148148rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7111rem;
+}
+
+.areaDiv .citySelect p {
+    width: 1.97037rem;
+    background: url("../images/select_bg.png") no-repeat right center;
+    background-size: 0.4444rem 0.2666rem;
+}
+
+.areaDiv #selectValue {
+    position: absolute;
+    top: 0.7407rem;
+    z-index: 50;
+}
+
+.totalWidth {
+    width: 16rem;
+}
+
+.areaDiv #selectValue li {
+
+    padding: 0.148rem 0rem;
+    width: 1.9703rem;
+    border-bottom: 0.0148rem #cccccc solid;
+
+}
+
+.seatchBox {
+    float: left;
+    position: relative;
+    width: 9.57037rem;
+}
+
+.seatchBox #keyword {
+    width: 7.748148rem;
+    height: 1.185185rem;
+    line-height: 1.185185rem;
+    font-size: 0.474rem;
+    color: #808080;
+    padding-left: 1.437rem;
+    border: 0rem;
+    border-radius: 5.3333rem;
+}
+
+.seatchBox .s_button {
+    position: absolute;
+    left: 0.4592rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 0.7407rem;
+    width: 0.7407rem;
+}
+
+.weatherBox {
+    float: left;
+    width: 2.9333rem;
+}
+
+.classDiv {
+    width: 14.2518rem;
+    margin: 0 auto;
+    margin-top: 0.99259rem;
+    background-color: #ffffff;
+    border-radius: 0.37037rem;
+    padding-bottom: 0.59259rem;
+    box-shadow: 0rem 0.29629rem 0.59259rem #e7e7e7;
+    min-height: 6.9333rem;
+
+}
+
+.classDiv a {
+    color: #262626;
+}
+
+.classDiv li {
+    float: left;
+    width: 4.7407rem;
+    font-size: 0.474rem;
+    color: #262626;
+    text-align: center;
+    margin-top: 0.59259rem;
+}
+
+.classDiv li p {
+    margin-top: 0.2222rem;
+    font-weight: lighter;
+}
+
+.bitTitle {
+    color: #272727;
+    font-size: 0.5629rem;
+    text-align: center;
+    margin-top: 0.5777em;
+    font-weight: lighter;
+}
+
+.listBox {
+    width: 14.237rem;
+    height: 4.56296rem;
+    margin: 0 auto;
+    border-radius: 0.37037rem;
+    box-shadow: 0 0 0.59259rem #d5d4d4;
+    margin-top: 0.4148rem;
+    border: 0.0148rem white solid;
+}
+
+.listBox .l-left {
+    position: relative;
+    top: 0.3407rem;
+    left: 0.3407rem;
+    width: 4.8296rem;
+    height: 3.88148rem;
+    float: left;
+    overflow: hidden;
+}
+
+.listBox .l-right {
+    position: relative;
+    left: 0.8592rem;
+    top: 0.3407rem;
+    width: 7.6444rem;
+    /*max-height: 3.6rem;*/
+    max-height: 4rem;
+    float: left;
+}
+
+.listBox .l-right .title {
+    margin-top: 0.1777rem;
+    color: #333333;
+    top: 0.5185rem;
+    font-size: 0.56296rem;
+    line-height: 0.56296rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.listBox .l-right .desc {
+    display: block;
+    margin-top: 0.2222rem;
+    width: 7.4963rem;
+    max-height: 1.0666rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #333333;
+    font-size: 0.474rem;
+    line-height: 0.5333rem;
+    font-weight: lighter;
+}
+
+.listBox .l-right .button {
+    margin-top: 0.3407rem;
+}
+
+.listBox .bookingbutton {
+    margin-left: 0.874rem;
+    width: 3.259259rem;
+    height: 0.74074rem;
+}
+
+.list_c_div {
+    width: 15.0222rem;
+    margin: 0 auto;
+    border-radius: 0.3703rem;
+    padding-bottom: 0.5629rem;
+    box-shadow: 0 0 0.59259rem 0.2962rem #e1e8f8;
+    margin-top: 0.4888rem;
+    border: 0.0148rem #fff solid;
+}
+
+.list_c_div li {
+    float: left;
+    width: 4.19259em;
+    margin-left: 0.6222rem;
+    margin-top: 0.5629rem;
+    display: inline;
+}
+
+.list_c_div li .title {
+    color: #1a1a1a;
+    font-size: 0.474rem;
+    line-height: 0.6222rem;
+}
+
+.list_c_div li .price {
+    color: #eb2225;
+    font-size: 0.4148em;
+}
+
+.list_c_div li .title a {
+    color: #1a1a1a;
+}
+
+.list_c_div li .price a {
+    color: #1a1a1a;
+}
+
+.mainContent {
+    padding-bottom: 2.2222rem;
+}
+.mainContent .classDiv .cat-list li img{
+    width: 2rem;
+    height: 1.97037rem;
+}
+.listBox .l-right .button .examinebutton{
+    width: 3.259259rem;
+    height: 0.74074rem;
+}
