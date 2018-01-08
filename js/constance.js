@@ -1,3 +1,4 @@
+var COOKIE_NAME_USER_ID = "ewedouserID";
 var DOMAIN = "http://192.168.1.78/ticket/api"
 var MALL_ADDRESS =
     "http://sdyigou.sdevnet.com/topics/api/dev/index.html#/device/"
@@ -11,3 +12,11 @@ var TICKET_SENDCODE = '/sendcode.php';
 var TICKET_CAT = "/cat.php";
 var TICKET_ORDER_STATUS = '/getorderstatus.php';
 var TICKET_GET_DATA = '/getticket.php';
+var LOGIN = '/login.php';
+var ORDER_LIST = '/orderlist.php';
+var CASH_HISTORY = 'withdrawlog.php';
+var GET_USER_BANK = '/getuserbank.php';
+var CASH_REQUEST = '/applywithdraw.php';
+var GET_CASH_REQUEST_CODE = '/withdrawsendcode.php';
+var APPLY_AGENT = '/applyagent.php';
+var INCOME = '/income.php';
