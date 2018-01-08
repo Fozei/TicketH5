@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/input.css"/>
     <script src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/inputtid.js"></script>
+    <script src="js/checklogin.js"></script>
 </head>
 
 <body>
@@ -28,11 +30,11 @@
     <li>
         <div class="inputBox-p dataBox secondItem">
             <div class="inputBox">
-                <input placeholder="请输入身份证号"/>
+                <input id="itp_idt" placeholder="请输入身份证号"/>
             </div>
             <!--完成注册-->
-            <div class="inputBox-p" onclick="submitId()">
-                <div class="submit inputBox">
+            <div class="inputBox-p">
+                    <div id="idt_submit" class="submit inputBox">
                     确定
                 </div>
             </div>

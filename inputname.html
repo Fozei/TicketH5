@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/input.css"/>
     <script src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/inputname.js"></script>
+    <script src="js/checklogin.js"></script>
 </head>
 
 <body>
@@ -28,11 +30,11 @@
     <li>
         <div class="inputBox-p dataBox secondItem">
             <div class="inputBox">
-                <input placeholder="请输入真实姓名"/>
+                <input id="ipt_name" placeholder="请输入真实姓名"/>
             </div>
-            <!--完成注册-->
-            <div class="inputBox-p" onclick="submitName()">
-                <div class="submit inputBox">
+            <!--完成注册-- onclick="submitName()" -->
+            <div class="inputBox-p" >
+                <div id="name_submit" class="submit inputBox">
                     确定
                 </div>
             </div>
@@ -42,11 +44,10 @@
 </ul>
 </body>
 <script type="text/javascript">
-    <!--
-    function submitName() {
-        console.log("submit name")
-    }
 
-    //-->
+
+
+
+
 </script>
 </html>
