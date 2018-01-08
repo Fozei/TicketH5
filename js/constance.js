@@ -23,3 +23,5 @@ var INCOME = '/income.php';
 var GET_REG_CODE = '/regsendcode.php';
 var REG = '/reg.php';
 var USER_INDEX = '/userindex.php';
+var GET_USR_LIST = '/getuserlist.php';
+

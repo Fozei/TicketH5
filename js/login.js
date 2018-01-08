@@ -7,7 +7,6 @@ function login() {
     //     alert("请输入正确的账号或密码");
     //     return false;
     // }
-
     var pwdString = encryptPwd(pwd);
     $.post(DOMAIN + LOGIN, {
         phone: phone,
