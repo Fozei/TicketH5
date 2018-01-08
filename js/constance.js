@@ -20,3 +20,5 @@ var CASH_REQUEST = '/applywithdraw.php';
 var GET_CASH_REQUEST_CODE = '/withdrawsendcode.php';
 var APPLY_AGENT = '/applyagent.php';
 var INCOME = '/income.php';
+var GET_REG_CODE = '/regsendcode.php';
+var REG = '/reg.php';

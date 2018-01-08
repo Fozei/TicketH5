@@ -5,7 +5,6 @@ function setCookie(c_name, value, expiredays) {
 }
 
 function getCookie(c_name) {
-    console.log("get cookie")
     if (document.cookie.length > 0) {
         c_start = document.cookie.indexOf(c_name + "=")
         if (c_start != -1) {
@@ -53,7 +52,6 @@ function decodePwd(str) {
     var s5 = decode64(s4);
     //2 反转
     var s6 = s5.split("").reverse().join("");
-    console.log("haha" + s6);
 }
 
 
