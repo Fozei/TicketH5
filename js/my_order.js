@@ -18,7 +18,7 @@ $(function () {
                 create_details_data(data.list);
                 console.log(data.list)
             } else {
-                layer.msg(data.message);
+                alert("获取数据失败："+data.message);
             }
         }
     });

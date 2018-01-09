@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/profitdetail.css"/>
     <script src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/checklogin.js"></script>
+    <script src="js/profitdetail.js"></script>
 </head>
 
 <body>
@@ -28,15 +30,15 @@
             </p>
         </div>
     </li>
+    <!--<li>-->
+        <!--<p class="dataItem">-->
+            <!--<span class="date">收益时间</span>-->
+            <!--<span class="cat">类别</span>-->
+            <!--<span class="account">账号</span>-->
+            <!--<span class="value">金额</span>-->
+        <!--</p>-->
+    <!--</li>-->
 
-    <li>
-        <p class="dataItem">
-            <span class="date">收益时间</span>
-            <span class="cat">类别</span>
-            <span class="account">账号</span>
-            <span class="value">金额</span>
-        </p>
-    </li>
 </ul>
 
 <div class="bottomPlaceHolder"></div>
@@ -47,19 +49,19 @@
 
 </footer>
 <div id="catList">
-    <div class="catTitle"><p onclick="resetCatPosition()">确定</p></div>
-    <div class="category">
-        <p style="border: none">足球</p>
-        <p>体操</p>
-        <p>篮球</p>
-        <p>排球</p>
-        <p>乒乓球</p>
-        <p>羽毛球</p>
+    <div class="catTitle"><p>选择类型</p></div>
+    <div id="classify" class="category">
+        <!--<p style="border: none">足球</p>-->
+        <!--<p>体操</p>-->
+        <!--<p>篮球</p>-->
+        <!--<p>排球</p>-->
+        <!--<p>乒乓球</p>-->
+        <!--<p>羽毛球</p>-->
     </div>
 </div>
 
 <div id="datePicker">
-    <div class="catTitle"><p onclick="resetDatePosition()">确定</p></div>
+    <div id="cat_deta" class="catTitle"><p onclick="resetDatePosition()">确定</p></div>
     <div class="category">
         <p style="border: none">&nbsp</p>
         <p>开始日期：<input id="startDate" type="date"></p>
@@ -81,6 +83,7 @@
 
     function showCatSelect() {
         $("#catList").animate({top: "13rem", height: "12rem"});
+
     }
 
     function resetCatPosition() {

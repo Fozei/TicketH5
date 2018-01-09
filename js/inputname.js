@@ -24,9 +24,10 @@ $(function () {
                 // layer.close(index);
                 if (data.code == 'success') {
                     // window.location.href = 'account_setting.html';
+                    alert("修改姓名成功");
                     window.history.back(-1);
                 } else {
-                    layer.msg(data.message);
+                    alert("修改失败："+data.message);
                 }
             }
         });

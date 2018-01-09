@@ -68,7 +68,7 @@ span {
 }
 
 .dataItem span {
-    border-top: solid #343434;
+    border-top: solid 0.0296296rem #cccccc;
 }
 
 .date {
@@ -131,25 +131,34 @@ footer div {
     width: 16rem;
     line-height: 1.7rem;
     background-color: #f0f1f3;
-    text-align: right;
+    text-align: center;
     color: #2d70e1;
     font-size: 0.56rem;
-    margin-right: 1rem;
+    /*margin-right: 1rem;*/
 }
 
 .catTitle p {
     line-height: 1.7rem;
     height: 1.7rem;
-    margin-right: 1rem;
+    /*margin-right: 1rem;*/
 }
 
 .category {
     background-color: #dbe0e6;
     padding-right: 1rem;
     padding-left: 1rem;
+    overflow-y: scroll;
+    height: 10.25185rem;
 }
 
-.category p {
+.category .p_none {
+    /*border-top: solid #c9cdce;*/
+    line-height: 1.7rem;
+    text-align: center;
+    font-size: 0.56rem;
+    color: #545559;
+}
+.category .p_vis {
     border-top: solid #c9cdce;
     line-height: 1.7rem;
     text-align: center;

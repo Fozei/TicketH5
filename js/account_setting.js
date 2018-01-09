@@ -20,7 +20,7 @@ $(function () {
                 $('#idt').html(userData.idcard);
                 $('#num').html('17666666666');
             } else {
-                layer.msg(data.message);
+                alert("获取失败："+data.message);
             }
         }
     });

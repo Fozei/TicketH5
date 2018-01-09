@@ -1,7 +1,7 @@
 $(function () {
-    function submitName() {
-        console.log("submit name")
-    }
+    // function submitName() {
+    //     console.log("submit name")
+    // }
 
     var surl_s = decodeURI(location.href);
     var name_data = surl_s.split("=")[1];
@@ -25,9 +25,10 @@ $(function () {
             success: function (data) {
                 // layer.close(index);
                 if (data.code == 'success') {
+                    alert("修改身份证号成功");
                     window.history.back(-1);
                 } else {
-                    layer.msg(data.message);
+                    alert("修改失败："+data.message);
                 }
             }
         });
