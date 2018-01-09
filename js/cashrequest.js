@@ -11,6 +11,7 @@ $(function () {
             console.log(data);
             userPhone = data.userData.phone;
             $.trim($('#phone').val(userPhone));
+            $('#balanceAvailable').text(data.userData.balance);
         } else {
             alert(data.message);
         }

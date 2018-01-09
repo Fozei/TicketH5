@@ -18,7 +18,7 @@
     个人中心
 </header>
 
-<div class="basicInfo clear">
+<div class="basicInfo clear" onclick="goUserSetting()">
     <img id="portrait" class="clear" src="images/portrait.png" onclick="selectImage()">
     <div>
         <p id="phone">手机号</p>
@@ -31,11 +31,11 @@
         <div class="firstItem">
             <div class="accountSummary money">
                 <p>账户余额(元)</p>
-                <p class="fontColorGrey" id="balance">2000</p>
+                <p class="fontColorGrey" id="balance"></p>
             </div>
-            <div class="accountSummary">
+            <div onclick="goProfitDetail()" class="accountSummary">
                 <p>累计收益(元)</p>
-                <p class="fontColorGrey" id="income">2000</p>
+                <p class="fontColorGrey" id="income"></p>
             </div>
         </div>
     </li>
@@ -47,7 +47,7 @@
         </div>
     </li>
     <li>
-        <div class="dataBox">
+        <div onclick="goMyOrder()" class="dataBox">
             <img class="catLogo" src="images/orderlist.png">
             <span>我的订单</span>
         </div>
@@ -61,8 +61,8 @@
     </li>
 
     <li>
-        <div class="dataBox">
-            <img onclick="goFaq()" class="catLogo" src="images/faq.png">
+        <div onclick="goFaq()" class="dataBox">
+            <img class="catLogo" src="images/faq.png">
             <span>常见问题</span>
         </div>
     </li>
@@ -76,10 +76,10 @@
     </li>
 
     <!--<li>-->
-        <!--<div class="dataBox">-->
-            <!--<img class="catLogo" src="images/myagent.png">-->
-            <!--<span>我的代理商</span>-->
-        <!--</div>-->
+    <!--<div class="dataBox">-->
+    <!--<img class="catLogo" src="images/myagent.png">-->
+    <!--<span>我的代理商</span>-->
+    <!--</div>-->
     <!--</li>-->
 </ul>
 
