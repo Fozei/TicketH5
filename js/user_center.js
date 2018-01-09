@@ -22,7 +22,7 @@ function initView(data) {
     //1=普通用户 2=代理人
     userType = parseInt(data.userData.type);
     if (userType === 1) {
-        console.log(type);
+        console.log(userType);
         $('#cashRequest').remove();
         $('#list').append("<li><div onclick='goAgent()' class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span>申请成为代理商</span></div></li>");
     } else if (userType === 2) {

@@ -1,12 +1,12 @@
 function login() {
-    // var phone = $("#phone").val();
-    var phone = '13146575509';
-    // var pwd = $("#pwd").val();
-    var pwd = '123456';
-    // if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone))) || pwd.length < 6) {
-    //     alert("请输入正确的账号或密码");
-    //     return false;
-    // }
+    var phone = $("#phone").val();
+    // var phone = '13146575509';
+    var pwd = $("#pwd").val();
+    // var pwd = '123456';
+    if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone))) || pwd.length < 6) {
+        alert("请输入正确的账号或密码");
+        return false;
+    }
     var pwdString = encryptPwd(pwd);
     $.post(DOMAIN + LOGIN, {
         phone: phone,

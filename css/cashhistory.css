@@ -46,19 +46,35 @@ header img {
     border-width: 0.02rem;
 }
 
-/*审核中 #fdb73d*/
-/*转账中 #a177fd*/
-/*交易成功 #a177fd*/
-/*交易失败 #ef403d*/
+/* 0 审核中 #fdb73d*/
+/* 1 转账中 #a177fd*/
+/* 2 交易成功 #2d70e1*/
+/* 3 交易失败 #ef403d*/
+/*1=已审核，提现中  0=待审  2=提现成功 3=驳回*/
 .status {
     width: 2.25rem;
     height: 0.8rem;
-    background-color: #fdb73d;
     margin-top: 0.5rem;
     text-align: center;
     line-height: 0.8rem;
     color: white;
     border-radius: 0.15rem;
+}
+
+.verifying {
+    background-color: #fdb73d;
+}
+
+.cashing {
+    background-color: #a177fd;
+}
+
+.finish {
+    background-color: #2d70e1;
+}
+
+.rejected {
+    background-color: #ef403d;
 }
 
 .normalP {

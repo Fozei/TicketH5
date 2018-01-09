@@ -8,40 +8,18 @@
     <link rel="stylesheet" href="css/cashhistory.css"/>
     <script src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cashhistory.js"></script>
 </head>
 
 <body>
 <header id="header">
-    <img src="images/prev.png"/>
+    <img onclick="location.href='user_center.html'" src="images/prev.png"/>
     提现记录
 </header>
 
-<ul class="dataBox">
-    <li>
-        <div style="border-top: none">
-            <p class="left normalP money">235.00</p>
-            <p class="right status">审核中</p>
-        </div>
-
-        <div>
-            <img class="left" src="images/clock.png">
-            <p class="left cashTime">提现申请时间</p>
-            <p class="right normalP">2018-01-12 17:55</p>
-        </div>
-    </li>
-
-    <li>
-        <div style="border-top: none">
-            <p class="left normalP money">235.00</p>
-            <p class="right status">审核中</p>
-        </div>
-
-        <div>
-            <img class="left" src="images/clock.png">
-            <p class="left cashTime">提现申请时间</p>
-            <p class="right normalP">2018-01-12 17:55</p>
-        </div>
-    </li>
+<ul id="list" class="dataBox">
 
 </ul>
 
