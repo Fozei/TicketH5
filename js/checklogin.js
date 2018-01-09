@@ -1,5 +1,5 @@
 //检查用户是否登录
-var USERID=localStorage.userID;
+var USERID=getCookie(COOKIE_NAME_USER_ID);
 USERID='PThFUnJGVFRSMVRQ';
 if (USERID==undefined)
 {
