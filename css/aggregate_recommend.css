@@ -34,7 +34,10 @@
 .hint .tipListsTit span:nth-of-type(2),.tipLists ul li span:nth-of-type(2){width: 4.666666666666667rem;}
 .hint .tipListsTit span:nth-of-type(3),.tipLists ul li span:nth-of-type(3){width: 4.074074074074074rem;}
 .tipListsCon{height: 18.01481481481481rem;overflow-y: auto;}
-
+.tipListsCon>ul {position: relative;padding-bottom: 1.185185185185185rem;}
+#more{position: absolute;left: 0;right: 0;margin: 0 auto;bottom: 40px;width: 12rem;text-align: center;height: 0.5925925925925926rem;line-height: 0.5925925925925926rem;display: flex; justify-content: center;  }
+#more img{width: 0.5777777777777778rem;height: 0.5777777777777778rem;display: block}
+#more span{display: block;color: #ccc;font-size: 0.3555555555555556rem;margin-left: 0.1481481481481481rem;}
 .hint .tipListsTit span:nth-of-type(4),.tipLists ul li span:nth-of-type(4){width: 1.703703703703704rem;text-align: right;}
 .tipLists ul li{width:12rem;height: 2.222222222222222rem;line-height: 2.222222222222222rem;border-top: 0.0296296296296296rem solid #ccc; }
 .tipLists ul li span{color: #1a1a1a;font-size: 0.562962962962963rem;display: block;text-align: center;height: 2.222222222222222rem;line-height: 2.222222222222222rem;}

@@ -2,9 +2,9 @@
 var deviceID=getQueryString('device');
 if (deviceID==undefined)
 {
-	deviceID = localStorage.deviceID;
+  deviceID = localStorage.deviceID;
 }else{
-	localStorage.deviceID = deviceID;
+  localStorage.deviceID = deviceID;
 }
 $(window).load(function() {
   layer.load(0, {
@@ -14,8 +14,10 @@ $(window).load(function() {
   var jqxhr = $.post(DOMAIN + TICKET_CAT, {
     page: 1
   }).done(function(data) {
+    console.log(data)
+    // return
     var obj = eval("(" + data + ")"); // 将json转换为对象 json 格式{status:'1',data:'2'}
-    console.log(obj);
+    console.log(obj)
     parseInitData(obj);
   }).fail(function(xhr, status) {
     alert("获取数据失败，请刷新重试");
@@ -55,28 +57,26 @@ function requestSearchResult() {
 function parseInitData(jsonData) {
   var catData = jsonData.catData;
   var recommendData = jsonData.recommendData;
-  // console.log(catData);
-  // console.log(recommendData);
+  console.log(catData);
+  console.log(recommendData);
   // <li>
   //   <img src="images/icon1.png"  alt="" />
   //   <p><a href="#">体育</a></p>
   // </li>
 
   $.each(catData, function bindData(index, item) {
-
     var catName = item.name;
-    var catid = item.catid;
+    var catid = item.id;
     var pic = item.pic;
     var url = item.url;
-    var catid = item.catid;
     var li;
     li='<li>';
     if(catid>1000){
-        li+='<a href="'+url+'"><img src="'+ pic +'" ></a>';
-        li+='<p><a href="'+url+'" >'+catName+'</a></p>';
+      li+='<a href="'+url+'"><img src="'+ pic +'" ></a>';
+      li+='<p><a href="'+url+'" >'+catName+'</a></p>';
     }else{
-        li+='<img src="'+ pic +'" onClick="goToList('+catid+')">';
-        li+='<p><a href="javascript:void(0);" onClick="goToList('+catid+')">'+catName+'</a></p>';
+      li+='<img src="'+ pic +'" onClick="goToList('+catid+')">';
+      li+='<p><a href="javascript:void(0);" onClick="goToList('+catid+')">'+catName+'</a></p>';
     }
 
     li+='</li>';
@@ -105,7 +105,7 @@ function parseInitData(jsonData) {
       "<p class=\"desc\" onclick=\"goToDetail(" + id +
       ")\">" + desc + "</p>\n<p class=\"button\" >\n" +
       "<img onclick=\"goToDetail(" + id +
-      ")\" src=\"images/seebutton.jpg\" class=\"examinebutton\" alt=\"\" />\n" +
+      ")\" src=\"images/seebutton.jpg\"  alt=\"\" />\n" +
       "<img onclick=\"goBooking(" + id +
       ")\" src=\"images/bookingbutton.jpg\" class=\"bookingbutton\"/>\n" +
       "</p>\n</div>\n<div class=\"clear\"></div>\n</div>";
@@ -115,7 +115,7 @@ function parseInitData(jsonData) {
 
 function goToList(catID) {
   console.log("catID :" + catID);
-  window.location.href = "list.html?catID=" + catID;
+  window.location.href = "competition_classify.html?catID=" + catID;
 }
 
 function goToDetail(id) {
@@ -128,5 +128,5 @@ function goBooking(id) {
   window.location.href = "select.html?id=" + id;
 }
 function goToList_r(url){
-    window.location.href = url;
+  window.location.href = url;
 }
