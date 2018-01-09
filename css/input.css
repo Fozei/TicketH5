@@ -29,19 +29,16 @@ header img {
     border-radius: 2rem;
     height: 1.7rem;
     width: 12rem;
-    border: 0.1rem solid #999999;
+    border: 0.05rem solid #999999;
     line-height: 1.7rem;
 }
 
 .inputBox input {
+    height: 1.3rem;
     vertical-align: middle;
     border: none;
-    font-size: 0.56296rem;
+    font-size: 0.5rem;
     text-align: center;
-    border: solid 0.0444rem #b3b3b3;
-    width: 12.28148rem;
-    height: 1.85185rem;
-    border-radius: 0.9259rem;
 }
 
 .submit {
