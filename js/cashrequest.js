@@ -97,6 +97,10 @@ function submitRequest() {
         backCard: bankAccount
     }).done(function (data) {
         console.log(data);
+        var data = eval("(" + data + ")");
+        if (data.code === "success") {
+            location.href = "cash_history.html";
+        }
     }).fail(function (xhr, status) {
         console.log("fail")
         alert("获取验证码失败");
