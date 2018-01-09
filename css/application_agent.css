@@ -1,4 +1,4 @@
-html,body{width: 100%;}
+html,body{width: 100%;height: 100%;}
 /* 2018.01.09 8:30 */
 .agent{width: 100%;height: 100%;background-color: #f5f4f9;overflow: hidden;}
 .agent .head{position: relative;padding-bottom: 2.148148148148148rem;}

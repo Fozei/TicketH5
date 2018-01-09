@@ -55,15 +55,16 @@ function requestSearchResult() {
 function parseInitData(jsonData) {
   var catData = jsonData.catData;
   var recommendData = jsonData.recommendData;
-  console.log(catData);
-  console.log(recommendData);
+  // console.log(catData);
+  // console.log(recommendData);
   // <li>
   //   <img src="images/icon1.png"  alt="" />
   //   <p><a href="#">体育</a></p>
   // </li>
 
   $.each(catData, function bindData(index, item) {
-    var catName = item.cat;
+
+    var catName = item.name;
     var catid = item.catid;
     var pic = item.pic;
     var url = item.url;

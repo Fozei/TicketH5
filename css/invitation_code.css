@@ -1,8 +1,21 @@
+html,body{width: 100%;height: 100%;}
+.invitation_code{width: 100%;height: 100%;background-image: url("../images/dabeijing.jpg");background-size: 16rem 28.44444444444444rem;background-repeat: no-repeat;background-position: left top;}
 /* head start */
 .head{padding-top: 0.8888888888888889rem;background-size:16rem 2.148148148148148rem;background-repeat: no-repeat;background-position: left top;}
 .header{height: 1.007407407407407rem;line-height: 1.007407407407407rem;text-align: center;font-size: 0.7111111111111111rem;color: #fff;position: relative}
 .head .backUp{position: absolute;left:0.5481481481481481rem;width: 0.8592592592592593rem;height: 1.007407407407407rem;top:0;bottom: 0;margin: auto;}
 .head .backUp:after,.head .backUp:before{content: '';position: absolute;left: 0;width:0.4444444444444444rem ;height: 0.0444444444444444rem;background-color: #fff;transform-origin: left  center;}
-.head .backUp:after{top: 0.4962962962962963rem;transform: rotate(-45deg);bottom: 0;}
-.head .backUp:before{transform: rotate(45deg);bottom: 0.4962962962962963rem;}
+.head .backUp:after{top: 0.47rem;transform: rotate(-30deg);bottom: 0;}
+.head .backUp:before{transform: rotate(30deg);bottom: 0.51rem;}
 /* head end */
+/* main start */
+.main{width: 16rem;height: 20.14814814814815rem;background-image: url("../images/erweimabeijing.png");background-size: 14.6962962962963rem  20.14814814814815rem;background-repeat: no-repeat;background-position: center top;position: relative }
+.mainCon{width: 100%;padding-top: 2.192592592592593rem;text-align: center;}
+.mainCon .logo{width: 1.688888888888889rem;height: 1.688888888888889rem;margin-bottom: 0.5925925925925926rem;}
+.mainTopTxt{color: #1a1a1a;font-size: 0.562962962962963rem;width: 7.925925925925926rem;margin: 0 auto;line-height: 0.8148148148148148rem;}
+.code{padding-top: 0.962962962962963rem;}
+.code img{width: 7.288888888888889rem;height: 7.377777777777778rem;}
+#scanme{width: 7.288888888888889rem;height: 7.377777777777778rem;margin: 0 auto;}
+.code p{color: #1a1a1a;font-size: 0.562962962962963rem;height: 0.562962962962963rem;line-height: 0.562962962962963rem;padding-top: 0.4444444444444444rem;}
+.joinUs{color: #1a1a1a;font-size: 0.6222222222222222rem;width: 5.585185185185185rem;margin: 0 auto;line-height: 1.037037037037037rem;position: absolute;left: 0;right: 0;margin: auto;bottom: 1.259259259259259rem;}
+/* main end */

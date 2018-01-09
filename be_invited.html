@@ -10,9 +10,9 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>扫码分享</title>
+    <title>被邀请</title>
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
-    <link rel="stylesheet" type="text/css" href="css/invitation_code.css"/>
+    <link rel="stylesheet" type="text/css" href="css/be_invited.css"/>
     <script type="text/javascript" src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
 </head>
@@ -20,7 +20,7 @@
 <!--
     作者：987089337@qq.com
     时间：2018-01-08
-    描述：扫码分享
+    描述：被邀请
 -->
 <div class="invitation_code">
     <div class="head">
@@ -30,17 +30,25 @@
         </div>
     </div>
     <div class="main">
-        <div class="mainCon">
-            <img src="images/logopng.png" class="logo">
-            <p class="mainTopTxt">您的朋友<span>138***1234</span>邀请您加入长颈乐票务系统，一起赚大钱</p>
-           <div class="code">
-               <div id="scanme"><img src="images/code.jpg" alt=""></div>
-               <p>扫描二维码享受购票折扣</p>
-           </div>
-            <div class="joinUs">
-                邀请伙伴一起赚钱赶紧加入吧！
+        <p class="hint">您的好友<span>13812341234</span>邀请您加入长颈乐票务系统，不仅可以享受更优惠的购票折扣还可以稳定赚大钱！</p>
+        <form>
+            <div>
+                <label><img src="images/shoujihao.png" alt=""></label>
+                <input type="text" placeholder="请输入手机号" />
             </div>
-        </div>
+            <div>
+                <label><img src="images/xiaosuo.png" alt=""></label>
+                <input type="text" placeholder="输入登录密码（6-18位数字、字母）" />
+            </div>
+            <div>
+                <label><img src="images/xiaosuo.png" alt=""></label>
+                <input type="text" placeholder="输入验证码" />
+                <span class="getCode">获取验证码<i>（59）</i></span>
+            </div>
+            <div>
+                <input type="submit" value="免费注册" />
+            </div>
+        </form>
     </div>
 </div>
 <script>

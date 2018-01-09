@@ -1,0 +1,33 @@
+html,body{width: 100%;height: 100%;}
+.ticket_checking{width: 100%;height: 100%;background-color: #4884e9;}
+/* head start */
+.head{padding-top: 0.8888888888888889rem;background-size:16rem 8.577777777777778rem;background-repeat: no-repeat;background-position: left top;background-image: url("../images/checking1.jpg");padding-bottom: 6.681481481481481rem;}
+.header{height: 1.007407407407407rem;line-height: 1.007407407407407rem;text-align: center;font-size: 0.7111111111111111rem;color: #fff;position: relative;}
+.header .backUp{position: absolute;left:0.5481481481481481rem;width: 0.8592592592592593rem;height: 1.007407407407407rem;top:0;bottom: 0;margin: auto;}
+.header .backUp:after,.header .backUp:before{content: '';position: absolute;left: 0;width:0.4444444444444444rem ;height: 0.0444444444444444rem;background-color: #fff;transform-origin: left  center;}
+.header .backUp:after{top: 0.47rem;transform: rotate(-30deg);bottom: 0;}
+.header .backUp:before{transform: rotate(30deg);bottom: 0.51rem;}
+/* head end */
+/* nav start */
+.nav{padding: 0 1rem;height: 5.955555555555556rem;margin-top: -6.681481481481481rem;padding-top: 0.4296296296296296rem;}
+.nav>div{float: left;width: 4.666666666666667rem;text-align: center;margin-bottom: 0.3703703703703704rem;}
+a{display: inline-block;color: #fff;font-size: 0.4740740740740741rem;}
+.nav a i{display: block;width:2rem;height: 1.97037037037037rem;border-radius:50%;background-image: url("../images/nav_link.png");background-size: 12rem 1.97037037037037rem;background-repeat: no-repeatl;background-position-y: 0;  background-position-x: 0;overflow: hidden;margin: 0 auto;}
+.nav a span{display: block;height: 0.4740740740740741rem;font-size: 0.4740740740740741rem;line-height: 0.4740740740740741rem;padding-top: 0.1777777777777778rem;}
+.nav>div:nth-of-type(1) i{ background-position-x: 0rem;}
+.nav>div:nth-of-type(2) i{ background-position-x: 2rem;}
+.nav>div:nth-of-type(3) i{ background-position-x: 4rem;}
+.nav>div:nth-of-type(4) i{ background-position-x: 6rem;}
+.nav>div:nth-of-type(5) i{ background-position-x: 8rem;}
+.nav>div:nth-of-type(6) i{ background-position-x: 10rem;}
+
+/* nav end */
+/* main start */
+.main{height: 16.5037037037037rem;background-image: url("../images/neirongbej.png");background-size: 16rem 16.5037037037037rem;background-position: center top;}
+.mainCon{width: 11.15555555555556rem;margin: 0 auto;padding-top: 1.525925925925926rem;}
+.mainCon a{display:block;height: 3.481481481481481rem;border-bottom: 0.0444444444444444rem dashed #c6c6c6 }
+.mainCon a:last-of-type{border-bottom: none;}
+.mainCon .title{color: #1a1a1a;font-size: 0.562962962962963rem;line-height: 0.7407407407407407rem;padding-top:0.562962962962963rem;}
+.mainCon .name{color: #545454;font-size:0.4740740740740741rem;height: 0.4740740740740741rem;line-height: 0.4740740740740741rem;padding-top: 0.2666666666666667rem;}
+/* main end */
+.submit{width: 12.26666666666667rem;height: 1.837037037037037rem;line-height: 1.837037037037037rem;color: #fff;font-size: 0.7111111111111111rem;text-align: center;background-color: #ff770d;border-radius: 0.9185185185185185rem;margin: 0 auto;margin-top: 0.7703703703703704rem;}
