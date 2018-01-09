@@ -14,7 +14,12 @@
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
     <link rel="stylesheet" type="text/css" href="css/invitation_code.css"/>
     <script type="text/javascript" src="js/auto.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/checklogin.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/qrcode/qrcode.js"></script>
+    <script src="js/invitation_code.js"></script>
 </head>
 <body>
 <!--
@@ -32,9 +37,11 @@
     <div class="main">
         <div class="mainCon">
             <img src="images/logopng.png" class="logo">
-            <p class="mainTopTxt">您的朋友<span>138***1234</span>邀请您加入长颈乐票务系统，一起赚大钱</p>
+            <p class="mainTopTxt">您的朋友<span id="sp_number">***********</span>邀请您加入长颈乐票务系统，一起赚大钱</p>
            <div class="code">
-               <div id="scanme"><img src="images/code.jpg" alt=""></div>
+               <div id="scanme">
+                   <!--<img id="qr_code_img" alt="">-->
+               </div>
                <p>扫描二维码享受购票折扣</p>
            </div>
             <div class="joinUs">

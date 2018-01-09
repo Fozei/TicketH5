@@ -12,7 +12,7 @@
 .myAgent .nav{margin: 0.3703703703703704rem 0;}
 .myAgent .nav ul{width:16rem;height: 1.481481481481481rem;display: flex;display:-webkit-flex; -webkit-justify-content: center;
     justify-content: center;   }
-.myAgent .nav ul li {}
+
 .myAgent .nav ul li:first-of-type a{border-radius: 0.1481481481481481rem 0 0 0.1481481481481481rem;
     border-right:none; }
 .myAgent .nav ul li:nth-child(2) a{border-right:none; }
@@ -25,6 +25,9 @@
 .hint{width: 14.25185185185185rem;height:22.84444444444444rem;border-radius: 0.2222222222222222rem;margin: 0 auto;border-radius: 0.2222222222222222rem;box-shadow: 0 0.5185185185185185rem 1.185185185185185rem 0rem #d1e0f8}
 .hintTit{width: 14.25185185185185rem;height: 2.207407407407407rem;line-height: 2.207407407407407rem;text-align: center;color: #2c70e1;font-size: 0.7111111111111111rem;background-image: url("../images/agenthintbg.png");background-size: cover;}
 .tipLists{width: 12rem;margin: 0 auto;}
+.tipListsCon::-webkit-scrollbar{
+    display:none;
+}
 .hint .tipListsTit,.tipLists ul li{display: flex;display: -webkit-flex;}
 .hint .tipListsTit span{color: #2c70e1;font-size: 0.562962962962963rem;display: block;text-align: center;height: 2.222222222222222rem;line-height: 2.222222222222222rem;}
 .hint .tipListsTit span:nth-of-type(1),.tipLists ul li span:nth-of-type(1){width: 1.555555555555556rem;text-align: left;}

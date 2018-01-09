@@ -14,6 +14,9 @@
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
     <link rel="stylesheet" type="text/css" href="css/agent_earnings.css"/>
     <script type="text/javascript" src="js/auto.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/checklogin.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
 </head>
 <body>
@@ -37,7 +40,7 @@
     <!-- hint start-->
     <div class="hint">
         <div class="hintTit">
-            累计收益<span>20</span>元
+            累计收益<span id="sp_money">0</span>元
         </div>
         <div class="tipLists">
             <div class="tipListsTit">
@@ -49,55 +52,55 @@
             </div>
             <div class="tipListsCon">
 
-                <ul>
-                    <li>
-                        <span>2017.12.12/16:58</span>
-                        <span>187****3155</span>
-                        <span>二级</span>
-                        <span>220.00</span>
-                    </li>
-                    <li>
-                        <span>2017.12.12/16:58</span>
-                        <span>187****3155</span>
-                        <span>二级</span>
-                        <span>220.00</span>
-                    </li>
-                    <li>
-                        <span>2017.12.12/16:58</span>
-                        <span>187****3155</span>
-                        <span>二级</span>
-                        <span>220.00</span>
-                    </li>
-                    <li>
-                        <span>2017.12.12/16:58</span>
-                        <span>187****3155</span>
-                        <span>二级</span>
-                        <span>220.00</span>
-                    </li>
-                    <li>
-                        <span>2017.12.12/16:58</span>
-                        <span>187****3155</span>
-                        <span>二级</span>
-                        <span>220.00</span>
-                    </li>
-                    <li>
-                        <span>2017.12.12/16:58</span>
-                        <span>187****3155</span>
-                        <span>二级</span>
-                        <span>220.00</span>
-                    </li>
-                    <li>
-                        <span>2017.12.12/16:58</span>
-                        <span>187****3155</span>
-                        <span>二级</span>
-                        <span>220.00</span>
-                    </li>
-                    <li>
-                        <span>2017.12.12/16:58</span>
-                        <span>187****3155</span>
-                        <span>二级</span>
-                        <span>220.00</span>
-                    </li>
+                <ul id="ul_eag_item">
+                    <!--<li>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                        <!--<span>220.00</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                        <!--<span>220.00</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                        <!--<span>220.00</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                        <!--<span>220.00</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                        <!--<span>220.00</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                        <!--<span>220.00</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                        <!--<span>220.00</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                        <!--<span>220.00</span>-->
+                    <!--</li>-->
                 </ul>
 
             </div>
@@ -106,8 +109,6 @@
     <!-- hint end-->
 
 </div>
-<script type="text/javascript" src="js/aggregate_recommend.js"></script>
-
 <script type="text/javascript" src="js/agent_earnings.js"></script>
 </body>
 </html>

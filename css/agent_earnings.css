@@ -32,7 +32,9 @@
 .hint .tipListsTit span:nth-of-type(3),.tipListsCon ul li span:nth-of-type(3){width:1.333333333333333rem;}
 .tipListsCon{height: 18.01481481481481rem;overflow-y: auto;}
 /*.tipLists ul li span:nth-of-type(2)*/
-
+.tipListsCon::-webkit-scrollbar{
+    display:none;
+}
 .hint .tipListsTit span:nth-of-type(4),.tipListsCon ul li span:nth-of-type(4){width: 2.518518518518519rem;text-align: right;}
 .hint .tipListsTit span:nth-of-type(4) em{font-size: 0.4148148148148148rem;font-style:normal;}
 .tipLists ul li{width:12rem;height: 2.222222222222222rem;line-height: 2.222222222222222rem;border-top: 0.0296296296296296rem solid #ccc; }

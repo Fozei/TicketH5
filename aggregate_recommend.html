@@ -8,11 +8,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
     <title>我的代理商(累计推荐)</title>
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
     <link rel="stylesheet" type="text/css" href="css/aggregate_recommend.css"/>
     <script type="text/javascript" src="js/auto.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/checklogin.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
 </head>
 <body>
@@ -27,8 +31,8 @@
     <!-- pgc nav start -->
     <div class="nav">
         <ul>
-            <li ><a href="my_agent.html">我的邀请</a></li>
-            <li class="active"><a href="javascript:;"  >累计推荐</a></li>
+            <li><a href="my_agent.html">我的邀请</a></li>
+            <li class="active"><a href="javascript:;">累计推荐</a></li>
             <li><a href="agent_earnings.html">代理商收益</a></li>
         </ul>
     </div>
@@ -36,7 +40,7 @@
     <!-- hint start-->
     <div class="hint">
         <div class="hintTit">
-            累计推荐<span>20</span>人
+            累计推荐<span id="sp_money">20</span>人
         </div>
         <div class="tipLists">
             <div class="tipListsTit">
@@ -47,56 +51,56 @@
             </div>
             <div class="tipListsCon">
 
-            <ul>
-                <li>
-                    <span>1</span>
-                    <span>2017.12.12/16:58</span>
-                    <span>187****3155</span>
-                    <span>二级</span>
-                </li>
-                <li>
-                    <span>2</span>
-                    <span>2017.12.12/16:58</span>
-                    <span>187****3155</span>
-                    <span>二级</span>
-                </li>
-                <li>
-                    <span>3</span>
-                    <span>2017.12.12/16:58</span>
-                    <span>187****3155</span>
-                    <span>二级</span>
-                </li>
-                <li>
-                    <span>4</span>
-                    <span>2017.12.12/16:58</span>
-                    <span>187****3155</span>
-                    <span>二级</span>
-                </li>
-                <li>
-                    <span>5</span>
-                    <span>2017.12.12/16:58</span>
-                    <span>187****3155</span>
-                    <span>二级</span>
-                </li>
-                <li>
-                    <span>6</span>
-                    <span>2017.12.12/16:58</span>
-                    <span>187****3155</span>
-                    <span>二级</span>
-                </li>
-                <li>
-                    <span>7</span>
-                    <span>2017.12.12/16:58</span>
-                    <span>187****3155</span>
-                    <span>二级</span>
-                </li>
-                <li>
-                    <span>8</span>
-                    <span>2017.12.12/16:58</span>
-                    <span>187****3155</span>
-                    <span>二级</span>
-                </li>
-            </ul>
+                <ul id="ul_red_item">
+                    <!--<li>-->
+                        <!--<span>1</span>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>2</span>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>3</span>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>4</span>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>5</span>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>6</span>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>7</span>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<span>8</span>-->
+                        <!--<span>2017.12.12/16:58</span>-->
+                        <!--<span>187****3155</span>-->
+                        <!--<span>二级</span>-->
+                    <!--</li>-->
+                </ul>
 
             </div>
         </div>
