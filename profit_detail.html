@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,init-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/basic.css"/>
+    <link rel="stylesheet" href="css/profitdetail.css"/>
+    <script src="js/auto.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/checklogin.js"></script>
+    <script src="js/profitdetail.js"></script>
+</head>
+
+<body>
+<header id="header">
+    <img src="images/prev.png"/>
+    累计收益
+</header>
+
+<ul id="list">
+    <li>
+        <div class="firstItem">
+            <p id="total">1200.00元</p>
+            <p class="listTitle">
+                <span class="date">收益时间</span>
+                <span class="cat">类别</span>
+                <span class="account">账号</span>
+                <span class="value">金额</span>
+            </p>
+        </div>
+    </li>
+    <!--<li>-->
+    <!--<p class="dataItem">-->
+    <!--<span class="date">收益时间</span>-->
+    <!--<span class="cat">类别</span>-->
+    <!--<span class="account">账号</span>-->
+    <!--<span class="value">金额</span>-->
+    <!--</p>-->
+    <!--</li>-->
+
+</ul>
+
+<div class="bottomPlaceHolder"></div>
+<footer class="footer">
+
+    <div class="left" onclick="showDateSelect()">筛选收益时间</div>
+    <div class="right" onclick="showCatSelect()">筛选分类</div>
+
+</footer>
+<div id="catList">
+    <div class="catTitle"><p onclick="resetCatPosition()">确定</p></div>
+    <div id="classify" class="category">
+        <!--<p style="border: none">足球</p>-->
+        <!--<p>体操</p>-->
+        <!--<p>篮球</p>-->
+        <!--<p>排球</p>-->
+        <!--<p>乒乓球</p>-->
+        <!--<p>羽毛球</p>-->
+    </div>
+</div>
+
+<div id="datePicker">
+    <div id="cat_date" class="catTitle"><p onclick="resetDatePosition()">确定</p></div>
+    <div class="category">
+        <p class="p_vis" style="border: none">&nbsp</p>
+        <p class="p_vis">开始日期：<input id="startDate" type="date"></p>
+        <p class="p_vis">截止日期：<input id="endDate" type="date"></p>
+        <p class="p_vis">&nbsp</p>
+    </div>
+</div>
+
+
+</body>
+</html>

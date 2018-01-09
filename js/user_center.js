@@ -74,7 +74,7 @@ function goUserSetting() {
 
 function goProfitDetail() {
     if (userType === 2) {
-        location.href = "profitdetail.html";
+        location.href = "../profit_detail.html";
     }
 }
 

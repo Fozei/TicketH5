@@ -118,9 +118,9 @@ footer div {
 }
 
 #catList {
+    top: 28rem;
     overflow: hidden;
     position: absolute;
-    top: 28.44rem;
     left: 0;
     height: 0rem;
     width: 16rem;
@@ -131,16 +131,15 @@ footer div {
     width: 16rem;
     line-height: 1.7rem;
     background-color: #f0f1f3;
-    text-align: center;
     color: #2d70e1;
     font-size: 0.56rem;
-    /*margin-right: 1rem;*/
 }
 
 .catTitle p {
+    float: right;
     line-height: 1.7rem;
     height: 1.7rem;
-    /*margin-right: 1rem;*/
+    margin-right: 1rem;
 }
 
 .category {
@@ -148,7 +147,6 @@ footer div {
     padding-right: 1rem;
     padding-left: 1rem;
     overflow-y: scroll;
-    height: 10.25185rem;
 }
 
 .category .p_none {
@@ -165,7 +163,9 @@ footer div {
     font-size: 0.56rem;
     color: #545559;
 }
-
+.category>p.active {
+    color: black;
+}
 #datePicker {
     overflow: hidden;
     position: absolute;
@@ -177,6 +177,9 @@ footer div {
 input {
     margin-left: 1rem;
     height: 1rem;
+    vertical-align: middle;
 }
+
+
 
 
