@@ -1,7 +1,7 @@
 $(function () {
 
     $.ajax({
-        url: "http://192.168.1.78/ticket/api/orderlist.php ",
+        url: DOMAIN+USER_ORDER_LIST,
         data: {
             'userID':USERID,
             'page': 1,
@@ -13,10 +13,12 @@ $(function () {
             // layer.close(index);
             console.log('data:'+data);
             if (data.code == 'success') {
-                // alert("数据信息:" + data.list);
-                console.log('data.list:'+data.list[0].matchName);
-                create_details_data(data.list);
-                console.log(data.list)
+				if (data.list==0)
+				{
+					$('#dev_ul').append('<div class="emptyTip">暂无信息</div>');	
+				}else{
+					create_details_data(data.list);
+				}
             } else {
                 alert("获取数据失败："+data.message);
             }

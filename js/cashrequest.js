@@ -100,7 +100,9 @@ function submitRequest() {
         var data = eval("(" + data + ")");
         if (data.code === "success") {
             location.href = "cash_history.html";
-        }
+        }else{
+			alert(data.message);
+		}
     }).fail(function (xhr, status) {
         console.log("fail")
         alert("获取验证码失败");

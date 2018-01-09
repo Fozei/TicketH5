@@ -25,4 +25,5 @@ var REG = '/reg.php';
 var USER_INDEX = '/userindex.php';
 var GET_USR_LIST = '/getuserlist.php';
 var CAT_LIST = '/catlist.php';
+var USER_ORDER_LIST = '/orderlist.php';
 
