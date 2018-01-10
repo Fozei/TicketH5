@@ -21,6 +21,7 @@ function initView(data) {
     userType = parseInt(data.userData.type);
     if (userType === 1) {
         $('#cashRequest').remove();
+        $('#cashHistory').remove();
         $('#list').append("<li><div onclick='goAgent()' class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span>申请成为代理商</span></div></li>");
     } else if (userType === 2) {
         $('#list').append("<li><div onclick='goMyAgent()' class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span>我的代理商</span></div></li>");
@@ -85,5 +86,11 @@ function goMyAgent() {
 function goAgent() {
     if (userType === 1) {
         location.href = "application_agent.html";
+    }
+}
+
+function goCashHistory() {
+    if (userType === 2) {
+        location.href = "cash_history.html";
     }
 }
