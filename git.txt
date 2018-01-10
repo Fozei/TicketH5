@@ -1,0 +1,19 @@
+如果我在dev上修改的
+在dev 上
+1、add
+2、commit
+
+3、checkout lujx
+4. 在lujx 上 merge dev
+
+5.git log 
+6、checkout dev 
+
+git log 
+
+8.git reset --hard 38f8f62a5b7a60
+
+9/git pull origin dev
+
+git mege lujx
+git push origin dev
