@@ -1,7 +1,7 @@
 $(function () {
-
+    //邀请好友
     $.ajax({
-        url: "http://192.168.1.78/ticket/api/invite.php ",
+        url: DOMAIN + INVITE_FRIEND,
         data: {
             'userID': USERID,
         },

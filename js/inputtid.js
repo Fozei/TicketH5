@@ -13,8 +13,9 @@ $(function () {
             alert("身份证号不合法");
             return '身份证号不合法';
         }
+        //修改用户姓名、身份证
         $.ajax({
-            url: "http://192.168.1.78/ticket/api/edituser.php",
+            url: DOMAIN + AMEND_EDITUSER,
             data: {
                 'userID': USERID,
                 'idcard': idt,

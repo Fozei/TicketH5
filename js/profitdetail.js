@@ -39,8 +39,9 @@ $(function () {
 
 function clssify_data(userID, page, startTime, catID, endTime) {
     console.log('进行网络请求catID:' + catID);
+    //累计收益
     $.ajax({
-        url: "http://192.168.1.78/ticket/api/income.php",
+        url: DOMAIN + ADD_EARNING,
         data: {
             'userID': userID,
             'page': page,

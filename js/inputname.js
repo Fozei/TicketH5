@@ -11,8 +11,9 @@ $(function () {
 
     $('#name_submit').click(function () {
         var name = $('#ipt_name').val();
+        //修改用户姓名、身份证
         $.ajax({
-            url: "http://192.168.1.78/ticket/api/edituser.php",
+            url: DOMAIN + AMEND_EDITUSER,
             data: {
                 'userID': USERID,
                 'name':name,

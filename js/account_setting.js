@@ -1,7 +1,7 @@
 $(function () {
-// 得到订单信息
+    // 得到订单信息
     $.ajax({
-        url: "http://192.168.1.78/ticket/api/getuserlist.php ",
+        url: DOMAIN + GET_USR_LIST,
         data: {
             'userID': USERID,
         },

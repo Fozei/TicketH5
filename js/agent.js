@@ -3,8 +3,9 @@ $('.head .backUp').on('touchstart',function(e) {
 });
 $(function () {
     $('#apply_submit').click(function () {
+        //申请代理人
         $.ajax({
-            url: "http://192.168.1.78/ticket/api/applyagent.php",
+            url: DOMAIN + APPLY_AGENT,
             data: {
                 'userID': USERID,
             },

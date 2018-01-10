@@ -1,7 +1,7 @@
 $(function () {
     //代理商收益
     $.ajax({
-        url: "http://192.168.1.78/ticket/api/agentincome.php ",
+        url: DOMAIN + AGENT_EARNING,
         data: {
             'userID': USERID,
         },
