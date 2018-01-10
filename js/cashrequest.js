@@ -23,9 +23,16 @@ $(function () {
 
 
 function withDrawSendCode() {
-    //验证金额
-    var amount = parseFloat($('#amount').val());
+    console.log("click")
+    //不可点击
+    $("#getVerifyCode").attr("onclick", null);
+    $("#getVerifyCode").css("color", "grey");
 
+    setTimeout(function () {
+        $("#getVerifyCode").attr("onclick", "withDrawSendCode()");
+        $("#getVerifyCode").css("color", "#2d70e1");
+    }, 1000 * 60);
+    //验证金额
     console.log(parseFloat($('#balanceAvailable').text()) + ":::" + amount)
     if (amount < 200 || parseFloat($('#balanceAvailable').text()) < amount) {
         console.log("单次提现金额必须大于200")
@@ -38,8 +45,6 @@ function withDrawSendCode() {
         alert("请输入正确的手机号");
         return false;
     }
-
-    console.log(getCookie(COOKIE_NAME_USER_ID));
 
     //获取验证码 GET_CASH_REQUEST_CODE
     $.post(DOMAIN + GET_CASH_REQUEST_CODE, {
@@ -100,9 +105,9 @@ function submitRequest() {
         var data = eval("(" + data + ")");
         if (data.code === "success") {
             location.href = "cash_history.html";
-        }else{
-			alert(data.message);
-		}
+        } else {
+            alert(data.message);
+        }
     }).fail(function (xhr, status) {
         console.log("fail")
         alert("获取验证码失败");
