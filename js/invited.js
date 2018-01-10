@@ -45,13 +45,16 @@ $(function () {
             async: false,
             dataType: "json",
             success: function (data) {
-                if (data.code == 'success') {
-                    setTime();
-                } else {
-                    alert("获取失败：" + data.message);
-                }
+                // console.log('数据信息');
+                // console.log(data);
+                // if (data.code == 'success') {
+                //     setTime();
+                // } else {
+                //     alert("获取失败：" + data.message);
+                // }
             }
         });
+        setTime();
     });
 
     $('#submit_register').click(function () {
@@ -70,6 +73,7 @@ $(function () {
             return false;
         }
         var pwdString = encryptPwd(pwd);
+
         //邀请注册
         $.ajax({
             url: DOMAIN + INVITE_REGISTER,
@@ -84,7 +88,8 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.code == 'success') {
-                    setTime();
+                    alert('注册成功');
+                    // setTime();
                 } else {
                     alert("获取失败：" + data.message);
                 }
@@ -93,13 +98,14 @@ $(function () {
     });
 
     function setTime() {
+        alert('进来了')
         isHead = false;
         var altime = 60000;
         var interval = setInterval(function () {
             var time = altime/1000;
             $('#get_code').html( time + "秒后重试");
             altime -= 1000;
-            if (altime <= 0){
+            if (altime < 0){
                 $('#get_code').html( '重新获取');
                 clearInterval(interval);
                 isHead = true;
