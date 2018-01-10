@@ -60,8 +60,6 @@ function withDrawSendCode() {
 function submitRequest() {
     //验证金额
     var amount = parseFloat($('#amount').val());
-
-    console.log(parseFloat($('#balanceAvailable').text()) + ":::" + amount)
     if (amount < 200 || parseFloat($('#balanceAvailable').text()) < amount) {
         console.log("单次提现金额必须大于200")
         alert("单次提现金额必须大于200");
@@ -79,20 +77,14 @@ function submitRequest() {
     var verifyCode = $.trim($('#verifyCode').val());
     var countName = $.trim($('#countName').val());
 
-    console.log(bankAccount + "::" + verifyCode + "::" + countName)
-
     if (bankAccount.length <= 0 || verifyCode.length <= 0 || countName.length <= 0) {
         console.log("请输将信息录入完整")
         alert("请输将信息录入完整");
         return false;
     }
 
-    // userID 	int 	Y 		用户ID
-    // code 	string 	Y 		验证码
-    // price 	string 	Y 		提现金额
-    // backName 	string 	Y 		银行开户名
-    // backCard
-
+    $("#submit").attr("onclick", null);
+    $("#submit").css("background-color", "grey");
 
     $.post(DOMAIN + CASH_REQUEST, {
         userID: getCookie(COOKIE_NAME_USER_ID),
@@ -101,7 +93,8 @@ function submitRequest() {
         backName: countName,
         backCard: bankAccount
     }).done(function (data) {
-        console.log(data);
+        $("#submit").attr("onclick", "submitRequest()");
+        $("#submit").css("background-color", "#2d70e1");
         var data = eval("(" + data + ")");
         if (data.code === "success") {
             location.href = "cash_history.html";
@@ -109,8 +102,9 @@ function submitRequest() {
             alert(data.message);
         }
     }).fail(function (xhr, status) {
-        console.log("fail")
         alert("获取验证码失败");
     }).always(function () {
+        $("#submit").attr("onclick", "submitRequest()");
+        $("#submit").css("background-color", "#2d70e1");
     });
 }
