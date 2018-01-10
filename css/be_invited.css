@@ -22,3 +22,84 @@ html,body{width: 100%;height: 100%;}
 .main form>div:last-of-type{background-color: #ff770d;border: none;}
 .main form>div:last-of-type input{display: block;width: 100%;height: 100%;font-size: 0.7111111111111111rem;color: #fff;}
 /* main end */
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html, body {
+    font-size: 20px;
+}
+.hide {
+    display: none;
+}
+.mark-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mark-black {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.mark-content {
+    width: 10rem;
+    position: absolute;
+    z-index: 11000;
+    left: 50%;
+    margin-left: -5rem;
+    margin-top: -59px;
+    top: 50%;
+    text-align: center;
+    border-radius: 0.35rem;
+    -webkit-transform: translate3d(0, 0, 0) scale(1.185);
+    transform: translate3d(0, 0, 0) scale(1.185);
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    color: #3d4145;
+}
+.mark-time {
+    padding: 0.55rem;
+    height: 2rem;
+    border-radius: 0.35rem 0.35rem 0.35rem 0.35rem;
+    position: relative;
+    background: #e8e8e8;
+}
+.mark-button {
+    height: 2.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.mark-button > a {
+    width: 100%;
+    padding: 0 0.25rem;
+    height: 2.2rem;
+    font-size: 0.85rem;
+    line-height: 2.2rem;
+    text-align: center;
+    color: #0894ec;
+    background: #e8e8e8;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    border-radius: 0 0 0.35rem 0.35rem;
+    text-decoration: none;
+}

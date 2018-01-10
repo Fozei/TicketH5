@@ -5,6 +5,7 @@ $(function () {
         alert("无效参数");
         return false;
     }
+    
     //通过邀请人注册初始化数据
     $.ajax({
         url: DOMAIN + INVITE_REGISTER_INIT,
@@ -88,8 +89,9 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.code == 'success') {
-                    alert('注册成功');
+                    // alert('注册成功');
                     // setTime();
+                    skip();
                 } else {
                     alert("获取失败：" + data.message);
                 }
@@ -101,13 +103,42 @@ $(function () {
         isHead = false;
         var altime = 60000;
         var interval = setInterval(function () {
-            var time = altime/1000;
-            $('#get_code').html( time + "秒后重试");
+            var time = altime / 1000;
+            $('#get_code').html(time + "秒后重试");
             altime -= 1000;
-            if (altime < 0){
-                $('#get_code').html( '重新获取');
+            if (altime < 0) {
+                $('#get_code').html('重新获取');
                 clearInterval(interval);
                 isHead = true;
+            }
+        }, 1000);
+    }
+
+    var wo;
+    function winopen() {
+        wo = window.open('invited.html', 'ssss', 'width=250,height=200');
+        wo.document.write('<h1 id="abc"></h1>');
+        wo.document.close();
+        winclose(10);
+    }
+
+
+    function skip() {
+        $('.mark-box').removeClass('hide')
+
+        var altime = 5000;
+        var $text = document.getElementById('time_box');
+
+        var interval = setInterval(function () {
+            if ((altime/1000) <= 0){
+                $text.innerText = "注册成功"+'\n' + '1秒后自动跳转';
+            } else {
+                $text.innerText = "注册成功"+'\n'+ (altime/1000) + '秒后自动跳转';
+            }
+            altime -= 1000;
+            if (altime < 0){
+                clearInterval(interval);
+                window.location.href = "index.html";
             }
         }, 1000);
     }
