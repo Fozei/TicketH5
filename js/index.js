@@ -21,15 +21,6 @@ $(window).load(function () {
     }).always(function () {
         layer.closeAll('loading');
     });
-
-    // 初始化天气信息
-    // $.getJSON(WEATHER_REPORT, {
-    //   dataType: 'JSONP'
-    // }).done(function(data) {
-    //   console.log(data);
-    // }).fail(function() {
-    //   console.log("error");
-    // });
 });
 
 function requestSearchResult() {
@@ -39,11 +30,6 @@ function requestSearchResult() {
 function parseInitData(jsonData) {
     var catData = jsonData.catData;
     var recommendData = jsonData.recommendData;
-    // <li>
-    //   <img src="images/icon1.png"  alt="" />
-    //   <p><a href="#">体育</a></p>
-    // </li>
-
     $.each(catData, function bindData(index, item) {
         var catName = item.name;
         var catid = item.id;
@@ -74,20 +60,12 @@ function parseInitData(jsonData) {
         var id = item.id;
         var pic = item.pic;
 
-        var listBox = "<div class=\"listBox\">\n" +
-            "<div class=\"l-left\">\n" +
-            "<img src=\"" + pic + "\" onclick=\"goToDetail(" + id +
-            ")\"  alt=\"\" />\n" +
-            "</div>\n<div class=\"l-right\">\n" +
-            "<div class=\"title\" href=\"javascript:void(0);\" onclick=\"goToDetail(" + id +
-            ")\">" + title + "</div>\n" +
-            "<p class=\"desc\" onclick=\"goToDetail(" + id +
-            ")\">" + desc + "</p>\n<p class=\"button\" >\n" +
-            "<img onclick=\"goToDetail(" + id +
-            ")\" src=\"images/seebutton.jpg\"  alt=\"\" />\n" +
-            "<img onclick=\"goBooking(" + id +
-            ")\" src=\"images/bookingbutton.jpg\" class=\"bookingbutton\"/>\n" +
-            "</p>\n</div>\n<div class=\"clear\"></div>\n</div>";
+        var listBox = "<div class=\"listBox\"><div class=\"l-left\">" +
+            "<img src=\"" + pic + "\"onclick=\"goToDetail(" + id + ")\"/></div><div class=l-right>" +
+            "<div class=\"title\" onclick=\"goToDetail(" + id + ")\">" + title +
+            "</div><p class=\"desc\" onclick=\"goToDetail(" + id + ")\">" + desc + "</p>" +
+            "<p class=\"button\"><img src=\"images/seebutton.jpg\" onclick=\"goToDetail(" + id + ")\"/></div>" +
+            "<div class=\"clear\"></div></div>";
         $(".mainContent").append(listBox);
     });
 }
@@ -100,18 +78,8 @@ function goToDetail(id) {
     window.location.href = "detail.html?id=" + id;
 }
 
-function goBooking(id) {
-    window.location.href = "select.html?id=" + id;
-}
-
-function goToList_r(url) {
-    window.location.href = url;
-}
-
-
 function goUserCenter() {
-    // var uID = getCookie(COOKIE_NAME_USER_ID);
-    var uID = null;
+    var uID = getCookie(COOKIE_NAME_USER_ID);
     if (uID === null || uID === undefined) {
         location.href = "login.html";
     } else {

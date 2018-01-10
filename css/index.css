@@ -134,6 +134,7 @@
     height: 3.88148rem;
     float: left;
     overflow: hidden;
+    border-radius: 0.05rem;
 }
 
 .listBox .l-right {
@@ -142,14 +143,14 @@
     top: 0.3407rem;
     width: 7.6444rem;
     /*max-height: 3.6rem;*/
-    max-height: 4rem;
+    height: 4rem;
     float: left;
 }
 
 .listBox .l-right .title {
-    margin-top: 0.1777rem;
+    margin-top: 0.2rem;
+    width: 7.4963rem;
     color: #333333;
-    top: 0.5185rem;
     font-size: 0.56296rem;
     line-height: 0.56296rem;
     text-overflow: ellipsis;
@@ -160,29 +161,35 @@
 }
 
 .listBox .l-right .desc {
-    display: block;
-    margin-top: 0.2222rem;
+    margin-top: 0.2rem;
     width: 7.4963rem;
+    color: #333333;
+    font-size: 0.474rem;
+    line-height: 0.5333rem;
     max-height: 1.0666rem;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
     overflow: hidden;
-    color: #333333;
-    font-size: 0.474rem;
-    line-height: 0.5333rem;
+    -webkit-line-clamp: 2;
     font-weight: lighter;
 }
 
 .listBox .l-right .button {
-    margin-top: 0.3407rem;
+    position: absolute;
+    bottom:0;
+    height: 0.75rem;
+    width: 7.6444rem;
+    margin-bottom: 0.2rem;
+    line-height: 0.75rem;
 }
 
-.listBox .bookingbutton {
-    margin-left: 0.874rem;
+.button img {
+    float: right;
+    display: block;
     width: 3.259259rem;
     height: 0.74074rem;
+    vertical-align: middle;
 }
 
 .list_c_div {
