@@ -63,7 +63,7 @@ $(function () {
       $.ajax({
         url: DOMAIN + AGENT_EARNING,
         data: {
-          'userID':'PTRFUk5WVFRSMVRQ',
+          'userID':USERID,
           "page": page
         },
         beforeSend: function () {

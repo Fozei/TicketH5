@@ -40,7 +40,7 @@
 #more,#null,#loadOver{position: absolute;left: 0;right: 0;margin: 0 auto;bottom: 0.2962962962962963rem;width: 12rem;text-align: center;height: 0.7407407407407407rem;line-height:0.7407407407407407rem;display: none }
 #more img{width: 0.5777777777777778rem;height: 0.5777777777777778rem;vertical-align: middle;}
 #more span,#null span,#loadOver span{display: inline-block;color: #ccc;font-size: 0.3555555555555556rem;margin-left: 0.1481481481481481rem;vertical-align: middle;}
-.hint .tipListsTit span:nth-of-type(4),.tipListsCon ul li span:nth-of-type(4){width: 2.518518518518519rem;text-align: center;overflow-x: auto}
+.hint .tipListsTit span:nth-of-type(4),.tipListsCon ul li span:nth-of-type(4){width: 2.518518518518519rem;text-align: center;}
 .hint .tipListsTit span:nth-of-type(4) em{font-size: 0.4148148148148148rem;font-style:normal;}
 .tipLists ul li{width:12rem;height: 2.222222222222222rem;line-height: 2.222222222222222rem;border-top: 0.0296296296296296rem solid #ccc; }
 .tipLists ul li span{color: #1a1a1a;font-size: 0.562962962962963rem;display: block;text-align: center;height: 2.222222222222222rem;line-height: 2.222222222222222rem;}

@@ -24,7 +24,7 @@ $(function () {
     $.ajax({
       url: DOMAIN + ADD_RECOMMEND,
       data: {
-        'userID':'PTRFUk5WVFRSMVRQ',
+        'userID':USERID,
         "page": page
       },
       beforeSend: function () {
