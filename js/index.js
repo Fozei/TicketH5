@@ -80,7 +80,7 @@ function goToDetail(id) {
 
 function goUserCenter() {
     var uID = getCookie(COOKIE_NAME_USER_ID);
-    if (uID === null || uID === undefined) {
+    if (uID === null || uID === undefined || uID === "") {
         location.href = "login.html";
     } else {
         location.href = "user_center.html";
