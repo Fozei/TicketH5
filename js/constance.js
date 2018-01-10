@@ -33,3 +33,6 @@ var AGENT_EARNING = '/agentincome.php';//代理商收益
 var ADD_RECOMMEND = '/agentlist.php ';//累计推荐
 var AMEND_EDITUSER = '/edituser.php';//修改用户姓名、身份证
 var ADD_EARNING = '/income.php';//累计收益
+var TICKET_EXAMINE = '/checkseat.php';
+var TICKET_ADDORDER = '/addorder.php';
+var TICKET_ADDORDER = '/h5_get_qr.php';

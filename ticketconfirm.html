@@ -26,71 +26,41 @@
     <div class="header_r header_r_no_bg totalWidth">
         <img src="images/fanhui.png" onclick="history.back()" class="back-img back" alt=""/>
         订单确认
-        <span class="ft-cancel"  id="cancel">取消</span>
     </div>
     <div class="compert-img">
         <div class="tab-order">
             <p class="order-details">订单详情</p>
-            <div class="tab-order-details-all">
-                <p class="order-title">2017-2018赛季中国女子职业篮球职业联赛（WCBA）</p>
-                <div class="tab-order-li">
-                    <p class="tab-order-competition-schedule">比赛日程</p>
-                    <p class="tab-order-competition-schedule-details">山东队~山西队 2017年12月30日 周六 19:30 </p>
-                    <p class="clear-clear"></p>
-                </div>
-                <div class="tab-order-li ">
-                    <p class="tab-order-competition-schedule">比赛地点</p>
-                    <p class="tab-order-competition-schedule-details">蓬莱中心体育馆</p>
-                    <p class="clear-clear"></p>
-                </div>
-                <div class="tab-order-li">
-                    <p class="tab-order-competition-schedule">座位号</p>
-                    <p class="tab-order-competition-schedule-details">1区10排19座</p>
-                    <p class="clear-clear"></p>
-                </div>
-                <div class="tab-order-li">
-                    <p class="tab-order-competition-schedule">数 量</p>
-                    <p class="tab-order-competition-schedule-details">1张</p>
-                    <p class="clear-clear"></p>
-                </div>
-                <div class="tab-order-li">
-                    <p class="tab-order-competition-schedule">票 价</p>
-                    <p class="tab-order-competition-schedule-price">650元</p>
-                    <p class="clear-clear"></p>
-                </div>
-                <img class="img-oder-line" src="images/order-line.jpg">
-            </div>
-
-
-            <div class="tab-order-details-all">
-                <p class="order-title">2017-2018赛季中国女子职业篮球职业联赛（WCBA）</p>
-                <div class="tab-order-li">
-                    <p class="tab-order-competition-schedule">比赛日程</p>
-                    <p class="tab-order-competition-schedule-details">山东队~山西队 2017年12月30日 周六 19:30 </p>
-                    <p class="clear-clear"></p>
-                </div>
-                <div class="tab-order-li ">
-                    <p class="tab-order-competition-schedule">比赛地点</p>
-                    <p class="tab-order-competition-schedule-details">蓬莱中心体育馆</p>
-                    <p class="clear-clear"></p>
-                </div>
-                <div class="tab-order-li">
-                    <p class="tab-order-competition-schedule">座位号</p>
-                    <p class="tab-order-competition-schedule-details">1区10排19座</p>
-                    <p class="clear-clear"></p>
-                </div>
-                <div class="tab-order-li">
-                    <p class="tab-order-competition-schedule">数 量</p>
-                    <p class="tab-order-competition-schedule-details">1张</p>
-                    <p class="clear-clear"></p>
-                </div>
-                <div class="tab-order-li">
-                    <p class="tab-order-competition-schedule">票 价</p>
-                    <p class="tab-order-competition-schedule-price">650元</p>
-                    <p class="clear-clear"></p>
-                </div>
-                <!--<img class="img-oder-line" src="images/order-line.jpg">-->
-            </div>
+			<div id="orderContent">
+				<div class="tab-order-details-all">
+					<p class="order-title"></p>
+					<div class="tab-order-li">
+						<p class="tab-order-competition-schedule">比赛日程</p>
+						<p class="tab-order-competition-schedule-details"> </p>
+						<p class="clear-clear"></p>
+					</div>
+					<div class="tab-order-li ">
+						<p class="tab-order-competition-schedule">比赛地点</p>
+						<p class="tab-order-competition-schedule-details"></p>
+						<p class="clear-clear"></p>
+					</div>
+					<div class="tab-order-li">
+						<p class="tab-order-competition-schedule">座位号</p>
+						<p class="tab-order-competition-schedule-details"></p>
+						<p class="clear-clear"></p>
+					</div>
+					<div class="tab-order-li">
+						<p class="tab-order-competition-schedule">数 量</p>
+						<p class="tab-order-competition-schedule-details">1张</p>
+						<p class="clear-clear"></p>
+					</div>
+					<div class="tab-order-li">
+						<p class="tab-order-competition-schedule">票 价</p>
+						<p class="tab-order-competition-schedule-price"></p>
+						<p class="clear-clear"></p>
+					</div>
+					<img class="img-oder-line" src="images/order-line.jpg">
+				</div>
+			</div>
         </div>
 
         <!--<div class="tab-order margin-top">-->
@@ -100,7 +70,7 @@
 
         <!--</div>-->
         <div class="order-confimBox">
-            <!--<p class="order-play-classfiy">验证支付</p>-->
+            <p class="order-play-classfiy">验证支付</p>-->
             <!--<p class="order-play-input-tel"><input type="number" class="order-input-tel" id="tel_num"-->
                                                    <!--placeholder="请输入手机号码"/>-->
                 <!--&lt;!&ndash;<img src="images/del.png"  class="del" alt="del" />&ndash;&gt;-->
@@ -108,7 +78,7 @@
                 <!--<img id="img_clear" class="img-imput-tel" src="images/delete.png"/></p>-->
             <!--<p class="order-play-input-code"><input type="number" class="order-input-tel" id="code_num"-->
                                                     <!--placeholder="请输入验证码"/>-->
-                <!--<span class="getcode" id="get_ma">获取验证码</span>-->
+                <!--<span class="getcode" id="get_ma">获取验证码</span>
             <!--</p>-->
             <p class="order-play-classfiy">选择支付方式</p>
                 <span class="price-info totalPrice">￥<span class="totalPrice" id="totalPrice2">1999</span></span>
@@ -138,6 +108,9 @@
     </div>
 
 </body>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script src="js/checklogin.js"></script>
 <script src="js/layer/layer.js"></script>
 <script src="js/confim.js"></script>
 <!--<script src="js/ticket-order.js"></script>-->

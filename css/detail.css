@@ -99,6 +99,9 @@ td {
     border-right: 0.05rem solid #000;
     border-bottom: 0.05rem solid #000;
 }
+table a{
+	color: #545454;
+}
 
 .active {
     border: 0.05rem solid #2c70e1;

@@ -1,18 +1,11 @@
 var targetId;
+targetId = getQueryString('id');
+if (targetId=='' || targetId==null)
+{
+	location.href='index.html';
+}
 
 function parseDetailData(data) {
-    // code: "success"
-    // data: {…}
-    // address: "北京体育管"
-    // bookingtime: "2017-12-07"
-    // detail: "发给对方"
-    // endtime: "2017-12-20"
-    // id: "5"
-    // pic: "http://192.168.10.27/mall/uploadfile/product/1/2017/12/06/1512534434.jpg"
-    // price1: "565.00"
-    // price2: "987.00"
-    // starttime: "2017-12-21"
-    // title: "演唱会55"
     if (data.code === "success") {
         var address = data.data.address;
         var pic = data.data.pic;
@@ -46,7 +39,7 @@ function parseDetailData(data) {
             var turn = timeList[i].turn;
             var team = timeList[i].team;
             var time = timeList[i].time;
-            table.append('<tr  matchId=' + i + '><td>' + (i + 1) + '</td><td>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td>选座购票</td></tr>');
+            table.append('<tr  matchId=' + targetId + ' timeID='+timeList[i]['id']+'><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID='+timeList[i]['id']+'>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td><a href="seat.html?ticketID='+targetId+'&timeID='+timeList[i]['id']+'">选座购票</a></td></tr>');
         }
 
         $("#notice").html(desc);
@@ -56,17 +49,9 @@ function parseDetailData(data) {
 }
 
 
-function goBooking(matchId) {
-    var is_buy = $('#is_buy').val();
-    if (is_buy === 'Y') {
-        window.location.href = "select.html?id=" + matchId;
-    } else {
-        layer.msg('比赛已结束，无法购买');
-    }
-}
 
-function show() {
-}
+
+
 
 $(function () {
     layer.open({type: 2});
@@ -75,9 +60,9 @@ $(function () {
         layer.closeAll('loading');
         alert("数据出错");
     } else {
-        targetId = getQueryString();
-        if (targetId !== null) {
-            targetId = 16;
+
+        if (targetId != null) {
+            
             $.post(DOMAIN + TICKET_DETAIL, {
                 id: targetId
             }).done(function (data) {
@@ -93,10 +78,5 @@ $(function () {
             alert("数据出错");
         }
     }
-    //赛事日程点击事件
-    $('.matchTable').delegate('tr', 'click', function (ev) {
-        $(this).addClass("active");
-        $(this).find("td:last").addClass("buttonSel");
-        goBooking($(this).attr("matchId"));
-    });
+
 });

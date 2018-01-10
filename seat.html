@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>选座购票</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/seat.css" />
+	</head>
+
+	<body>
+		<!--
+    	author：pgc
+    	time：2018-01-03
+    	describe：Choose a ticket 1.0.0
+   -->
+		<div class="main">
+
+			<!-- pgc head start -->
+			<div class="head">
+				<div class="mobileTit"></div>
+				<div class="header">
+					<i></i>
+					<span>选座购票</span>
+				</div>
+			</div>
+			<!-- head end -->
+			<!-- pgc seating Plan start -->
+			<div class="seatingPlan">
+				<div class="seatingPlanTit">蓬莱市体育场馆座位图</div>
+				<div class="seatingPlanCon">
+					<div class="areaA1" name="A1"></div>
+					<div class="areaA2" name="A2"></div>
+					<div class="areaA3" name="A3"></div>
+					<div class="areaA4" name="A4"></div>
+					<div class="areaA5" name="A5"></div>
+					<div class="areaA6" name="A6"></div>
+					<div class="areaA7" name="A7"></div>
+					<div class="areaA8" name="A8"></div>
+					<div class="areaA9" name="A9"></div>
+					<div class="areaA10" name="A10"></div>
+					<div class="areaA11" name="A11"></div>
+					<div class="areaA12" name="A12"></div>
+					<div class="areaA13" name="A13"></div>
+					<div class="areaA14" name="A14"></div>
+					<div class="areaB1" name="B1"></div>
+					<div class="areaB2" name="B2"></div>
+					<div class="areaB3" name="B3"></div>
+					<div class="areaB4" name="B4"></div>
+					<div class="areaB5" name="B5"></div>
+					<div class="areaB6" name="B6"></div>
+					<div class="areaB7" name="B7"></div>
+					<div class="areaB8" name="B8"></div>
+
+					<div class="areaC1" name="C1"></div>
+					<div class="areaC2" name="C2"></div>
+					<div class="areaC3" name="C3"></div>
+					<div class="areaC4" name="C4"></div>
+					<div class="areaC5" name="C5"></div>
+					<div class="areaC6" name="C6"></div>
+					<div class="areaC7" name="C7"></div>
+					<div class="areaC8" name="C8"></div>
+					<div class="areaC9" name="C9"></div>
+					<div class="areaC10" name="C10"></div>
+					<div class="areaC11" name="C11"></div>
+					<div class="areaC12" name="C12"></div>
+					
+					<div class="areaD1" name="D1"></div>
+					<div class="areaD2" name="D2"></div>
+					<div class="areaD3" name="D3"></div>
+					<div class="areaD4" name="D4"></div>
+					<div class="areaD5" name="D5"></div>
+					<div class="areaD6" name="D6"></div>
+					<div class="areaD7" name="D7"></div>
+					<div class="areaD8 " name="D8"></div>
+					
+				</div>
+				<!--<div class="mark">
+					备注：标注排数的位置为过道
+					<span>为验票口</span>
+					<span>为门口</span>
+				</div>-->
+			</div>
+			<!-- seating Plan end -->
+			<!-- pgc seat start -->
+			<div class="seatCon">
+				<div class="seatTit">
+					<span id="checkedArea">A1</span>区座位选择：
+				</div>
+				<div class="seatList" id="box">
+					<div class="seatListCon">	
+					</div>
+				</div>
+				<div class="seatMark clearFix">
+					<div class="not">
+						<img src="images/not.png" />
+						<span>已售出座位</span>
+					</div>
+					<div class="optional">
+						<img src="images/optional.png" />
+						<span>可选择座位</span>
+					</div>
+				</div>
+			</div>
+			<div class="checkSeat" style="display:none;">
+				<div class="checkSeatTit seatTit" >
+					您选择了：
+				</div>
+				<div class="checkSeatList">
+					
+				</div>
+			</div>
+			<!-- seat end -->
+			<!-- pgc buy Button start -->
+			<div class="buy">
+				<input type="button" id="buyBtn" value="确定购买" />
+				<img src="images/submitbg.png" alt="">
+			</div>
+			<!-- buy Button end -->
+		</div>
+		<script type="text/javascript" src="js/auto.js"></script>
+		<script  type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+		<script src="js/layer/layer.js"></script>
+		<script type="text/javascript" src="js/constance.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/utils.js"></script>
+		<script src="js/checklogin.js"></script>
+		<script type="text/javascript" src="js/seat.js"></script>
+
+	</body>
+
+</html>
