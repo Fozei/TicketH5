@@ -51,6 +51,10 @@ function bindData(data) {
 
 }
 
+function goHomePage() {
+    location.href = "index.html";
+}
+
 function goCashRequest() {
     location.href = "cash_request.html";
 }
