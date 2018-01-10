@@ -83,30 +83,7 @@ $(function () {
             shade: [0.3, 'black'] //0.1透明度的白色背景
         });
 
-        //验证验证码
-        $.ajax({
-            url: DOMAIN + TICKET_VERIFY,
-            data: {
-                'ticketID': ticketID,
-                'orderNum': orderNum,
-                'timeID': timeID,
-                'payType': pay
-            },
-            type: "POST",
-            async: false,
-            dataType: "json",
-            success: function (data) {
-                layer.close(index);
-                if (data.code == 'error') {
-                    layer.msg(data.message);
-                    return false;
-                } else {
-                    location.href='qr-pay.html?ticketID='+ticketID+'&orderNum='+orderNum+'&timeID='+timeID+'&payType='+pay;
-                }
-
-
-            }
-        });
+       location.href='http://www.ewedo.net/ticket/api/h5wxpay.php?ticketID='+ticketID+'&orderNum='+orderNum+'&timeID='+timeID;
 
     })
     //交换支付方式

@@ -38,4 +38,3 @@ var FORGET_PWD = '/forgetpwd.php';//修改密码、忘记密码 验证验证码
 
 var TICKET_EXAMINE = '/checkseat.php';
 var TICKET_ADDORDER = '/addorder.php';
-var TICKET_ADDORDER = '/h5_get_qr.php';
