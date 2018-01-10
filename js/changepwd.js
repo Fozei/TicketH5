@@ -18,10 +18,11 @@ function resetPwd() {
     $('.submit').css("background-color", "grey");
 
     $.post(DOMAIN + FORGET_CHECK_VCODE, {
-        tel: phone,
-        code: code
+        code: code,
+        phone: phone
     }).done(function (data) {
         var data = eval("(" + data + ")");
+        console.log(data);
         if (data.code === "success") {
             location.href = "resetpwd.html" + "?var=" + encryptPwd(phone);
         }

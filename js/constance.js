@@ -33,8 +33,8 @@ var AGENT_EARNING = '/agentincome.php';//代理商收益
 var ADD_RECOMMEND = '/agentlist.php ';//累计推荐
 var AMEND_EDITUSER = '/edituser.php';//修改用户姓名、身份证
 var ADD_EARNING = '/income.php';//累计收益
-var FORGET_CHECK_VCODE = '/forgetvcode.php';//忘记密码验证码验证
-var FORGET_PWD = '/forgetpwd.php';//忘记密码-重置密码
+var FORGET_CHECK_VCODE = '/vcode.php';//修改密码、忘记密码 验证验证码
+var FORGET_PWD = '/forgetpwd.php';//修改密码、忘记密码 验证验证码
 
 var TICKET_EXAMINE = '/checkseat.php';
 var TICKET_ADDORDER = '/addorder.php';
