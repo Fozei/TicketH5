@@ -1,0 +1,151 @@
+
+.totalWidth {
+    width: 16rem;
+}
+
+.header_r_no_bg {
+    background: none;
+}
+
+.header_r {
+    /*background: url("../images/header_bg.jpg") no-repeat;*/
+    height: 2.3851rem;
+    line-height: 2.3851rem;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7111rem;
+    overflow: hidden;
+    /*background: url("../images/header_bg.jpg") no-repeat;*/
+    /*height: 161px;*/
+    /*line-height: 161px;*/
+    /*position: relative;*/
+    /*text-align: center;*/
+    /*color: #ffffff;*/
+    /*font-size: 48px;*/
+    /*overflow: hidden;*/
+}
+
+.header_r .back {
+    position: absolute;
+    left: 0.5777rem;
+    top: 0.8888rem;
+}
+
+.back-img {
+    width: 0.4444rem;
+    height: 0.7111rem;
+}
+.place_holder {
+    height: 0.4148148148rem;
+}
+
+.cat {
+    width: 14.2666666rem;
+    height: 4.829629629rem;
+    border-radius: 0.370370rem;
+    box-shadow: 0 0 0.592592rem #d5d4d4;
+    margin: 0.4148148148rem auto 0;
+    border: 1px white solid;
+    background-color: white;
+}
+
+.cat .c-left {
+    margin-top: 0.3555555555rem;
+    margin-left: 0.4740740740rem;
+    width: 4.844444444444rem;
+    height: 4.1185185185rem;
+    float: left;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.cat .title {
+    width: 8.08888888888rem;
+    height: 1.3333333333rem;
+    color: #333333;
+    margin-top: 0.518518518rem;
+    margin-left: 0.4rem;
+    top: 0.5162241rem;
+    font-size: 0.5629629rem;
+    line-height: 0.666666rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.cat a{
+	 color: #333333;
+}
+
+.cat .date {
+    margin-top: 0.2962962rem;
+    margin-left: 0.4rem;
+    height: 0.4740740740rem;
+    font-size: 0.4740740740rem;
+    line-height: 0.4740740740rem;
+    color: #333333;
+}
+.cat .date img{
+	width:0.4148148148rem;
+	height:0.4148148148rem;
+}
+
+.cat .area {
+    margin-top: 0.2962962rem;
+    margin-left:0.4rem;
+    height:0.4740740740rem;
+    font-size: 0.4740740740rem;
+    line-height: 0.4740740740rem;
+    color: #1A1A1A;
+}
+
+
+.cat .area img{
+	width:0.340740740rem;
+	height:0.444444444rem;
+}
+
+
+.cat .left .action {
+    height: 0.66666666666rem;
+    width: 8.08888888888rem;
+    margin-left: 0.4rem;
+    margin-top: 0.296296rem;
+}
+
+.action .price {
+    width: 4.296rem;
+    height: 0.666rem;
+}
+
+.price {
+    color: #EE1C63;
+    font-size: 0.4740740rem;
+    line-height: 0.666666rem;
+	margin-left:0.148148148rem;
+}
+
+.status {
+    color: #545454;
+    font-size: 0.4740740rem;
+    line-height: 0.666666rem;
+}
+
+.action .book {
+    color: #EE1C63;
+    font-size: 0.4740740rem;
+    line-height: 0.666666rem;
+    height: 0.666666rem;
+    width: 2.962962rem;
+}
+
+.action a{
+	color: #EE1C63;
+	font-size: 0.4740740rem;
+}
+.action .book .bookingImg{
+	 height: 0.444444rem;
+     width: 0.4740740rem;
+}

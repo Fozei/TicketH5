@@ -27,6 +27,7 @@ body {
 }
 .header_r{
     background:url("../images/header_bg.jpg") no-repeat;
+	background-size: 16rem 2.38518rem;
     height: 2.38518rem;
     line-height: 2.38518rem;
     position:relative;

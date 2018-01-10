@@ -31,6 +31,10 @@ header img {
     float: left;
     margin-left: 0.59rem;
 }
+.left_intro img{
+	width:5.2rem;
+	height:6.9777777rem;
+}
 
 .right_intro {
     width: 8.74rem;
@@ -63,6 +67,7 @@ header img {
     font-size: 0.56rem;
     font-weight: lighter;
     border: 0.01rem white solid;
+	background-color:#fff;
 }
 
 .dataBox .tip {
