@@ -21,14 +21,6 @@ $(function () {
 
 
 function withDrawSendCode() {
-    //不可点击
-    $("#getVerifyCode").attr("onclick", null);
-    $("#getVerifyCode").css("color", "grey");
-
-    setTimeout(function () {
-        $("#getVerifyCode").attr("onclick", "withDrawSendCode()");
-        $("#getVerifyCode").css("color", "#2d70e1");
-    }, 1000 * 60);
     //验证金额
     var amount = $.trim($('#amount').val());
     if (amount < 200 || parseFloat($('#balanceAvailable').text()) < amount) {
@@ -41,6 +33,15 @@ function withDrawSendCode() {
         alert("请输入正确的手机号");
         return false;
     }
+
+    //不可点击
+    $("#getVerifyCode").attr("onclick", null);
+    $("#getVerifyCode").css("color", "grey");
+
+    setTimeout(function () {
+        $("#getVerifyCode").attr("onclick", "withDrawSendCode()");
+        $("#getVerifyCode").css("color", "#2d70e1");
+    }, 1000 * 60);
 
     //获取验证码 GET_CASH_REQUEST_CODE
     $.post(DOMAIN + GET_CASH_REQUEST_CODE, {
