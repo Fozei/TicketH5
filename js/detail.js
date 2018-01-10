@@ -13,7 +13,6 @@ function parseDetailData(data) {
     // price2: "987.00"
     // starttime: "2017-12-21"
     // title: "演唱会55"
-    console.log(data)
     if (data.code === "success") {
         var address = data.data.address;
         var pic = data.data.pic;
@@ -67,23 +66,18 @@ function goBooking(matchId) {
 }
 
 function show() {
-    console.log("show")
 }
 
 $(function () {
     layer.open({type: 2});
     var url = window.location.search;
-    console.log(url);
     if (url.replace(/(^s*)|(s*$)/g, "").length === 0) {
         layer.closeAll('loading');
         alert("数据出错");
     } else {
         targetId = getQueryString();
-        console.log(targetId);
-        //fixme todo change "targetId !==null"
-        if (targetId === null) {
+        if (targetId !== null) {
             targetId = 16;
-            console.log(targetId + "::" + DOMAIN + TICKET_DETAIL);
             $.post(DOMAIN + TICKET_DETAIL, {
                 id: targetId
             }).done(function (data) {
@@ -103,7 +97,6 @@ $(function () {
     $('.matchTable').delegate('tr', 'click', function (ev) {
         $(this).addClass("active");
         $(this).find("td:last").addClass("buttonSel");
-        console.log($(this).attr("matchId") + ":::" + $(this))
         goBooking($(this).attr("matchId"));
     });
 });

@@ -22,7 +22,7 @@
 <div class="basicInfo clear" onclick="goUserSetting()">
     <img id="portrait" class="clear" src="images/portrait.png" onclick="selectImage()">
     <div>
-        <p id="phone">手机号</p>
+        <p id="phone"></p>
         <p id="discount"></p>
     </div>
 </div>
@@ -103,7 +103,6 @@
 </body>
 <script type="text/javascript">
     function selectImage() {
-        console.log("click")
         $("#imgSelector").click();
     }
 
@@ -163,9 +162,6 @@
 
     function setNewImage() {
         var imageSelector = document.getElementById("imgSelector");
-        console.log(imageSelector.value);
-        console.log(imageSelector.files);
-
         var picture;
         picture = imageSelector.value;
         if (!picture.match(/.jpg|.gif|.png|.bmp/i)) {

@@ -3,7 +3,6 @@
 
 $(function () {
     function submitName() {
-        console.log("submit name")
     }
     var surl_s = decodeURI(location.href);
     var name_data = surl_s.split("=")[1];

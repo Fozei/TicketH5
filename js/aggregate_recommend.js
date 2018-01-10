@@ -55,7 +55,6 @@ $(function () {
       onScrollMove: function(){
         static = 0;
         //如果上拉高度 大于 (内容高度 - wrapper高度) 50px 以上  且是未刷新状态时触发 ;
-        console.log(1)
         if(this.y <= ( this.wrapperH - this.scroller.clientHeight -50) && is_r == false){
           // console.log(this.y)
           // console.log(this.scroller.clientHeight)
@@ -77,7 +76,6 @@ $(function () {
             }
             //这里表示渲染完成后刷新wrapper
             setTimeout(function(){
-              console.log("刷新wrapper");
               //显示加载成功状态图标 (没有更多数据时候的提示作用)
               static = 2;
               setTimeout(function(){

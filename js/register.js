@@ -1,6 +1,5 @@
 function getVerifyCode() {
     var phone = $("#phone").val();
-    console.log("get code")
     if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone)))) {
         alert("请输入正确的账号或密码");
         return false;
@@ -9,7 +8,6 @@ function getVerifyCode() {
     $.post(DOMAIN + GET_REG_CODE, {
         tel: phone
     }).done(function (data) {
-        console.log(data);
     }).fail(function (xhr, status) {
         alert("获取验证码失败");
     }).always(function () {
@@ -50,7 +48,6 @@ function register() {
         pwd1: encryedPwd,
         pwd2: encryedPwd
     }).done(function (data) {
-        console.log(data);
         var data = eval("(" + data + ")");
         if (data.code === "success") {
             location.href = "index.html";

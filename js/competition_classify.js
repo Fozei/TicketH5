@@ -17,7 +17,6 @@ $(function () {
         var data_r=data.catData;
         var l=data_r.length;
         var str='';
-        console.log(data.ctitle)
 
         $('#cat_titile').html(data.ctitle);
         for(var i=0;i<l;i++){
@@ -54,7 +53,5 @@ $(function () {
       }
     })
   }
-
-  console.log(catId)
 
 })

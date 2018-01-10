@@ -28,8 +28,7 @@
     }
 </script>
 <script type="text/javascript"> function setImagePreview() {
-    if (true) return alert("您上传的图片格式不正确，请重新选择！"), console.log("hello"), console.log("hello 2"),!1;
-    console.log("aftre return")
+    if (true) return alert("您上传的图片格式不正确，请重新选择！"),!1;
     var preview, img_txt, localImag, file_head = document.getElementById("file_head"), picture = file_head.value;
     if (!picture.match(/.jpg|.gif|.png|.bmp/i)) return alert("您上传的图片格式不正确，请重新选择！"), !1;
     if (preview = document.getElementById("preview"), file_head.files && file_head.files[0]) preview.style.display = "block", preview.style.width = "63px", preview.style.height = "63px", preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]); else {

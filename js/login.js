@@ -13,7 +13,6 @@ function login() {
         pwd: pwdString
     }).done(function (data) {
         var data = eval("(" + data + ")");
-        console.log(data);
         if (data.code === "success") {
             setCookie(COOKIE_NAME_USER_ID, data.userID, 30);
             location.href = "index.html";

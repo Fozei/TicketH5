@@ -14,14 +14,13 @@ $(window).load(function() {
   var jqxhr = $.post(DOMAIN + TICKET_CAT, {
     page: 1
   }).done(function(data) {
+    // return
     var obj = eval("(" + data + ")"); // 将json转换为对象 json 格式{status:'1',data:'2'}
     parseInitData(obj);
   }).fail(function(xhr, status) {
     alert("获取数据失败，请刷新重试");
-    console.log("onload error");
   }).always(function() {
     layer.closeAll('loading');
-    console.log("onload always");
   });
 
   // 初始化天气信息
@@ -35,13 +34,17 @@ $(window).load(function() {
 });
 
 function requestSearchResult() {
-  console.log("requestSearchResult with key words :" + $("#keyword").val());
   window.location.href = "list.html?keyword=" + $("#keyword").val();
 }
 
 function parseInitData(jsonData) {
   var catData = jsonData.catData;
   var recommendData = jsonData.recommendData;
+  // <li>
+  //   <img src="images/icon1.png"  alt="" />
+  //   <p><a href="#">体育</a></p>
+  // </li>
+
   $.each(catData, function bindData(index, item) {
     var catName = item.name;
     var catid = item.id;
@@ -91,17 +94,14 @@ function parseInitData(jsonData) {
 }
 
 function goToList(catID) {
-  console.log("catID :" + catID);
   window.location.href = "competition_classify.html?catID=" + catID;
 }
 
 function goToDetail(id) {
-  console.log(id);
   window.location.href = "detail.html?id=" + id;
 }
 
 function goBooking(id) {
-  console.log("go booking : " + id);
   window.location.href = "select.html?id=" + id;
 }
 function goToList_r(url){

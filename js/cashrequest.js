@@ -5,10 +5,8 @@ $(function () {
     $.post(DOMAIN + GET_USR_LIST, {
         userID: getCookie(COOKIE_NAME_USER_ID),
     }).done(function (data) {
-        console.log(data);
         var data = eval("(" + data + ")");
         if (data.code === "success") {
-            console.log(data);
             userPhone = data.userData.phone;
             $.trim($('#phone').val(userPhone));
             $('#balanceAvailable').text(data.userData.balance);
@@ -23,7 +21,6 @@ $(function () {
 
 
 function withDrawSendCode() {
-    console.log("click")
     //不可点击
     $("#getVerifyCode").attr("onclick", null);
     $("#getVerifyCode").css("color", "grey");
@@ -33,9 +30,8 @@ function withDrawSendCode() {
         $("#getVerifyCode").css("color", "#2d70e1");
     }, 1000 * 60);
     //验证金额
-    console.log(parseFloat($('#balanceAvailable').text()) + ":::" + amount)
+    var amount = $.trim($('#amount').val());
     if (amount < 200 || parseFloat($('#balanceAvailable').text()) < amount) {
-        console.log("单次提现金额必须大于200")
         alert("单次提现金额必须大于200");
         return;
     }
@@ -50,7 +46,6 @@ function withDrawSendCode() {
     $.post(DOMAIN + GET_CASH_REQUEST_CODE, {
         userID: getCookie(COOKIE_NAME_USER_ID)
     }).done(function (data) {
-        console.log(data);
     }).fail(function (xhr, status) {
         alert("获取验证码失败");
     }).always(function () {
@@ -61,7 +56,6 @@ function submitRequest() {
     //验证金额
     var amount = parseFloat($('#amount').val());
     if (amount < 200 || parseFloat($('#balanceAvailable').text()) < amount) {
-        console.log("单次提现金额必须大于200")
         alert("单次提现金额必须大于200");
         return;
     }
@@ -78,7 +72,6 @@ function submitRequest() {
     var countName = $.trim($('#countName').val());
 
     if (bankAccount.length <= 0 || verifyCode.length <= 0 || countName.length <= 0) {
-        console.log("请输将信息录入完整")
         alert("请输将信息录入完整");
         return false;
     }

@@ -11,7 +11,6 @@ $(function () {
         dataType: "json",
         success: function (data) {
             // layer.close(index);
-            console.log('data:'+data);
             if (data.code == 'success') {
 				if (data.list==0)
 				{
@@ -28,7 +27,6 @@ $(function () {
         // console.log('data.list:'+data.list[0].matchName);
         var htmls = '';
         $.each(data, function (v) {
-            console.log(v+'data.list------:'+data[v].matchName);
             var p_html = getdata(data[v].seatList);
             htmls += "<div class='page'> "+
                 "<span class='sp-ft-title'>"+data[v].matchName+"<span class='sp-ft-details'>&nbsp&nbsp比赛赛事：</span><span class=''>"+data[v].team+"</span></span>"+
@@ -54,7 +52,6 @@ $(function () {
     function getdata(data) {
         var p_html = '';
         $.each(data, function (p) {
-            console.log("---"+p);
             p_html +=  "<p style='font-size: 0.474rem; color: #808080;letter-spacing: 0.15rem;'>座位号：<span style='font-size: 0.474rem; color: #1a1a1a;letter-spacing: 0rem;'>"+data[p].areaName+'区'+data[p].matchseat_line+'排'+ data[p].matchseat_column+'座'+"</span></p>" ;
         });
         return p_html;

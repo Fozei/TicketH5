@@ -1,7 +1,6 @@
 var userID = getQueryString('key');
 var isHead = true;
 $(function () {
-    console.log('得到的数据：' + userID);
     if (userID == "" || userID == null) {
         alert("无效参数");
         return false;
@@ -47,7 +46,6 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.code == 'success') {
-                    console.log(data);
                     setTime();
                 } else {
                     alert("获取失败：" + data.message);
@@ -86,7 +84,6 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.code == 'success') {
-                    console.log(data);
                     setTime();
                 } else {
                     alert("获取失败：" + data.message);

@@ -233,7 +233,6 @@ function contentDown(secondsLeft) {
     }
     $('#seconds').text(secondsLeft);
     secondsLeft -= 1;
-    console.log($('#seconds') + secondsLeft);
     setTimeout(function () {
         contentDown(secondsLeft);
     }, 1000);

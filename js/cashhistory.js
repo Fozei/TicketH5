@@ -3,7 +3,6 @@ $(function () {
     $.post(DOMAIN + CASH_HISTORY, {
         userID: getCookie(COOKIE_NAME_USER_ID),
     }).done(function (data) {
-        console.log(data);
         var data = eval("(" + data + ")");
         if (data.code === "success") {
             initView(data);
@@ -17,15 +16,10 @@ $(function () {
 });
 
 function initView(data) {
-    console.log(data);
-
     // data.list.map(function (t, number, ts) {
     //     console.log(t + "::" + number + "::" + ts)
     // });
-
     $(data.list).each(function (index, dataItem) {
-        console.log(dataItem.money);
-
         var status = parseInt(dataItem.status);
         var remark, className;
         switch (status) {
