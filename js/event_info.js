@@ -4,7 +4,6 @@ $(function () {
     shade: [0.3, 'black'] //0.1透明度的白色背景
   });
   var catId =getQueryString('catID')
-  console.log(catId)
   var page = 1;
   var key = '';
   eventView(catId,page,'')
@@ -19,15 +18,12 @@ $(function () {
         keyword:key
       },
       success: function (data) {
-        console.log(data)
         var data = eval("(" + data + ")");
         // var data_r=data.catData;
         var dataList=data.list;
 
         var le = dataList.length;
         var str='';
-        console.log(dataList)
-        console.log(le)
 
         $('.header .title').text(data.ctitle)
         // data.list
@@ -52,7 +48,6 @@ $(function () {
 
       },
       error: function (error) {
-        console.log(error)
 
       }
     })
