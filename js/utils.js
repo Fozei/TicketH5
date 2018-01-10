@@ -59,6 +59,7 @@ function decodePwd(str) {
     var s5 = decode64(s4);
     //2 反转
     var s6 = s5.split("").reverse().join("");
+    return s6.substr(0, s6.length - 3);
 }
 
 

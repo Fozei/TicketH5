@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/changepwd.css"/>
     <script src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/changepwd.js"></script>
 </head>
 
@@ -30,12 +32,12 @@
     <div class="inputBox">
         <img src="images/mima.jpg" style="">
         <input id="verifyCode" placeholder="请输入验证码"/>
-        <span onclick="getVerifyCode()" class="getVerifyCode">获取验证码</span>
+        <span id="getVerifyCode" onclick="getVerifyCode()" class="getVerifyCode">获取验证码</span>
     </div>
 </div>
 <!--下一步-->
 <div class="inputBox-p">
-    <div onclick="rersetPwd()" class="submit inputBox">
+    <div onclick="resetPwd()" class="submit inputBox">
         下一步
     </div>
 </div>

@@ -28,11 +28,14 @@ var CAT_LIST = '/catlist.php';
 var USER_ORDER_LIST = '/orderlist.php';//我的订单
 var INVITE_REGISTER = '/invitereg2.php';//邀请注册
 var INVITE_REGISTER_INIT = '/invitereg1.php';//通过邀请人注册初始化数据
-var INVITE_FRIEND= '/invitereg.php';//邀请好友
+var INVITE_FRIEND = '/invitereg.php';//邀请好友
 var AGENT_EARNING = '/agentincome.php';//代理商收益
 var ADD_RECOMMEND = '/agentlist.php ';//累计推荐
 var AMEND_EDITUSER = '/edituser.php';//修改用户姓名、身份证
 var ADD_EARNING = '/income.php';//累计收益
+var FORGET_CHECK_VCODE = '/forgetvcode.php';//忘记密码验证码验证
+var FORGET_PWD = '/forgetpwd.php';//忘记密码-重置密码
+
 var TICKET_EXAMINE = '/checkseat.php';
 var TICKET_ADDORDER = '/addorder.php';
 var TICKET_ADDORDER = '/h5_get_qr.php';

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/changepwd.css"/>
     <script src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
-    <script src="js/register.js"></script>
+    <script src="js/constance.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/resetpwd.js"></script>
 </head>
 
 <body>
@@ -22,20 +24,19 @@
     <div class="inputBox">
         <img src="images/shouji.jpg" style="">
         <input id="phone" placeholder="请输入手机号"/>
-
     </div>
 </div>
-<!--再次输入密码-->
+<!--输入密码-->
 <div class="inputBox-p">
     <div class="inputBox">
         <img src="images/mima.jpg" style="">
-        <input id="pwd2" type="password" placeholder="再次输入登录密码"/>
+        <input id="pwd" type="password" placeholder="输入登录密码"/>
 
     </div>
 </div>
 <!--下一步-->
 <div class="inputBox-p">
-    <div onclick="register()" class="submit inputBox">
+    <div id="finish" onclick="finish()" class="submit inputBox">
         完成
     </div>
 </div>
