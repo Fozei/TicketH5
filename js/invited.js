@@ -98,7 +98,6 @@ $(function () {
     });
 
     function setTime() {
-        alert('进来了')
         isHead = false;
         var altime = 60000;
         var interval = setInterval(function () {
