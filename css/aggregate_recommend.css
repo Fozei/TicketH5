@@ -1,7 +1,7 @@
 /* 2018.01.08 */
 /* pgc head start */
 .myAgent{width: 100%;height: 100%;}
-.myAgent .head{position: relative;padding-bottom: 2.148148148148148rem;}
+.myAgent .head{position: relative;padding-bottom: 2.148148148148148rem;background-color: #3f7de6}
 .myAgent .head .header{position: fixed;z-index: 9;left: 0;top: 0;width: 16rem;height: 2.148148148148148rem;line-height: 2.148148148148148rem;text-align: center;background-image: url(../images/agentheadbg.jpg);background-size: 16rem  2.148148148148148rem;background-repeat: no-repeat;background-position: left top;font-size: 0.7111111111111111rem;color: #fff; }
 .myAgent .head .backUp{position: absolute;left:0.5481481481481481rem;width: 0.8592592592592593rem;height: 1.007407407407407rem;top:0;bottom: 0;margin: auto;}
 .myAgent .head .backUp:after,.myAgent .head .backUp:before{content: '';position: absolute;left: 0;width:0.4444444444444444rem ;height: 0.0444444444444444rem;background-color: #fff;transform-origin: left  center;}
@@ -35,11 +35,12 @@
 .hint .tipListsTit span:nth-of-type(3),.tipLists ul li span:nth-of-type(3){width: 4.074074074074074rem;}
 .tipListsCon{height: 18.01481481481481rem;overflow-y: auto;}
 .tipListsCon>ul {position: relative;padding-bottom: 1.185185185185185rem;}
-#more{position: absolute;left: 0;right: 0;margin: 0 auto;bottom: 40px;width: 12rem;text-align: center;height: 0.5925925925925926rem;line-height: 0.5925925925925926rem;display: flex; justify-content: center;  }
-#more img{width: 0.5777777777777778rem;height: 0.5777777777777778rem;display: block}
-#more span{display: block;color: #ccc;font-size: 0.3555555555555556rem;margin-left: 0.1481481481481481rem;}
+#more,#null,#loadOver{position: absolute;left: 0;right: 0;margin: 0 auto;bottom: 0.2962962962962963rem;width: 12rem;text-align: center;height: 0.7407407407407407rem;line-height:0.7407407407407407rem;display: none }
+#more img{width: 0.5777777777777778rem;height: 0.5777777777777778rem;vertical-align: middle;}
+#more span,#null span,#loadOver span{display: inline-block;color: #ccc;font-size: 0.3555555555555556rem;margin-left: 0.1481481481481481rem;vertical-align: middle;}
 .hint .tipListsTit span:nth-of-type(4),.tipLists ul li span:nth-of-type(4){width: 1.703703703703704rem;text-align: right;}
 .tipLists ul li{width:12rem;height: 2.222222222222222rem;line-height: 2.222222222222222rem;border-top: 0.0296296296296296rem solid #ccc; }
 .tipLists ul li span{color: #1a1a1a;font-size: 0.562962962962963rem;display: block;text-align: center;height: 2.222222222222222rem;line-height: 2.222222222222222rem;}
 
+.layui-layer-loading .layui-layer-content{margin: 0 auto;}
 /* hint end */

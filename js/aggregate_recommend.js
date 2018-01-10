@@ -9,100 +9,109 @@ $('.head .backUp').on('touchstart',function(e) {
 var myscroll;
 var is_r = false;
 var static = '';
-var num = 0;
-var total = 50;
-$('#num').text(total)
-var lis  = [
-              {"time":"2017.12.12/16:58","tel":"187****3155","rank":"一级"},
-              {"time":"2017.12.12/16:58","tel":"187****3155","rank":"一级"},
-              {"time":"2017.12.12/16:58","tel":"187****3155","rank":"一级"},
-              {"time":"2017.12.12/16:58","tel":"187****3155","rank":"一级"},
-              {"time":"2017.12.12/16:58","tel":"187****3155","rank":"一级"},
-              {"time":"2017.12.12/16:58","tel":"187****3155","rank":"一级"},
-              {"time":"2017.12.12/16:58","tel":"187****3155","rank":"一级"},
-              {"time":"2017.12.12/16:58","tel":"187****3155","rank":"一级"}
-]
-var page=1,pageCount=2;
-function loadMore() {
-  $(lis).each(function (i,item) {
-    num++
-    $('.tipListsCon>ul').append(' <li>\n' +
-      '                    <span>'+num+'</span>\n' +
-      '                    <span>'+item.time+'</span>\n' +
-      '                    <span>'+item.tel+'</span>\n' +
-      '                    <span>'+item.rank+'</span>\n' +
-      '                </li>')
-  })
-
-}
+var num = 0;//序号
+var page = 1
+var pageNull = null;
 $('#more').hide();
 $('#null').hide();
 $('#loadOver').hide();
-$(lis).each(function (i,item) {
-  num++
-  $('.tipListsCon>ul').append(' <li>\n' +
-    '                    <span>'+num+'</span>\n' +
-    '                    <span>'+item.time+'</span>\n' +
-    '                    <span>'+item.tel+'</span>\n' +
-    '                    <span>'+item.rank+'</span>\n' +
-    '                </li>')
-})
+
 $(function () {
-    setTimeout(function(){
+  layer.load(0, {
+    shade: [0.3, 'black']
+  })
+  function loadMore(page) {
+    $.ajax({
+      url: DOMAIN + ADD_RECOMMEND,
+      data: {
+        'userID':'PTRFUk5WVFRSMVRQ',
+        "page": page
+      },
+      beforeSend: function () {
+        $('#more').show();
+      },
+      type: "POST",
+      async: false,
+      dataType: "json",
+      success: function (data) {
+        // console.log(data)
+        if (data.code == 'success') {
+          $('#num').text(data.totalCount)
+          $(data.agentData).each(function (i,item) {
+            num++
+            $('.tipListsCon>ul').append(' <li>\n' +
+                  '                    <span>'+num+'</span>\n' +
+                  '                    <span>'+item.addtime+'</span>\n' +
+                  '                    <span>'+item.account+'</span>\n' +
+                  '                    <span>'+item.discount+'</span>\n' +
+                  '                </li>')
+          })
+          if(data.agentData == 0){
+            pageNull = false
+          }
+        } else {
+          console.log("获取失败：" + data.message);
+        }
+      },
+      complete: function () {
+        layer.closeAll();
+        $('#more').hide();
+      },
+      error: function (error) {
+        console.log(error)
+      }
+    });
+  }
+  loadMore(page)
+  setTimeout(function () {
     myscroll = new iScroll("wrapper",{
       topOffset: 0,
       //上拉时触发
       onScrollMove: function(){
-        static = 0;
         //如果上拉高度 大于 (内容高度 - wrapper高度) 50px 以上  且是未刷新状态时触发 ;
         if(this.y <= ( this.wrapperH - this.scroller.clientHeight -50) && is_r == false){
-          // console.log(this.y)
-          // console.log(this.scroller.clientHeight)
-          //正在加载状态
-          $('#more').show();
-          $('#more>img').show();
           is_r = true;
+          if(!pageNull){
+            return
+          }else{
+            page++;
+          }
           setTimeout(function(){
-            //这
-            // 里表示数据加载成功后
-            if(page<pageCount){
-              page++
-              loadMore()
-            }else{
-              $('#more img').hide();
-              $('#more').show();
-
-              $('#more>span').text('暂无更多数据');
-            }
+            //这里表示数据加载成功后
+            loadMore(page)
+            console.log(!pageNull)
             //这里表示渲染完成后刷新wrapper
             setTimeout(function(){
               //显示加载成功状态图标 (没有更多数据时候的提示作用)
-              static = 2;
+              $('#loadOver').show();
               setTimeout(function(){
-                static = "";
-              },500)
+                $('#more').hide();
+                $('#null').hide();
+                $('#loadOver').hide();
+              },0)
               //加载完成状态
-              $('#more').hide();
-              $('#more>img').hide();
               is_r = false;
               myscroll.refresh();
             },0)
-          },2000)
-
+          },1000)
+          //正在加载状态
         }
       },
       onScrollEnd: function(){
-        //上拉之后如果触发刷新则 状态图标值为1 显示loading状态
         if(is_r == true){
-          static = 1;
-          if(page>=pageCount){
-            $('#more>img').hide();
+          $('#more').show();
+          $('#null').hide();
+          $('#loadOver').hide();
+          if(!pageNull){
             $('#more').show();
-          }else{
-            $('#more>img').show();
-            $('#more').show();
+            setTimeout(function () {
+              $('#more').hide();
+              $('#null').show();
+            },500)
+            setTimeout(function () {
+              $('#null').hide();
+            },1000)
           }
-
         }
       }
     });

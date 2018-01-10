@@ -18,6 +18,8 @@
     <script src="js/utils.js"></script>
     <script src="js/checklogin.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/layer/layer.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
 </head>
 <body>
 <div class="myAgent">
@@ -50,9 +52,18 @@
                 <span>收益<em>(元)</em></span>
 
             </div>
-            <div class="tipListsCon">
+            <div class="tipListsCon" id="wrapper">
 
                 <ul id="ul_eag_item">
+                    <a href="javascript:;" id="more">
+                        <img src="images/more.gif" alt="" ><span>正在加载...</span>
+                    </a>
+                    <a href="javascript:;" id="loadOver">
+                        <span>已加载完成</span>
+                    </a>
+                    <a href="javascript:;" id="null">
+                        <span>暂无更多数据</span>
+                    </a>
                     <!--<li>-->
                         <!--<span>2017.12.12/16:58</span>-->
                         <!--<span>187****3155</span>-->
