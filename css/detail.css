@@ -31,9 +31,10 @@ header img {
     float: left;
     margin-left: 0.59rem;
 }
-.left_intro img{
-	width:5.2rem;
-	height:6.9777777rem;
+
+.left_intro img {
+    width: 5.2rem;
+    height: 6.9777777rem;
 }
 
 .right_intro {
@@ -60,14 +61,18 @@ header img {
 .dataBox {
     width: 13.5rem;
     border-radius: 0.25rem;
-    padding: 0.74rem 0.64rem;
+    padding: 0.74rem 0.74rem;
     box-shadow: 0 0 0.59rem 0.30rem #dee8f9;
     margin: 0.25rem auto 0;
     color: #4c4c4c;
     font-size: 0.56rem;
     font-weight: lighter;
     border: 0.01rem white solid;
-	background-color:#fff;
+    background-color: #fff;
+}
+
+#introduction img {
+    max-width: 13.5rem !important;
 }
 
 .dataBox .tip {
@@ -104,8 +109,9 @@ td {
     border-right: 0.05rem solid #000;
     border-bottom: 0.05rem solid #000;
 }
-table a{
-	color: #545454;
+
+table a {
+    color: #545454;
 }
 
 .active {
