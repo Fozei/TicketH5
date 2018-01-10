@@ -6,7 +6,7 @@ $(function () {
     $.post(DOMAIN + CAT_LIST, {}).done(function (data) {
         var data = eval("(" + data + ")");
         if (data.code === "success") {
-            adapter_classify(data);
+            setupCategory(data);
         } else {
             alert(data.message);
         }
@@ -16,13 +16,6 @@ $(function () {
     });
     //获取数据
     clssify_data(USERID, 1, null, null, null);
-
-    //设置分类点击事件
-    $('#classify').find('p').on('click', function (e) {
-        targetCat = $(this).attr('data');
-        $(this).addClass("active");
-        $(this).siblings().removeClass('active')
-    });
 
     // 时间戳转换成       年-月-日
     function getLocalTime(nS) {
@@ -60,7 +53,7 @@ function clssify_data(userID, page, startTime, catID, endTime) {
     });
 }
 
-function adapter_classify(data) {
+function setupCategory(data) {
     catNum = data.catData.length;
     var ap_html = '';
     $.each(data.catData, function (v) {
@@ -71,6 +64,17 @@ function adapter_classify(data) {
         }
     })
     $('#classify').append(ap_html);
+    setUpListener();
+}
+
+function setUpListener() {
+    //设置分类点击事件
+    $('#classify').find('p').on('click', function (e) {
+        targetCat = $(this).attr('data');
+        console.log("click");
+        $(this).addClass("active");
+        $(this).siblings().removeClass('active')
+    });
 }
 
 function adapter_profit(data) {
@@ -97,10 +101,31 @@ function adapter_profit(data) {
 
 function showDateSelect() {
     resetCatPosition();
-    $("#datePicker").animate({top: "17.18rem", height: "8.5rem"});
+    $("#datePicker").animate({top: "16.18rem", height: "8.5rem"});
 }
 
 function resetDatePosition() {
+    $("#datePicker").animate({top: "28rem", height: "0rem"});
+}
+
+//展示分类选择器
+function showCatSelect() {
+    resetDatePosition();
+    var targetHeight = (catNum + 1) * 1.7;
+    var targetTop = 28.44 - targetHeight - 4;
+    $("#catList").animate({top: targetTop + "rem", height: targetHeight + "rem"});
+}
+
+function resetCatPosition() {
+    $("#catList").animate({top: "28rem", height: "0rem"});
+    if (targetCat !== undefined && targetCat !== currentCat) {
+        setTimeout(function () {
+            clssify_data(USERID, 1, null, currentCat, null);
+        }, 500);
+    }
+}
+
+function requestByDate() {
     var start_time = $('#startDate').val();
     var end_time = $('#endDate').val();
     var today = new Date().getTime();
@@ -113,20 +138,4 @@ function resetDatePosition() {
         clssify_data(USERID, 1, getLocalTime(st_time), null, getLocalTime(ed_time));
     }
     $("#datePicker").animate({top: "28rem", height: "0rem"});
-}
-
-function showCatSelect() {
-    resetDatePosition();
-    var targetHeight = (catNum + 1) * 1.7;
-    var targetTop = 28.44 - targetHeight - 3;
-    $("#catList").animate({top: targetTop + "rem", height: targetHeight + "rem"});
-}
-
-function resetCatPosition() {
-    $("#catList").animate({top: "28rem", height: "0rem"});
-    if (targetCat !== undefined && targetCat !== currentCat) {
-        setTimeout(function () {
-            clssify_data(USERID, 1, null, currentCat, null);
-        }, 500);
-    }
 }
