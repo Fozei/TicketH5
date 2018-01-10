@@ -44,7 +44,7 @@ function initView(data) {
 }
 
 function bindData(data) {
-    $('#phone').text(data.phone.substr(0, 4) + "****" + data.phone.substr(7, data.phone.length));
+    $('#phone').text(data.phone.substr(0, 3) + "****" + data.phone.substr(7, data.phone.length));
     $('#discount').text(data.discount + "折优惠");
     $('#balance').text(data.balance);
     $('#income').text(data.income);
