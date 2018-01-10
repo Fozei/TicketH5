@@ -5,6 +5,14 @@ function getVerifyCode() {
         return false;
     }
 
+    $(".getVerifyCode").attr("onclick", null);
+    $(".getVerifyCode").css("color", "grey");
+
+    setTimeout(function () {
+        $(".getVerifyCode").attr("onclick", "getVerifyCode()");
+        $(".getVerifyCode").css("color", "#2d70e1");
+    }, 1000 * 60);
+
     $.post(DOMAIN + GET_REG_CODE, {
         tel: phone
     }).done(function (data) {
@@ -12,7 +20,6 @@ function getVerifyCode() {
         alert("获取验证码失败");
     }).always(function () {
     });
-
 }
 
 function register() {
@@ -42,6 +49,9 @@ function register() {
 
     var encryedPwd = encryptPwd(pwd);
 
+    $(".submit").attr("onclick", null);
+    $(".submit").css("background-color", "grey");
+
     $.post(DOMAIN + REG, {
         phone: phone,
         code: code,
@@ -57,5 +67,7 @@ function register() {
     }).fail(function (xhr, status) {
         alert("数据通信失败");
     }).always(function () {
+        $(".submit").attr("onclick", "register()");
+        $(".submit").css("background-color", "#2d70e1");
     });
 }
