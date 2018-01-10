@@ -14,10 +14,7 @@ $(window).load(function() {
   var jqxhr = $.post(DOMAIN + TICKET_CAT, {
     page: 1
   }).done(function(data) {
-    console.log(data)
-    // return
     var obj = eval("(" + data + ")"); // 将json转换为对象 json 格式{status:'1',data:'2'}
-    console.log(obj)
     parseInitData(obj);
   }).fail(function(xhr, status) {
     alert("获取数据失败，请刷新重试");
@@ -40,30 +37,11 @@ $(window).load(function() {
 function requestSearchResult() {
   console.log("requestSearchResult with key words :" + $("#keyword").val());
   window.location.href = "list.html?keyword=" + $("#keyword").val();
-  // var jqxhr = $.post(DOMAIN + TICKET_LIST, {
-  //   page: 1,
-  //   keyword: $("#keyword").val(),
-  // }).done(function(data) {
-  //   var obj = eval("(" + data + ")"); // 将json转换为对象 json 格式{status:'1',data:'2'}
-  //   console.log(obj);
-  //   //parse search result
-  // }).fail(function(xhr, status) {
-  //   console.log("requestSearchResult error");
-  // }).always(function() {
-  //   console.log("requestSearchResult always");
-  // });
 }
 
 function parseInitData(jsonData) {
   var catData = jsonData.catData;
   var recommendData = jsonData.recommendData;
-  console.log(catData);
-  console.log(recommendData);
-  // <li>
-  //   <img src="images/icon1.png"  alt="" />
-  //   <p><a href="#">体育</a></p>
-  // </li>
-
   $.each(catData, function bindData(index, item) {
     var catName = item.name;
     var catid = item.id;
@@ -78,7 +56,6 @@ function parseInitData(jsonData) {
       li+='<img src="'+ pic +'" onClick="goToList('+catid+')">';
       li+='<p><a href="javascript:void(0);" onClick="goToList('+catid+')">'+catName+'</a></p>';
     }
-
     li+='</li>';
     $(".cat-list").append(li);
   });

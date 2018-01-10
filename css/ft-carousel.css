@@ -122,6 +122,12 @@ body {
     margin-left: 0.4444rem;
     margin-right: 0.4444rem;
     margin-top: 0.459259rem;
+    display: flex;
+    justify-content: center;
+}
+.tab-classfiy>div:nth-of-type(2){
+    margin-left: 0.5rem ;
+    margin-right: 0.5rem;
 }
 .tab-classfiy-second{
     margin-left: 0.4444rem;
@@ -131,6 +137,7 @@ body {
 .tab-basketball{
     float: left;
 }
+.tab-basketball>a{display: block;}
 .tab-classfiy .tab-classfiy-basketball{
     width: 4.2074rem;
     height: 1.2rem;
@@ -152,12 +159,10 @@ body {
     color: #1A1A1A;
 }
 .tab-left{
-    margin-left: 0.6074rem;
     width: 4.19259rem;
     height: 5.037rem;
 }
 .tab-left-details{
-    margin-left: 0.8148rem;
     text-align: left;
     margin-bottom: 0.2rem;
 }

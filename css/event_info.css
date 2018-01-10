@@ -11,16 +11,19 @@
 .head .backUp:after{top: 0.4962962962962963rem;transform: rotate(-45deg);bottom: 0;}
 .head .backUp:before{transform: rotate(45deg);bottom: 0.4962962962962963rem;}
 /* banner start */
-.banner{width: 16rem;height: 7.540740740740741rem;background-color: #ccc}
+.banner{width: 16rem;height: 7.540740740740741rem;background-color: #ccc;overflow: hidden}
 .banner img{width: 16rem;height: 7.540740740740741rem;display: block;}
+
+.banner ul{height: 100%;width: 400%}
+.banner ul li{width: 100;height:100;float: left; }
 /* banner end */
 /* content start */
 .eventMain{height: 16.44444444444444rem;overflow-y: auto;padding-bottom: 0.4740740740740741rem;box-shadow: 0 0 40px 0.4444444444444444rem #f2f5fc}
 .contentTit{height: 1.57037037037037rem;line-height: 1.57037037037037rem;text-align: center;color: #171717;font-size:0.562962962962963rem }
 .content{background-color: #f2f5fc;width: 100%;}
 .content>div:nth-child(odd){margin-bottom: 0.4148148148148148rem;}
-.eventsList{display: flex;width: 15.06666666666667rem;height: 8.014814814814815rem;background-color: #fff;margin: 0 auto;    -webkit-justify-content: center; justify-content: center; -webkit-align-items: center;
-    align-items: center;box-shadow: 0 0 40px 0.4444444444444444rem #f2f5fc}
+.eventsList{display: flex;width: 13.88148148148148rem;height: 8.014814814814815rem;background-color: #fff;margin: 0 auto; -webkit-align-items: center;
+    align-items: center;box-shadow: 0 0 40px 0.4444444444444444rem #f2f5fc;padding: 0 0.5925925925925926rem;}
 .eventsList a{display:block;height: 6.903703703703704rem;}
 .eventsList dl{
     width: 4.192592592592593rem;
@@ -30,7 +33,7 @@
 .eventsList dl dt{width: 100%;height: 4.607407407407407rem;overflow: hidden;}
 .eventsList dl dt img{width: 100%;height: 4.607407407407407rem;display: block;}
 .eventsList dl dd{width: 100%;}
-.eventsList dl dd:nth-of-type(1){height: 1.333333333333333rem;line-height:0.6666666666666667rem;color: #1a1a1a;font-size: 0.4740740740740741rem;padding:0.1481481481481481rem 0;    display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: 2;  overflow: hidden;}
+.eventsList dl dd:nth-of-type(1){height: 1.333333333333333rem;line-height:0.6814814814814815rem;color: #1a1a1a;font-size: 0.4740740740740741rem;padding:0.1481481481481481rem 0;    display: -webkit-box;  -webkit-box-orient: vertical;  -webkit-line-clamp: 2;  overflow: hidden;}
 .eventsList dl dd:nth-of-type(2){line-height:0.6666666666666667rem;color: #eb2225;font-size: 0.4148148148148148rem;text-align: center}
 .eventsList dl dd:nth-of-type(2) em{font-style: normal;padding-left: 0.2962962962962963rem;}
 /* content end */

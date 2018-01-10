@@ -26,14 +26,17 @@
     <!-- pgc head start -->
     <div class="head">
         <div class="header">
-            <i class="backUp"></i> 赛事信息
+            <i class="backUp"></i> <span class="title">赛事信息</span>
         </div>
     </div>
     <!-- head end -->
     <!-- banner start -->
-    <div class="banner">
-        <ul>
-            <li><img src="images/banner1.png" alt=""></li>
+    <div class="banner" id="banner">
+        <ul class="carousel-inner">
+            <li class="carousel-item""><img src="images/banner1.png"></li>
+            <li class="carousel-item"><img src="images/banner2.png"></li>
+            <li class="carousel-item"><img src="images/banner3.png"></li>
+            <li class="carousel-item"><img src="images/4.png"></li>
         </ul>
     </div>
     <!-- banner end -->
@@ -41,55 +44,31 @@
     <div class="contentTit">赛事聚焦</div>
     <div class="eventMain">
         <div class="content">
-            <div class="eventsList">
-                <a href="javascript:;">
-                    <dl>
-                        <dt><img src="images/events1.jpg" ></dt>
-                        <dd>中国女子篮球职业联赛（WCBA）</dd>
-                        <dd ><span>2017-12-18 </span><em>120元</em></dd>
+            <!--<div class="eventsList">-->
+                <!--<a href="javascript:;">-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/events1.jpg" ></dt>-->
+                        <!--<dd>中国女子篮球职业联赛（WCBA）</dd>-->
+                        <!--<dd ><span>2017-12-18 </span><em>120元</em></dd>-->
 
-                    </dl>
-                </a>
-                <a href="javascript:;">
-                    <dl>
-                        <dt><img src="images/events2.jpg"></dt>
-                        <dd>中国女子篮球职业联赛（WCBA）</dd>
-                        <dd><span>2017-12-18 </span><em>120元</em></dd>
+                    <!--</dl>-->
+                <!--</a>-->
+                <!--<a href="javascript:;">-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/events2.jpg"></dt>-->
+                        <!--<dd>中国女子篮球职业联赛（WCBA）</dd>-->
+                        <!--<dd><span>2017-12-18 </span><em>120元</em></dd>-->
 
-                    </dl>
-                </a>
-                <a href="javascript:;">
-                    <dl>
-                        <dt><img src="images/events3.jpg"></dt>
-                        <dd>中国女子篮球职业联赛（WCBA）</dd>
-                        <dd><span>2017-12-18 </span><em>120元</em></dd>
-                    </dl>
-                </a>
-            </div>
-            <div class="eventsList">
-                <a href="javascript:;">
-                    <dl>
-                        <dt><img src="images/events1.jpg" ></dt>
-                        <dd>中国女子篮球职业联赛（WCBA）</dd>
-                        <dd ><span>2017-12-18 </span><em>120元</em></dd>
-                    </dl>
-                </a>
-                <a href="javascript:;">
-                    <dl>
-                        <dt><img src="images/events2.jpg"></dt>
-                        <dd>中国女子篮球职业联赛（WCBA）</dd>
-                        <dd><span>2017-12-18 </span><em>120元</em></dd>
-
-                    </dl>
-                </a>
-                <a href="javascript:;">
-                    <dl>
-                        <dt><img src="images/events3.jpg"></dt>
-                        <dd>中国女子篮球职业联赛（WCBA）</dd>
-                        <dd><span>2017-12-18 </span><em>120元</em></dd>
-                    </dl>
-                </a>
-            </div>
+                    <!--</dl>-->
+                <!--</a>-->
+                <!--<a href="javascript:;">-->
+                    <!--<dl>-->
+                        <!--<dt><img src="images/events3.jpg"></dt>-->
+                        <!--<dd>中国女子篮球职业联赛（WCBA）</dd>-->
+                        <!--<dd><span>2017-12-18 </span><em>120元</em></dd>-->
+                    <!--</dl>-->
+                <!--</a>-->
+            <!--</div>-->
         </div>
     </div>
     <!-- content end -->
@@ -98,12 +77,11 @@
 <script src="js/utils.js"></script>
 <script src="js/common.js"></script>
 <script src="js/constance.js"></script>
-
 <script src="js/event_info.js"></script>
 <script src="js/layer/layer.js"></script>
 <script>
 $('.head .backUp').on('touchstart',function(e) {
-window.history.back();
+    window.history.back();
 });
 </script>
 </body>

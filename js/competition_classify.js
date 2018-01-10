@@ -31,8 +31,8 @@ $(function () {
           str+='<img class="tab-img" src="'+data_r[i]["pic"]+'">';
           str+='<p class="tab-txt-backetball">'+data_r[i]["name"]+'</p>';
           str+='</div></a>';
-          str+='<a href="event_info.html?id='+match[0].id+'"><img class="tab-left" width="283" height="340" src="'+match[0].pic+'"></a>';
-          str+='<p class="tab-left-details tab-txt-details"><a href="event_info.html?id='+match[0].id+'">'+match[0].title+'</a></p></div>';
+          str+='<a href="detail.html?id='+match[0].id+'"><img class="tab-left" width="283" height="340" src="'+match[0].pic+'"></a>';
+          str+='<p class="tab-left-details tab-txt-details"><a href="detail.html?id='+match[0].id+'">'+match[0].title+'</a></p></div>';
           if ((i+1)%3==0 || i==(l-1))
           {
             str+='<div class="clear-clear"></div>';
