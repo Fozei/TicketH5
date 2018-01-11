@@ -98,7 +98,7 @@ function register() {
     }).done(function (data) {
         var data = eval("(" + data + ")");
         if (data.code === "success") {
-            location.href = "index.html";
+            location.href = "login.html";
         } else {
             layer.open({
                 content: data.message
