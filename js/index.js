@@ -90,3 +90,16 @@ function goUserCenter() {
         location.href = "user_center.html";
     }
 }
+var geolocation = new qq.maps.Geolocation("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", "myapp");
+var options = {timeout: 8000};
+function showPosition(position) {
+    var geographic = position
+    console.log(geographic)
+    document.getElementById('geographic').innerHTML = geographic.city
+};
+
+geolocation.getLocation(showPosition, showErr, options)
+function showErr() {
+    document.getElementById("demo").appendChild(document.createElement('p')).innerHTML = "定位失败！";
+    document.getElementById("city").innerHTML = "定位失败"
+};

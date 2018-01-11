@@ -23,9 +23,9 @@
 }
 
 .areaDiv .citySelect p {
-    width: 1.97037rem;
-    background: url("../images/select_bg.png") no-repeat right center;
-    background-size: 0.4444rem 0.2666rem;
+    width: 3rem;
+    /*background: url("../images/select_bg.png") no-repeat right center;*/
+    /*background-size: 0.4444rem 0.2666rem;*/
 }
 
 .areaDiv #selectValue {

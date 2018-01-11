@@ -54,6 +54,8 @@ function clssify_data(userID, page, startTime, catID, endTime) {
             if (data.code === 'success') {
                 adapter_profit(data);
                 currentCat = targetCat;
+                console.log(data)
+                $('#total').text(data.income+'元')
             } else {
                 layer.open({
                     content: "获取数据失败：" + data.message
@@ -66,6 +68,7 @@ function clssify_data(userID, page, startTime, catID, endTime) {
 }
 
 function setupCategory(data) {
+
     catNum = data.catData.length;
     var ap_html = '';
     $.each(data.catData, function (v) {
@@ -82,10 +85,12 @@ function setupCategory(data) {
 function setUpListener() {
     //设置分类点击事件
     $('#classify').find('p').on('click', function (e) {
+
         targetCat = $(this).attr('data');
         console.log("click");
         $(this).addClass("active");
         $(this).siblings().removeClass('active')
+
     });
 }
 
@@ -108,7 +113,7 @@ function adapter_profit(data) {
                 "</li>";
         });
     }
-    $('#list').append(ap_html);
+    $('#list .listContent').append(ap_html);
 }
 
 function showDateSelect() {
@@ -131,8 +136,9 @@ function showCatSelect() {
 function resetCatPosition() {
     $("#catList").animate({top: "28rem", height: "0rem"});
     if (targetCat !== undefined && targetCat !== currentCat) {
+        $('#list .listContent').empty()
         setTimeout(function () {
-            clssify_data(USERID, 1, null, currentCat, null);
+            clssify_data(USERID, 1, null, targetCat, null);
         }, 500);
     }
 }

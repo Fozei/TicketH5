@@ -237,7 +237,7 @@ $(function () {
 					if (increase==1){
 						
 						if(s==1){
-							var top = 0.740*u;
+							var top =0.9629*u;
 							str+='<div class="seatLine  clearFix" style="top:'+top+'rem">';
 						}
 					}else{
