@@ -8,10 +8,18 @@ $(function () {
         if (data.code === "success") {
             setupCategory(data);
         } else {
-            alert(data.message);
+            layer.open({
+                content: data.message
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
         }
     }).fail(function (xhr, status) {
-        alert("数据通信失败");
+        layer.open({
+            content: '数据通信失败'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
     });
     //获取数据
@@ -47,7 +55,11 @@ function clssify_data(userID, page, startTime, catID, endTime) {
                 adapter_profit(data);
                 currentCat = targetCat;
             } else {
-                alert("获取数据失败：" + data.message);
+                layer.open({
+                    content: "获取数据失败：" + data.message
+                    , skin: 'msg'
+                    , time: 2 //2秒后自动关闭
+                });
             }
         }
     });

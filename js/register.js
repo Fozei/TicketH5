@@ -1,7 +1,11 @@
 function getVerifyCode() {
     var phone = $("#phone").val();
     if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone)))) {
-        alert("请输入正确的账号或密码");
+        layer.open({
+            content: '请输入正确的账号或密码'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
 
@@ -17,7 +21,11 @@ function getVerifyCode() {
         tel: phone
     }).done(function (data) {
     }).fail(function (xhr, status) {
-        alert("获取验证码失败");
+        layer.open({
+            content: '获取验证码失败'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
     });
 }
@@ -28,22 +36,38 @@ function register() {
     var pwd = $.trim($("#pwd").val());
     var pwd2 = $.trim($("#pwd2").val());
     if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone)))) {
-        alert("请输入正确的账号或密码");
+        layer.open({
+            content: '请输入正确的账号或密码'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
 
     if (code.length < 4) {
-        alert("请输入验证码");
+        layer.open({
+            content: '请输入验证码'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
 
     if (pwd.length < 6 || pwd2.length < 6) {
-        alert("输入的密码长度不合规");
+        layer.open({
+            content: '输入的密码长度不合规'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
 
     if (pwd !== pwd2) {
-        alert("两次输入的密码不一致");
+        layer.open({
+            content: '两次输入的密码不一致'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
 
@@ -62,10 +86,18 @@ function register() {
         if (data.code === "success") {
             location.href = "index.html";
         } else {
-            alert(data.message);
+            layer.open({
+                content: data.message
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
         }
     }).fail(function (xhr, status) {
-        alert("数据通信失败");
+        layer.open({
+            content: '数据通信失败'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
         $(".submit").attr("onclick", "register()");
         $(".submit").css("background-color", "#2d70e1");

@@ -2,13 +2,21 @@ function resetPwd() {
 
     var phone = $("#phone").val();
     if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone)))) {
-        alert("请输入正确的账号或密码");
+        layer.open({
+            content: '请输入正确的账号或密码'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
 
     var code = $.trim($('#verifyCode').val());
     if (code.length < 4) {
-        alert("请输入正确的验证码");
+        layer.open({
+            content: '请输入正确的验证码'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return;
     }
 
@@ -22,12 +30,15 @@ function resetPwd() {
         phone: phone
     }).done(function (data) {
         var data = eval("(" + data + ")");
-        console.log(data);
         if (data.code === "success") {
             location.href = "resetpwd.html" + "?var=" + encryptPwd(phone);
         }
     }).fail(function (xhr, status) {
-        alert("获取验证码失败");
+        layer.open({
+            content: '获取验证码失败'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
         $('.submit').attr("onclick", "resetPwd()");
         $('.submit').css("background-color", "#2d70e1");
@@ -38,7 +49,11 @@ function resetPwd() {
 function getVerifyCode() {
     var phone = $("#phone").val();
     if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone)))) {
-        alert("请输入正确的账号或密码");
+        layer.open({
+            content: '请输入正确的账号或密码'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
 
@@ -53,9 +68,12 @@ function getVerifyCode() {
     $.post(DOMAIN + GET_REG_CODE, {
         tel: phone
     }).done(function (data) {
-        console.log(data);
     }).fail(function (xhr, status) {
-        alert("获取验证码失败");
+        layer.open({
+            content: '获取验证码失败'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
     });
 }

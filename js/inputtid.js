@@ -3,7 +3,11 @@ $(function () {
     $('#idt_submit').click(function () {
         var idt = $('#itp_idt').val();
         if (!ChinaIdChecker(idt)) {
-            alert("身份证号不合法");
+            layer.open({
+                content: '身份证号不合法'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
             return '身份证号不合法';
         }
         //修改用户姓名、身份证
@@ -19,10 +23,18 @@ $(function () {
             success: function (data) {
                 // layer.close(index);
                 if (data.code == 'success') {
-                    alert("修改身份证号成功");
+                    layer.open({
+                        content: '修改身份证号成功'
+                        , skin: 'msg'
+                        , time: 2 //2秒后自动关闭
+                    });
                     window.history.back(-1);
                 } else {
-                    alert("修改失败：" + data.message);
+                    layer.open({
+                        content: "修改失败：" + data.message
+                        , skin: 'msg'
+                        , time: 2 //2秒后自动关闭
+                    });
                 }
             }
         });

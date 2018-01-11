@@ -1,13 +1,21 @@
 function finish() {
     var phone = $("#phone").val();
     if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone)))) {
-        alert("请输入正确的账号或密码");
+        layer.open({
+            content: "请输入正确的账号或密码"
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
 
     var pwd = $.trim($('#pwd').val());
     if (pwd.length < 6) {
-        alert("请输入6-18位密码");
+        layer.open({
+            content: "请输入6-18位密码"
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return;
     }
 
@@ -30,13 +38,15 @@ function finish() {
         pwd: realpwd
     }).done(function (data) {
         var data = eval("(" + data + ")");
-        console.log(data);
         if (data.code === "success") {
             location.href = "login.html";
         }
     }).fail(function (xhr, status) {
-        console.log(xhr + "::" + status);
-        alert("获取验证码失败");
+        layer.open({
+            content: "获取验证码失败"
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
         $('#finish').attr("onclick", "finish()");
         $('#finish').css("background-color", "#2d70e1");

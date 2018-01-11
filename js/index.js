@@ -10,14 +10,18 @@ $(window).load(function () {
         shade: [0.3, 'black']
     }); //0代表加载的风格，支持0-2
     //初始化节目数据
-    var jqxhr = $.post(DOMAIN + TICKET_CAT, {
+    $.post(DOMAIN + TICKET_CAT, {
         page: 1
     }).done(function (data) {
         // return
         var obj = eval("(" + data + ")"); // 将json转换为对象 json 格式{status:'1',data:'2'}
         parseInitData(obj);
     }).fail(function (xhr, status) {
-        alert("获取数据失败，请刷新重试");
+        layer.open({
+            content: '获取数据失败，请刷新重试'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
         layer.closeAll('loading');
     });

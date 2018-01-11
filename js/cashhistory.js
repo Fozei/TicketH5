@@ -7,10 +7,18 @@ $(function () {
         if (data.code === "success") {
             initView(data);
         } else {
-            alert(data.message);
+            layer.open({
+                content: data.message
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
         }
     }).fail(function (xhr, status) {
-        alert("数据通信失败");
+        layer.open({
+            content: '数据通信失败'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
     });
 });
@@ -51,7 +59,4 @@ function initView(data) {
             "<p class=\"right normalP\">" + dataItem.addtime + "</p></div>" +
             "</li>");
     });
-
-
-    // $('#list').append();
 }

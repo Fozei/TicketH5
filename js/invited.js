@@ -1,11 +1,15 @@
 var userID = getQueryString('key');
 var isHead = true;
 $(function () {
-    if (userID == "" || userID == null) {
-        alert("无效参数");
+    if (userID === "" || userID === null) {
+        layer.open({
+            content: '无效参数'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
-    
+
     //通过邀请人注册初始化数据
     $.ajax({
         url: DOMAIN + INVITE_REGISTER_INIT,
@@ -19,7 +23,11 @@ $(function () {
             if (data.code == 'success') {
                 register(data);
             } else {
-                alert("获取失败：" + data.message);
+                layer.open({
+                    content: "获取失败：" + data.message
+                    , skin: 'msg'
+                    , time: 2 //2秒后自动关闭
+                });
             }
         }
     });
@@ -33,7 +41,11 @@ $(function () {
         if (!isHead) return;
         var tel = $("#phone").val();
         if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(tel)))) {
-            alert("请输入正确的账号或密码");
+            layer.open({
+                content: '请输入正确的账号或密码'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
             return false;
         }
         //获取验证码
@@ -46,13 +58,6 @@ $(function () {
             async: false,
             dataType: "json",
             success: function (data) {
-                // console.log('数据信息');
-                // console.log(data);
-                // if (data.code == 'success') {
-                //     setTime();
-                // } else {
-                //     alert("获取失败：" + data.message);
-                // }
             }
         });
         setTime();
@@ -66,11 +71,19 @@ $(function () {
         var code = $("#input_code").val();
         // var pwd = '123456';
         if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone))) || pwd.length < 6) {
-            alert("请输入正确的账号或密码");
+            layer.open({
+                content: '请输入正确的账号或密码'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
             return false;
         }
         if (code < 6) {
-            alert("验证码不正确");
+            layer.open({
+                content: '验证码不正确'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
             return false;
         }
         var pwdString = encryptPwd(pwd);
@@ -89,11 +102,13 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.code == 'success') {
-                    // alert('注册成功');
-                    // setTime();
                     skip();
                 } else {
-                    alert("获取失败：" + data.message);
+                    layer.open({
+                        content: "获取失败：" + data.message
+                        , skin: 'msg'
+                        , time: 2 //2秒后自动关闭
+                    });
                 }
             }
         });
@@ -115,6 +130,7 @@ $(function () {
     }
 
     var wo;
+
     function winopen() {
         wo = window.open('invited.html', 'ssss', 'width=250,height=200');
         wo.document.write('<h1 id="abc"></h1>');
@@ -130,13 +146,13 @@ $(function () {
         var $text = document.getElementById('time_box');
 
         var interval = setInterval(function () {
-            if ((altime/1000) <= 0){
-                $text.innerText = "注册成功"+'\n' + '1秒后自动跳转';
+            if ((altime / 1000) <= 0) {
+                $text.innerText = "注册成功" + '\n' + '1秒后自动跳转';
             } else {
-                $text.innerText = "注册成功"+'\n'+ (altime/1000) + '秒后自动跳转';
+                $text.innerText = "注册成功" + '\n' + (altime / 1000) + '秒后自动跳转';
             }
             altime -= 1000;
-            if (altime < 0){
+            if (altime < 0) {
                 clearInterval(interval);
                 window.location.href = "index.html";
             }

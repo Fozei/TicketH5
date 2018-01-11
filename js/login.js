@@ -2,7 +2,11 @@ function login() {
     var phone = $("#phone").val();
     var pwd = $("#pwd").val();
     if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone))) || pwd.length < 6) {
-        alert("请输入正确的账号或密码");
+        layer.open({
+            content: '请输入正确的账号或密码'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
         return false;
     }
     var pwdString = encryptPwd(pwd);
@@ -19,10 +23,18 @@ function login() {
             setCookie(COOKIE_NAME_USER_ID, data.userID, 30);
             location.href = "index.html";
         } else {
-            alert(data.message);
+            layer.open({
+                content: data.message
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
         }
     }).fail(function (xhr, status) {
-        alert("通信失败");
+        layer.open({
+            content: '通信失败'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     }).always(function () {
         $('.submit').attr("onclick", "login()");
         $('.submit').css("background-color", "#2d70e1");
