@@ -532,8 +532,6 @@ input {
 
 .checkSeatList {
     width: 100%;
-    height: 3.096296296296296rem;
-    overflow-y: auto;
 }
 
 .checkSeatList::-webkit-scrollbar {
@@ -543,7 +541,6 @@ input {
 
 .checkSeat {
     width: 14.85925925925926rem;
-    height: 4.562962962962963rem;
     border-radius: 0.1185185185185185rem;
     box-shadow: 0 0 .2222222222222222rem 0 #dae6fa;
     margin-left: 0.5925925925925926rem;
@@ -641,11 +638,10 @@ input {
 /* seatCon end */
 /* pgc buy Button start */
 .buy {
-    position: fixed;
-    bottom: 0.7703703703703704rem;
-    left: 0;
-    right: 0;
+
+    
     margin: auto;
+	margin-top:0.5rem;
 
 
 }
