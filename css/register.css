@@ -57,7 +57,8 @@ header img {
     height: 1.3rem;
     vertical-align: middle;
     border: none;
-    font-size: 0.5rem;
+    font-size: 0.56rem;
+    line-height: 1.3rem;
 }
 
 .getVerifyCode {
@@ -65,7 +66,7 @@ header img {
     right: 1rem;
     float: right;
     color: #2d70e1;
-    font-size: 0.5rem;
+    font-size: 0.56rem;
 }
 
 .submit {
@@ -84,4 +85,8 @@ header img {
 
 .induction a {
     color: #2d70e1;
+}
+
+#pwd {
+    min-width: 9rem;
 }
