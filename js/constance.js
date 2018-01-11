@@ -1,7 +1,9 @@
 var COOKIE_NAME_USER_ID = "ewedouserID";
-var DOMAIN = "http://192.168.1.78/ticket/api"
+var DOMAIM_API='http://www.ewedo.net/ticket/';
+var DOMAIN = DOMAIM_API+"api";
 var MALL_ADDRESS =
-    "http://sdyigou.sdevnet.com/topics/api/dev/index.html#/device/"
+    "http://sdyigou.sdevnet.com/topics/api/dev/index.html#/device/";
+
 var TICKET_DETAIL = "/tickeinfo.php";
 var TICKET_LIST = "/tickelist.php";
 var TICKET_AREA = "/tickearea.php";

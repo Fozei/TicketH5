@@ -158,7 +158,7 @@ $(function () {
                     layer.msg(data.message);
                     return false;
                 } else {
-                    location.href='ticketconfirm.html?ticketID='+ticketID+'&orderNum='+data.orderNum+'&timeID='+timeID;
+                    location.href=DOMAIM_API+'web/ticketconfirm.php?ticketID='+ticketID+'&orderNum='+data.orderNum+'&timeID='+timeID;
                 }
 
 
