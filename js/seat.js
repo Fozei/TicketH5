@@ -10,7 +10,9 @@ if (ticketID=='' || timeID=='')
 var index = layer.load(0, {
 	shade: [0.3, 'black'] //0.1透明度的白色背景
 });
- 
+ $('.header i').on('click',function () {
+	 window.history.back()
+ })
 $(function () {
 
 	//加载默认座位

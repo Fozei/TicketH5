@@ -135,8 +135,9 @@
     float: left;
     overflow: hidden;
     border-radius: 0.05rem;
-}
 
+}
+.listBox .l-left img{width: 4.82962962962963rem;height: 3.881481481481481rem}
 .listBox .l-right {
     position: relative;
     left: 0.8592rem;

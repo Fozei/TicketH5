@@ -20,7 +20,6 @@ $(function () {
         $('#cat_titile').html(data.ctitle);
         for(var i=0;i<l;i++){
           var match= data_r[i].matchData;
-          console.log(match)
           if (i==0 || i%3==0)
           {
             str+='<div class="tab-classfiy dev-font-box">';
@@ -31,7 +30,7 @@ $(function () {
           str+='<p class="tab-txt-backetball">'+data_r[i]["name"]+'</p>';
           str+='</div></a>';
           if(match != 0){
-            str+='<a href="detail.html?id='+match[0]+'"><img class="tab-left" width="283" height="340" src="'+match[0].pic+'"></a>';
+            str+='<a href="detail.html?id='+match[0].id+'"><img class="tab-left" width="283" height="340" src="'+match[0].pic+'"></a>';
             str+='<p class="tab-left-details tab-txt-details"><a href="detail.html?id='+match[0].id+'">'+match[0].title+'</a></p>';
           }
           str+='</div>';
@@ -53,7 +52,4 @@ $(function () {
       }
     })
   }
-
-  console.log(catId)
-
 })
