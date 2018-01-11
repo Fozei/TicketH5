@@ -21,7 +21,8 @@ function login() {
         var data = eval("(" + data + ")");
         if (data.code === "success") {
             setCookie(COOKIE_NAME_USER_ID, data.userID, 30);
-            location.href = "index.html";
+            // location.href = "index.html";
+            location.href = "user_center.html";
         } else {
             layer.open({
                 content: data.message
