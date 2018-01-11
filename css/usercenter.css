@@ -145,12 +145,6 @@ footer li p {
     margin-top: -1.5rem;
 }
 
-#imgSelector {
-    position: absolute;
-    opacity: 0;
-    filter: Alpha(opacity=0);
-}
-
 .fontColorGrey {
     color: #545454;
 }

@@ -48,6 +48,7 @@
     height: 1.8666rem;
     margin-top: 0.53335rem;
     margin-right: 1.037rem;
+    border-radius: 1.866rem;
 }
 
 .tab-order .img-picture-jt {
@@ -62,7 +63,7 @@
     margin-top: 0.9703rem;
 }
 
-.sp-ft-pb{
+.sp-ft-pb {
     font-size: 0.56296rem;
     color: #2c70e1;
 }
@@ -75,6 +76,7 @@
     overflow: hidden;
     border-bottom: 0.029629rem solid #cccccc;
 }
+
 .tab-order .real-name-border-bottom-hide {
     height: 2.237rem;
     line-height: 2.237rem;
@@ -98,4 +100,10 @@
     width: 12.28148rem;
     height: 2.185185rem;
     padding-bottom: 0.88888rem;
+}
+
+#imgSelector {
+    position: absolute;
+    opacity: 0;
+    filter: Alpha(opacity=0);
 }
