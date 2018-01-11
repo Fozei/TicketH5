@@ -1,5 +1,5 @@
 html,body{width: 100%;height: 100%;}
-.invitation_code{width: 100%;height: 100%;background-image: url("../images/invite_bg.jpg");background-size: 16rem 28.44444444444444rem;background-repeat: no-repeat;background-position: left top;}
+.invitation_code{width: 100%;height: 28.444444444444443rem;background-image: url("../images/invite_bg.jpg");background-size:16rem 28.444444444444443rem;background-repeat: no-repeat;background-position: left top;}
 /* head start */
 .head{padding-top: 0.8888888888888889rem;background-size:16rem 2.148148148148148rem;background-repeat: no-repeat;background-position: left top;}
 .header{height: 1.007407407407407rem;line-height: 1.007407407407407rem;text-align: center;font-size: 0.7111111111111111rem;color: #fff;position: relative}
