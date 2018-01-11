@@ -105,6 +105,7 @@
 .money {
     border-right: dashed #545454;
     height: 100%;
+    border-width: 0.05rem;
 }
 
 .catLogo {
