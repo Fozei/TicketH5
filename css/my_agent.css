@@ -29,7 +29,7 @@
 /* hint end */
 
 /* share start */
-.share{position: fixed;bottom: 0;left:0;width: 16rem;height: 2.948148148148148rem;background-color: #ccc;}
+.share{width: 16rem;height: 2.948148148148148rem;background-color: #ccc;margin-top: 0.25rem}
 .share ul{width: 15.97037037037037rem;height: 2.933333333333333rem;margin: 0 auto;display: flex;display:-webkit-flex;background-color: #cae0fc;}
 .share ul li{flex: 1;}
 .share ul li a{display: block;overflow: hidden;}
