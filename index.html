@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8"/>
     <meta name="author" content="订票系统"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-apple-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>订票系统</title>
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -41,7 +43,7 @@
             </ul>
         </div>
         <div class="seatchBox">
-            <input type="text" id="keyword" placeholder="搜素体育，演出，景点，美食"/>
+            <input type="text" id="keyword" placeholder="搜素体育，演出，景点，美食" onsubmit="requestSearchResult()"/>
             <img src="images/serch_bg.png" class="s_button" alt="" onclick="requestSearchResult()"/>
         </div>
         <div class="weatherBox">
@@ -78,11 +80,11 @@
 <footer class="footer">
     <ul>
         <li style="border:0px;">
-            <img src="images/homepage.png"/>
+            <img src="images/home2.png"/>
             <p>首页</p>
         </li>
         <li onclick="goUserCenter()" class="active" style="border:0">
-            <img src="images/mine.png"/>
+            <img src="images/my1.png"/>
             <p>我的</p>
         </li>
     </ul>

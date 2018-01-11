@@ -3,6 +3,7 @@
 	  });
 		var catID=getQueryString('catID');
 		var keyword=getQueryString('keyword');
+					console.log(keyword)
 		$(function(){
 
 			//加载数据
@@ -10,12 +11,14 @@
 				url:DOMAIN + TICKET_LIST,
 				data:{
 					'catID':catID,
-					'keyword':keyword,
+					'keyword':'排球',
 					'page'   :1
 				},
 				type:"POST",
 				dataType:"json",
 				success:function(data){
+				
+					console.log(data)
 					var data_r=data.list;
 					var l=data_r.length;
 					var str='';
