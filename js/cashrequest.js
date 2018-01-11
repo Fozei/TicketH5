@@ -54,10 +54,24 @@ function withDrawSendCode() {
     $("#getVerifyCode").attr("onclick", null);
     $("#getVerifyCode").css("color", "grey");
 
-    setTimeout(function () {
-        $("#getVerifyCode").attr("onclick", "withDrawSendCode()");
-        $("#getVerifyCode").css("color", "#2d70e1");
-    }, 1000 * 60);
+    var count = 0, TIME_COUNT = 60, time;
+    if (!time) {
+        count = TIME_COUNT;
+        time = setInterval(function () {
+            if (count > 1 && count <= TIME_COUNT) {
+                count--;
+                $('#getVerifyCode').text('重新获取(' + count + ')')
+                console.log(count)
+            } else {
+                clearInterval(time);
+                time = null;
+                $('#getVerifyCode').text('重新获取')
+                $("#getVerifyCode").attr("onclick", "withDrawSendCode()");
+                $("#getVerifyCode").css("color", "#2d70e1");
+            }
+        }, 1000)
+
+    }
 
     //获取验证码 GET_CASH_REQUEST_CODE
     $.post(DOMAIN + GET_CASH_REQUEST_CODE, {

@@ -80,6 +80,10 @@ div input {
     color: #545454;
 }
 
+#verifyCode {
+    max-width: 4rem;
+}
+
 
 
 
