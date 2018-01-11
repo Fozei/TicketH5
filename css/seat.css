@@ -78,9 +78,9 @@ input{border: none;outline: none;padding: 0;margin: 0;}
 .seatCon .seatList>.seatListCon .selected{background-image: url(../images/this.png);color: #fff}/* 选择座位 */
 .seatCon .seatList>.seatListCon .seatLine{height: 0.7111111111111111rem;width: 18.31851851851852rem;position:absolute;}
 .seatCon .seatList>.seatListCon .seatLine_r{height: 0.7111111111111111rem;width: 18.31851851851852rem;}
-.seatLine>div,.seatLine_r>div{width: 0.562962962962963rem;height: 0.4740740740740741rem;line-height:0.562962962962963rem;text-align: center;background-size: cover;background-repeat: no-repeat;background-position: left top;margin-right: 0.25rem;margin-bottom: 0.2518518518518519rem;color: #1A1A1A;font-size: 0.2074074074074074rem;
+.seatLine>div,.seatLine_r>div{width: .711rem;height: .578rem;line-height:.578rem;text-align: center;background-size: cover;background-repeat: no-repeat;background-position: left top;margin-right: 0.25rem;margin-bottom: 0.2518518518518519rem;color: #1A1A1A;font-size: 0.2074074074074074rem;
     float: left}
-.layui-layer-loading .layui-layer-loading1{background-size:0.5481481481481481rem 0.5481481481481481rem !important;background-position: center center !important;margin: 0 auto;margin-top: 1rem }
+.layui-layer-loading .layui-layer-loading1{background-size:cover !important;background-position: center center !important;margin: 0 auto;margin-top: 1rem }
 /*.seatList #seatLoad{}*/
 .seatCon .seatMark{width: 100%;text-align: center;display: flex;display: -webkit-flex;-webkit-box-align: center;-webkit-box-pack: center;}
 .seatMark>div>img{width: .562962962962963rem;height: 0.4592592592592593rem;vertical-align: top;}
@@ -119,5 +119,5 @@ height:0;
 /* buy Button end */
 .seatListCon .seat_left{
 	float:left;
-	
+
 }

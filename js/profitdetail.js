@@ -16,7 +16,7 @@ $(function () {
         }
     }).fail(function (xhr, status) {
         layer.open({
-            content: '数据通信失败'
+            content: '获取分类信息失败'
             , skin: 'msg'
             , time: 2 //2秒后自动关闭
         });
@@ -145,7 +145,11 @@ function requestByDate() {
     var ed_time = new Date(end_time).getTime();
     var requestData = isNaN(st_time) || isNaN(ed_time) || st_time >= today || ed_time > today || st_time >= ed_time;
     if (requestData) {
-        alert("输入的时间范围不合法");
+        layer.open({
+            content: '输入的时间范围不合法'
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
     } else {
         clssify_data(USERID, 1, getLocalTime(st_time), null, getLocalTime(ed_time));
     }

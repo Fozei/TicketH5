@@ -124,35 +124,8 @@ table a {
     color: white;
 }
 
-.place-holder {
-    height: 1.18rem;
-}
 
-.footer {
-    margin-top: 0.74rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 16rem;
-    background-color: #fff;
-}
 
-.footer li {
-    float: left;
-    width: 50%;
-    text-align: center;
-    color: #030303;
-    font-size: 0.47rem;
-    font-weight: lighter;
-}
-
-.footer li a {
-    color: #030303;
-}
-
-.footer li .active {
-    color: #3e69d4;
-}
 .animated {
     animation-fill-mode: both;
 

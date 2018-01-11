@@ -1,8 +1,7 @@
 var targetId;
 targetId = getQueryString('id');
-if (targetId=='' || targetId==null)
-{
-	location.href='index.html';
+if (targetId == '' || targetId == null) {
+    location.href = 'index.html';
 }
 
 function parseDetailData(data) {
@@ -37,49 +36,45 @@ function parseDetailData(data) {
             var turn = timeList[i].turn;
             var team = timeList[i].team;
             var time = timeList[i].time;
-            table.append('<tr  matchId=' + targetId + ' timeID='+timeList[i]['id']+'><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID='+timeList[i]['id']+'>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td><a href="javascript:;" targetid="'+targetId+'" timeid="'+timeList[i].id+'">选座购票</a></td></tr>');
+            table.append('<tr  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td><a href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>');
         }
 
         $("#notice").html(desc);
-        $('.matchTable tbody tr td a').on('click',function () {
+        $('.matchTable tbody tr td a').on('click', function () {
             var targetId = $(this).attr('targetid')
-          var timeId = $(this).attr('timeid')
-          var USERID=getCookie(COOKIE_NAME_USER_ID);
-          if (USERID==undefined || USERID==null || USERID==''){
-            var count = 0,TIME_COUNT = 3,time;
+            var timeId = $(this).attr('timeid')
+            var USERID = getCookie(COOKIE_NAME_USER_ID);
+            if (USERID == undefined || USERID == null || USERID == '') {
+                var count = 0, TIME_COUNT = 3, time;
                 $('.mask').addClass('fadeSlier-enter-active')
                 $('.notLogin').addClass('addCar-enter-active')
-            if (!time) {
-              console.log('go')
-              count = TIME_COUNT;
-              time = setInterval(() => {
-                if (count > 1 && count <= TIME_COUNT) {
-                count--;
-                $('#count').text(count)
-                console.log(count)
-              } else {
-                clearInterval(time);
-                time = null;
-                $('.mask').removeClass('fadeSlier-enter-active')
-                $('.notLogin').removeClass('addCar-enter-active')
-                window.location.href='login.html'
-              }
-            }, 1000)
+                if (!time) {
+                    console.log('go')
+                    count = TIME_COUNT;
+                    time = setInterval(function () {
+                        if (count > 1 && count <= TIME_COUNT) {
+                            count--;
+                            $('#count').text(count)
+                            console.log(count)
+                        } else {
+                            clearInterval(time);
+                            time = null;
+                            $('.mask').removeClass('fadeSlier-enter-active')
+                            $('.notLogin').removeClass('addCar-enter-active')
+                            window.location.href = 'login.html'
+                        }
+                    }, 1000)
+
+                }
+            } else {
+                window.location.href = 'seat.html?ticketID=' + targetId + '&timeID=' + timeId
             }
-          }else{
-            window.location.href='seat.html?ticketID='+targetId+'&timeID='+timeId
-          }
-          // seat.html?ticketID='+targetId+'&timeID='+timeList[i]['id']+'
+            // seat.html?ticketID='+targetId+'&timeID='+timeList[i]['id']+'
         })
     } else {
         alert("数据出错")
     }
 }
-
-
-
-
-
 
 $(function () {
     layer.open({type: 2});
@@ -90,7 +85,7 @@ $(function () {
     } else {
 
         if (targetId != null) {
-            
+
             $.post(DOMAIN + TICKET_DETAIL, {
                 id: targetId
             }).done(function (data) {
