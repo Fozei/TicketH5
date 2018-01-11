@@ -1,11 +1,4 @@
 $(function () {
-    // function submitName() {
-    //     console.log("submit name")
-    // }
-
-    var surl_s = decodeURI(location.href);
-    var name_data = surl_s.split("=")[1];
-    $('#itp_idt').val(name_data);
 
     $('#idt_submit').click(function () {
         var idt = $('#itp_idt').val();
@@ -29,11 +22,12 @@ $(function () {
                     alert("修改身份证号成功");
                     window.history.back(-1);
                 } else {
-                    alert("修改失败："+data.message);
+                    alert("修改失败：" + data.message);
                 }
             }
         });
     });
+
     // 检测身份证号是否合法
     function ChinaIdChecker(id) {
         this.isOK = false;
@@ -46,41 +40,41 @@ $(function () {
         }
 
         var area = {
-            11 : "北京",
-            12 : "天津",
-            13 : "河北",
-            14 : "山西",
-            15 : "内蒙古",
-            21 : "辽宁",
-            22 : "吉林",
-            23 : "黑龙江",
-            31 : "上海",
-            32 : "江苏",
-            33 : "浙江",
-            34 : "安徽",
-            35 : "福建",
-            36 : "江西",
-            37 : "山东",
-            41 : "河南",
-            42 : "湖北",
-            43 : "湖南",
-            44 : "广东",
-            45 : "广西",
-            46 : "海南",
-            50 : "重庆",
-            51 : "四川",
-            52 : "贵州",
-            53 : "云南",
-            54 : "西藏",
-            61 : "陕西",
-            62 : "甘肃",
-            63 : "青海",
-            64 : "宁夏",
-            65 : "新疆",
-            71 : "台湾",
-            81 : "香港",
-            82 : "澳门",
-            91 : "国外"
+            11: "北京",
+            12: "天津",
+            13: "河北",
+            14: "山西",
+            15: "内蒙古",
+            21: "辽宁",
+            22: "吉林",
+            23: "黑龙江",
+            31: "上海",
+            32: "江苏",
+            33: "浙江",
+            34: "安徽",
+            35: "福建",
+            36: "江西",
+            37: "山东",
+            41: "河南",
+            42: "湖北",
+            43: "湖南",
+            44: "广东",
+            45: "广西",
+            46: "海南",
+            50: "重庆",
+            51: "四川",
+            52: "贵州",
+            53: "云南",
+            54: "西藏",
+            61: "陕西",
+            62: "甘肃",
+            63: "青海",
+            64: "宁夏",
+            65: "新疆",
+            71: "台湾",
+            81: "香港",
+            82: "澳门",
+            91: "国外"
         };
 
         this.areaName = area[id.substr(0, 2)];
@@ -162,7 +156,7 @@ $(function () {
             return true;
         }
 
-        var getLastValidationLetter = function(str) {
+        var getLastValidationLetter = function (str) {
             var strArray = new Array(17);
             // 存储身份证的前17为数字
             var Wi = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2,
@@ -175,15 +169,15 @@ $(function () {
             var jym = 0;
             // 校验码
 
-            for ( var i = 16;
-                  i >= 0;
-                  i -= 1) {
+            for (var i = 16;
+                 i >= 0;
+                 i -= 1) {
                 strArray[i] = Number(str.charAt(i));
             }
 
-            for ( var j = 16;
-                  j >= 0;
-                  j -= 1) {
+            for (var j = 16;
+                 j >= 0;
+                 j -= 1) {
                 S += strArray[j] * Wi[j];
             }
 
