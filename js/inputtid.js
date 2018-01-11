@@ -28,7 +28,7 @@ $(function () {
                         , skin: 'msg'
                         , time: 2 //2秒后自动关闭
                     });
-                    window.history.back(-1);
+                    window.location.href = 'account_setting.html';
                 } else {
                     layer.open({
                         content: "修改失败：" + data.message
