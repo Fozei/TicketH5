@@ -408,7 +408,7 @@ input {
 /* seating Plan end */
 /* pgc seatCon start */
 .seatCon {
-    width: 14.85925925925926rem;
+    width: 16rem;
     border-radius: 0.1185185185185185rem;
     box-shadow: 0 0 .2222222222222222rem 0 #dae6fa;
     margin-left: 0.5925925925925926rem;
@@ -440,7 +440,7 @@ input {
 }
 
 .seatCon .seatList > .seatListCon {
-    width: 100%;
+	width:68rem;
     position: relative;
 }
 
@@ -462,20 +462,20 @@ input {
 
 /* 选择座位 */
 .seatCon .seatList > .seatListCon .seatLine {
-    height: 0.7111111111111111rem;
-    width: 18.31851851851852rem;
+    height: 1.9111111111111111rem;
+
     position: absolute;
 }
 
 .seatCon .seatList > .seatListCon .seatLine_r {
-    height: 0.7111111111111111rem;
-    width: 18.31851851851852rem;
+    height: 1.9111111111111111rem;
+ 
 }
 
 .seatLine > div, .seatLine_r > div {
-    width: .711rem;
-    height: .578rem;
-    line-height: .578rem;
+    width: 1.711rem;
+    height: 1.578rem;
+    line-height: 1.578rem;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -483,7 +483,7 @@ input {
     margin-right: 0.25rem;
     margin-bottom: 0.2518518518518519rem;
     color: #1A1A1A;
-    font-size: 0.2074074074074074rem;
+    font-size: 0.5074074074074074rem;
     float: left
 }
 

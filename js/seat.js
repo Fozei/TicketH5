@@ -238,12 +238,13 @@ $(function () {
 					if (increase==1){
 						
 						if(s==1){
-							var top =0.9629*u;
+							var top =1.9629*u;
 							str+='<div class="seatLine  clearFix" style="top:'+top+'rem">';
 						}
 					}else{
 						if(s==1 || (s-1) % end==0){
-							var top = 0.740*u;
+							var top = 1.9*u;
+							
 							str+='<div class="seatLine  clearFix" style="top:'+top+'rem">';
 						}
 					}
@@ -273,7 +274,7 @@ $(function () {
 					t++;
 				}
 				$('.seatListCon').html(str);
-				var m_t = top+1;
+				var m_t = top+3;
 				$('.seatMark').css({'margin-top':m_t+'rem'});
 			  }else if (type==1)
 			  {
@@ -307,12 +308,12 @@ $(function () {
 
 	var u=0;
 	var s=0;
-	widthStr=(end*(38+13.985))/67.5;
+	widthStr=(end*(115+14))/67.5;
 	str+='<div class="seat_left" style="width:'+widthStr+'rem;">';
 	for(var k=0;k<n;k++){
 		if(i==1 || (i-1) % end==0){
-			var top = 0.740*u;
-			str+= '<div class="seatLine_r" style="top:'+top+'rem">';
+			var top = 1.9*u;
+			str+= '<div class="seatLine_r" style="top:'+top+'rem;width:'+widthStr+'rem;">';
 		}
 		if (type==2){
 			newData[s]=new Array(s_list_2[k]);
