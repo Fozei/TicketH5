@@ -184,6 +184,7 @@ $(function () {
 		  success: function (data) {
 			if (data.code == 'error') {
 			   layer.msg(data.message);
+			   layer.close(index);
 			   return false;
 			} else {
 			  // seatList = data.seatList.reverse()
@@ -286,11 +287,9 @@ $(function () {
 				  $('.seatListCon').html(str);
 				   
 			  }
-			  
-			  layer.close(index);
-
 			 
 			}
+			layer.close(index);
 
 		  },
 		  error: function (error) {
