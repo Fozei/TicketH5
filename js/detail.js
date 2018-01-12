@@ -1,6 +1,6 @@
 var targetId;
 targetId = getQueryString('id');
-if (targetId == '' || targetId == null) {
+if (targetId === '' || targetId === null) {
     location.href = 'index.html';
 }
 
@@ -44,12 +44,11 @@ function parseDetailData(data) {
             var targetId = $(this).attr('targetid')
             var timeId = $(this).attr('timeid')
             var USERID = getCookie(COOKIE_NAME_USER_ID);
-            if (USERID == undefined || USERID == null || USERID == '') {
+            if (USERID === undefined || USERID === null || USERID === '') {
                 var count = 0, TIME_COUNT = 3, time;
                 $('.mask').addClass('fadeSlier-enter-active')
                 $('.notLogin').addClass('addCar-enter-active')
                 if (!time) {
-                    console.log('go')
                     count = TIME_COUNT;
                     time = setInterval(function () {
                         if (count > 1 && count <= TIME_COUNT) {
@@ -69,7 +68,6 @@ function parseDetailData(data) {
             } else {
                 window.location.href = 'seat.html?ticketID=' + targetId + '&timeID=' + timeId
             }
-            // seat.html?ticketID='+targetId+'&timeID='+timeList[i]['id']+'
         })
     } else {
         alert("数据出错")
@@ -84,7 +82,7 @@ $(function () {
         alert("数据出错");
     } else {
 
-        if (targetId != null) {
+        if (targetId !== null) {
 
             $.post(DOMAIN + TICKET_DETAIL, {
                 id: targetId

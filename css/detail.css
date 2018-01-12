@@ -113,6 +113,7 @@ table {
 td {
     border-right: 0.05rem solid #000;
     border-bottom: 0.05rem solid #000;
+    height: 1rem;
 }
 
 table a {

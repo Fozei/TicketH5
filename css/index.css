@@ -137,7 +137,12 @@
     border-radius: 0.05rem;
 
 }
-.listBox .l-left img{width: 4.82962962962963rem;height: 3.881481481481481rem}
+
+.listBox .l-left img {
+    width: 4.82962962962963rem;
+    height: 3.881481481481481rem
+}
+
 .listBox .l-right {
     position: relative;
     left: 0.8592rem;
@@ -149,6 +154,7 @@
 }
 
 .listBox .l-right .title {
+    margin-top: 0.2rem;
     width: 7.4963rem;
     color: #333333;
     font-size: 0.56296rem;
@@ -160,6 +166,7 @@
 }
 
 .listBox .l-right .desc {
+    margin-top: 0.2rem;
     width: 7.4963rem;
     color: #333333;
     font-size: 0.474rem;
@@ -175,7 +182,7 @@
 
 .listBox .l-right .button {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     height: 0.75rem;
     width: 7.6444rem;
     margin-bottom: 0.2rem;
