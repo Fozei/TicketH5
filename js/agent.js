@@ -14,9 +14,10 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.code == 'success') {
-                    alert("申请代理人成功");
+                    layer.msg('您的申请已提交，请等待！')
                 } else {
-                    alert("申请失败："+data.message);
+                    layer.msg(data.message)
+
                 }
             }
         });

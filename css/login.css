@@ -47,9 +47,10 @@
 
 .inputBox input {
     height: 1.3rem;
+    line-height: 1.3rem;
     vertical-align: middle;
     border: none;
-    font-size: 0.5rem;
+    font-size: 0.56rem;
 }
 
 .submit {
@@ -57,6 +58,7 @@
     color: white;
     text-align: center;
     border-color: #2d70e1;
+    font-size: 0.71rem;
 }
 
 .jumpTo {
@@ -75,7 +77,7 @@
 
 .induction {
     text-align: center;
-    margin-top: 3.5rem;
+    margin-top: 7.5rem;
     font-size: 0.5rem;
     margin-bottom: 1rem;
 }
