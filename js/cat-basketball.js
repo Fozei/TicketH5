@@ -3,7 +3,13 @@
 	  });
 		var catID=getQueryString('catID');
 		var keyword=getQueryString('keyword');
-					console.log(keyword)
+		if (keyword!=null)
+		{
+			var searchUrl = window.location.href;//截取 url中的“=”,获得“=”后面的参数  
+			var searchData = searchUrl.split("="); //decodeURI解码  
+			var searchText = decodeURI(searchData[1]); //将搜索的数据显示在搜索页面的搜索框中 
+		}
+		
 		$(function(){
 
 			//加载数据
@@ -11,7 +17,7 @@
 				url:DOMAIN + TICKET_LIST,
 				data:{
 					'catID':catID,
-					'keyword':'排球',
+					'keyword':searchText,
 					'page'   :1
 				},
 				type:"POST",

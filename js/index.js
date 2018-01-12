@@ -2,6 +2,11 @@
 var deviceID = getQueryString('device');
 if (deviceID == undefined) {
     deviceID = localStorage.deviceID;
+	if (deviceID==undefined)
+	{
+		deviceID = 2;
+		localStorage.deviceID = deviceID;
+	}
 } else {
     localStorage.deviceID = deviceID;
 }
@@ -28,9 +33,9 @@ $(window).load(function () {
 });
 function requestSearchResult() {
 	var str = $.trim($('#keyword').val());
-    var url = encodeURI("event_info.html?keyword=" +str);
-    var enurl = encodeURI(url);//使用了两次encodeRUI进行编码
-    window.location.href ='event_info.html?keyword='+enurl;
+    var searchUrl = encodeURI("event_info.html?keyword=" + str);
+	var searchUrl = "event_info.html?keyword=" + str
+	window.location.href = searchUrl;
 }
 
 function parseInitData(jsonData) {
@@ -92,16 +97,20 @@ function goUserCenter() {
         location.href = "user_center.html";
     }
 }
-var geolocation = new qq.maps.Geolocation("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", "myapp");
-var options = {timeout: 8000};
-function showPosition(position) {
-    var geographic = position
-    console.log(geographic)
-    document.getElementById('geographic').innerHTML = geographic.city
-};
+setTimeout(function() {
+	var geolocation = new qq.maps.Geolocation("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", "myapp");
+	var options = {
+		timeout: 0
+	};
 
-geolocation.getLocation(showPosition, showErr, options)
-function showErr() {
-    document.getElementById("demo").appendChild(document.createElement('p')).innerHTML = "定位失败！";
-    document.getElementById("city").innerHTML = "定位失败"
-};
+	function showPosition(position) {
+		geographic = position
+		document.getElementById('geographic').innerHTML = geographic.city
+	};
+	geolocation.getLocation(showPosition, showErr, options)
+
+	function showErr() {
+		document.getElementById("demo").appendChild(document.createElement('p')).innerHTML = "定位失败！";
+		document.getElementById("city").innerHTML = "定位失败"
+	};
+}, 500)
