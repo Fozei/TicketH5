@@ -166,7 +166,8 @@
 .order-confimBox .order-pay {
     /*margin-left: 142px;*/
     margin-top: 0.4444rem;
-    margin-left: 1.7037rem;
+    /*margin-left: 1.7037rem;  支持支付宝支付的时候，打开此项*/
+    margin-left: 4rem;
     margin-bottom: 0.6666rem;
     display: flex;
     -webkit-box-align: center;
