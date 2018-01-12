@@ -31,7 +31,11 @@ $(function () {
           str+='</div></a>';
           if(match != 0){
             str+='<a href="detail.html?id='+match[0].id+'"><img class="tab-left" width="283" height="340" src="'+match[0].pic+'"></a>';
-            str+='<p class="tab-left-details tab-txt-details"><a href="detail.html?id='+match[0].id+'">'+match[0].title+'</a></p>';
+            str+='<p class="tab-left-details tab-txt-details"><a href="detail.html?id='+match[0].id+'" style="color: #545454">'+match[0].title+'</a></p>';
+          } else {
+              str+='<img class="tab-left" width="283" height="340" src="images/none_competition.png">';
+              str+='<p class="tab-left-details tab-txt-details" style="text-align: center;color: #545454;">更多赛事<br>敬请期待...</p>';
+              // 暂&nbsp&nbsp&nbsp无<br>赛&nbsp&nbsp&nbsp事
           }
           str+='</div>';
           if ((i+1)%3==0 || i==(l-1))
