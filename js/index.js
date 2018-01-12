@@ -27,10 +27,10 @@ $(window).load(function () {
     });
 });
 function requestSearchResult() {
-	var str = $.trim($('#keyword').val())
-    var url = encodeURI("event_info.html?keyword=" +str
+	var str = $.trim($('#keyword').val());
+    var url = encodeURI("event_info.html?keyword=" +str);
     var enurl = encodeURI(url);//使用了两次encodeRUI进行编码
-    window.location.href ='event_info.html?keyword='+enurl
+    window.location.href ='event_info.html?keyword='+enurl;
 }
 
 function parseInitData(jsonData) {
