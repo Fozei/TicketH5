@@ -26,7 +26,13 @@ $(function () {
     function create_details_data(data) {
         // console.log('data.list:'+data.list[0].matchName);
         var htmls = '';
+        var str = '';
         $.each(data, function (v) {
+            if (data[v].status == "1"){
+                str = "已支付：";
+            } else{
+                str = "未支付：";
+            }
             var p_html = getdata(data[v].seatList);
             htmls += "<div class='page'> "+
                 "<span class='sp-ft-title'>"+data[v].matchName+"<span class='sp-ft-details'>&nbsp&nbsp比赛赛事：</span><span class=''>"+data[v].team+"</span></span>"+
@@ -43,7 +49,7 @@ $(function () {
             "<div class='clear'></div>"+
                 "<div style='position: relative; margin-top: 0.237rem;'>"+
                 "<span style='position: absolute; color: #545454; font-size: 0.474rem;left: 1.185rem'>购票时间："+data[v].create_time+"</span>"+
-            "<span style='position: absolute; right: 1.259rem;color: #545454;font-size: 0.474rem;'>已支付：<span style='color: #ec1c63;'>￥"+data[v].total_price+"</span></span>"+
+            "<span style='position: absolute; right: 1.259rem;color: #545454;font-size: 0.474rem;'>"+str+"<span style='color: #ec1c63;'>￥"+data[v].total_price+"</span></span>"+
             "</div>"+
             "</div>";
         });
