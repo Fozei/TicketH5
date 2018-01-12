@@ -25,6 +25,11 @@ header img {
     margin-top: 0.83rem;
 }
 
+#poster {
+    border-radius: 0.15rem;
+    border: 0.04rem solid #d5deff;
+}
+
 .left_intro {
     width: 6rem;
     height: 7.7rem;
@@ -124,12 +129,11 @@ table a {
     color: white;
 }
 
-
-
 .animated {
     animation-fill-mode: both;
 
 }
+
 .animated {
     animation-fill-mode: both;
 }
@@ -180,22 +184,55 @@ table a {
         transform: scale3d(.3, .3, .3);
     }
 }
-.mask{width: 16rem;height: 100%;background: rgba(0,0,0,.65);position: fixed;  left:0;  top:0;z-index: 9;display: none;}
-.notLogin{width: 4.2rem;height: 2rem;background-color: #fff;border-radius: 0.2222222222222222rem;position: fixed;left: 0;right: 0;
-    top:0;bottom: 0;margin: auto;padding: 0.5rem 0.4rem;font-size: 0.3555555555555556rem;   animation-duration: 0.4s !important;
+
+.mask {
+    width: 16rem;
+    height: 100%;
+    background: rgba(0, 0, 0, .65);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    display: none;
+}
+
+.notLogin {
+    width: 4.2rem;
+    height: 2rem;
+    background-color: #fff;
+    border-radius: 0.2222222222222222rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.3555555555555556rem;
+    animation-duration: 0.4s !important;
     transition: all 0.5s cubic-bezier(.22, -0.86, .97, .58);
-    box-shadow: 0 0 0.0740740740740741rem #ccc;z-index: 10;display: none}
-.notLogin .notLoginTit{width: 100%;text-align: center;}
+    box-shadow: 0 0 0.0740740740740741rem #ccc;
+    z-index: 10;
+    display: none
+}
+
+.notLogin .notLoginTit {
+    width: 100%;
+    text-align: center;
+}
+
 .addCar-enter-active {
     display: block;
     animation-name: bounceIn;
     animation-duration: .2s;
 }
+
 .addCar-leave-active {
 
     animation-name: bounceOut;
     animation-duration: .2s;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
