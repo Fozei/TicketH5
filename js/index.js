@@ -1,16 +1,16 @@
 // 首页初始化
 var deviceID = getQueryString('device');
-if (deviceID == undefined) {
+if (deviceID === undefined) {
     deviceID = localStorage.deviceID;
-	if (deviceID==undefined)
-	{
-		deviceID = 2;
-		localStorage.deviceID = deviceID;
-	}
+    if (deviceID === undefined) {
+        deviceID = 2;
+        localStorage.deviceID = deviceID;
+    }
 } else {
     localStorage.deviceID = deviceID;
 }
-$(window).load(function () {
+
+$(function () {
     layer.load(0, {
         shade: [0.3, 'black']
     }); //0代表加载的风格，支持0-2
@@ -31,16 +31,18 @@ $(window).load(function () {
         layer.closeAll('loading');
     });
 });
+
 function requestSearchResult() {
-	var str = $.trim($('#keyword').val());
-    var searchUrl = encodeURI("event_info.html?keyword=" + str);
-	var searchUrl = "event_info.html?keyword=" + str
-	window.location.href = searchUrl;
+    var str = $.trim($('#keyword').val());
+    // var searchUrl = encodeURI("event_info.html?keyword=" + str);
+    var searchUrl = "event_info.html?keyword=" + str;
+    window.location.href = searchUrl;
 }
 
 function parseInitData(jsonData) {
     var catData = jsonData.catData;
     var recommendData = jsonData.recommendData;
+    //拼接分类列表
     $.each(catData, function bindData(index, item) {
         var catName = item.name;
         var catid = item.id;
@@ -53,18 +55,16 @@ function parseInitData(jsonData) {
             li += '<p><a href="' + url + '" >' + catName + '</a></p>';
         } else {
             li += '<img src="' + pic + '" onClick="goToList(' + catid + ')">';
-            li += '<p><a href="javascript:void(0);" onClick="goToList(' + catid + ')">' + catName + '</a></p>';
+            li += '<p><a onClick="goToList(' + catid + ')">' + catName + '</a></p>';
         }
         li += '</li>';
         $(".cat-list").append(li);
     });
 
     $(".cat-list").append("<li>\n" +
-        "<img src=\"images/icon6.png\" onclick=\"location.href='" + MALL_ADDRESS + deviceID +
-        "'\" alt=\"\" />\n" +
-        "<p onclick=\"location.href='" + MALL_ADDRESS + deviceID + "'\">长颈乐商城</p>\n" +
-        "</li>");
-
+        "<img src=\"images/icon6.png\" onclick=\"location.href='" + MALL_ADDRESS + deviceID + "'\"/>" +
+        "<p onclick=\"location.href='" + MALL_ADDRESS + deviceID + "'\">长颈乐商城</p></li>");
+    //绑定热门推荐
     $.each(recommendData, function (index, item) {
         var title = item.title;
         var desc = item.ticket_info;
@@ -97,20 +97,20 @@ function goUserCenter() {
         location.href = "user_center.html";
     }
 }
-setTimeout(function() {
-	var geolocation = new qq.maps.Geolocation("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", "myapp");
-	var options = {
-		timeout: 0
-	};
 
-	function showPosition(position) {
-		geographic = position
-		document.getElementById('geographic').innerHTML = geographic.city
-	};
-	geolocation.getLocation(showPosition, showErr, options)
+setTimeout(function () {
+    var geolocation = new qq.maps.Geolocation("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", "myapp");
+    var options = {
+        timeout: 4000
+    };
 
-	function showErr() {
-		document.getElementById("demo").appendChild(document.createElement('p')).innerHTML = "定位失败！";
-		document.getElementById("city").innerHTML = "定位失败"
-	};
-}, 500)
+    function showPosition(position) {
+        document.getElementById('geographic').innerHTML = position.city;
+    }
+
+    geolocation.getLocation(showPosition, showErr, options)
+
+    function showErr() {
+        document.getElementById('geographic').innerHTML = "等位失败！";
+    }
+}, 500);
