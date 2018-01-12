@@ -28,11 +28,20 @@ $(function () {
 function initView(data) {
     //1=普通用户 2=代理人
     userType = parseInt(data.userData.type);
-    if (userType === 1) {
+    if (userType === 1) {//普通人
         $('#cashRequest').remove();
         $('#cashHistory').remove();
-        $('#list').append("<li><div onclick='goAgent()' class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span>申请成为代理商</span></div></li>");
-    } else if (userType === 2) {
+        var agentStatus = parseInt(data.userData.agent_status);
+        if (agentStatus === 1) {//普通用户--尚未申请
+            $('#list').append("<li><div onclick='goAgent()' class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span>申请成为代理商</span></div></li>");
+        } else if (agentStatus === 2) {
+            $('#list').append("<li><div onclick='goMyAgent()' class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span>我的代理商</span></div></li>");
+        } else if (agentStatus === 3) {//普通用户，申请审核中
+            $('#list').append('<li><div style="background-image: none" class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span style="float: right;margin-right: 1rem">申请审核中</span></div></li>');
+        } else if (agentStatus === 4) {
+            $('#list').append('<li><div style="background-image: none" class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span style="float: right;margin-right: 1rem">您的申请被驳回</span></div></li>');
+        }
+    } else if (userType === 2) {//代理商
         $('#list').append("<li><div onclick='goMyAgent()' class=\"dataBox\"><img class=\"catLogo\" src=\"images/myagent.png\"><span>我的代理商</span></div></li>");
     }
 
