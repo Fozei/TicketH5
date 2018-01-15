@@ -24,16 +24,6 @@ $(function () {
     });
     //获取数据
     clssify_data(USERID, 1, null, null, null);
-
-    // 时间戳转换成       年-月-日
-    function getLocalTime(nS) {
-        var ad = new Date(parseInt(nS));
-        var Y = ad.getFullYear() + '-';
-        var M = (ad.getMonth() + 1) + '-';
-        var D = ad.getDate() + ' ';
-        ad = Y + M + D;
-        return ad;
-    }
 });
 
 function clssify_data(userID, page, startTime, catID, endTime) {
@@ -160,4 +150,14 @@ function requestByDate() {
         clssify_data(USERID, 1, getLocalTime(st_time), null, getLocalTime(ed_time));
     }
     $("#datePicker").animate({top: "28rem", height: "0rem"});
+}
+
+// 时间戳转换成       年-月-日
+function getLocalTime(nS) {
+    var ad = new Date(parseInt(nS));
+    var Y = ad.getFullYear() + '-';
+    var M = (ad.getMonth() + 1) + '-';
+    var D = ad.getDate() + ' ';
+    ad = Y + M + D;
+    return ad;
 }
