@@ -40,3 +40,6 @@ var FORGET_PWD = '/forgetpwd.php';//修改密码、忘记密码 验证验证码
 
 var TICKET_EXAMINE = '/checkseat.php';
 var TICKET_ADDORDER = '/addorder.php';
+
+var TICKET_SEAT_COUNT = '/getordercount.php'; //得到座位数量
+var TICKET_ADDCARD = '/cardadd.php';    //添加身份证
