@@ -1,38 +1,4 @@
 var pageData;
-
-function buildUpOrderContent(index) {
-    var dataItem = pageData[parseInt(index)];
-    var str;
-    if (dataItem.status === "1") {
-        str = "已支付：";
-    } else {
-        str = "未支付：";
-    }
-
-    var week = dataItem.week + "\t";
-
-    console.log(dataItem);
-
-    var content = "<div class=\"page\" onclick=\"showTicketList(" + index + ")\">\n" +
-        "        <span class=\"sp-ft-title\">" + dataItem.matchName + "<span class=\"sp-ft-details\">比赛赛事：</span><span>" + dataItem.team + "</span></span>\n" +
-        "        <img class=\"img-line\" src=\"images/line.png\">\n" +
-        "        <div style=\"float: left;\">\n" +
-        "            <img class=\"img-pictrue\" src=\"" + dataItem.matchPic + "\">\n" +
-        "        </div>\n" +
-        "        <div class=\"d-details\">\n" +
-        "            <p>购票时间：" + dataItem.create_time + "</p>\n" +
-        "            <p>比赛时间：" + dataItem.year_r + "</p>\n" +
-        "            <p style=\"margin-left: 2.3555rem\">周" + week + dataItem.match_time + "</p>\n" +
-        "            <p>数&#12288&#12288量：" + dataItem.seatList.length + "</p>\n" +
-        "            <p>支付状态：" + str + "￥" + dataItem.total_price + " </p>\n" +
-        "        </div>\n" +
-        "        <div class=\"clear\"></div>\n" +
-        "    </div>";
-
-
-    return content;
-}
-
 $(function () {
 
     $.ajax({
@@ -47,7 +13,6 @@ $(function () {
         success: function (data) {
             // layer.close(index);
             if (data.code === 'success') {
-                console.log(data);
                 if (data.list === 0) {
                     $('#dev_ul').append('<div class="emptyTip">暂无信息</div>');
                 } else {
@@ -76,10 +41,9 @@ $(function () {
         return p_html;
     }
 
-})
+});
 
 function buildUpContent(pageDatum) {
-    console.log(pageDatum);
     var content = "<div class=\"orderDetail\"><p class=\"layer_title\">" + pageDatum.matchName + "</p><ul class=\"ticketUl\">";
 
     var seatList = pageDatum.seatList;
@@ -118,9 +82,38 @@ function buildUpContent(pageDatum) {
 
         content += str;
     }
-
-
     return content += "</ul></div>";
+}
+
+function buildUpOrderContent(index) {
+    var dataItem = pageData[parseInt(index)];
+    var str;
+    if (dataItem.status === "1") {
+        str = "已支付：";
+    } else {
+        str = "未支付：";
+    }
+
+    var week = dataItem.week + "\t";
+
+    var content = "<div class=\"page\" onclick=\"showTicketList(" + index + ")\">\n" +
+        "        <span class=\"sp-ft-title\">" + dataItem.matchName + "<span class=\"sp-ft-details\">比赛赛事：</span><span>" + dataItem.team + "</span></span>\n" +
+        "        <img class=\"img-line\" src=\"images/line.png\">\n" +
+        "        <div style=\"float: left;\">\n" +
+        "            <img class=\"img-pictrue\" src=\"" + dataItem.matchPic + "\">\n" +
+        "        </div>\n" +
+        "        <div class=\"d-details\">\n" +
+        "            <p>购票时间：" + dataItem.create_time + "</p>\n" +
+        "            <p>比赛时间：" + dataItem.year_r + "</p>\n" +
+        "            <p style=\"margin-left: 2.3555rem\">周" + week + dataItem.match_time + "</p>\n" +
+        "            <p>数&#12288&#12288量：" + dataItem.seatList.length + "</p>\n" +
+        "            <p>支付状态：" + str + "￥" + dataItem.total_price + " </p>\n" +
+        "        </div>\n" +
+        "        <div class=\"clear\"></div>\n" +
+        "    </div>";
+
+
+    return content;
 }
 
 function showTicketList(index) {
@@ -140,13 +133,6 @@ function showTicketList(index) {
             content: content
         });
 
-        // layer.open({
-        //     title: [
-        //         '订单详情',
-        //         'background-color: #2d70e1; color:#fff;'
-        //     ]
-        //     , content: content
-        // });
     } else {
         layer.open({
             content: '糟糕，页面出错'
