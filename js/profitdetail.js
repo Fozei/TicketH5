@@ -103,6 +103,7 @@ function adapter_profit(data) {
             "</li>";
     } else {
         $.each(data.logData, function (v) {
+            data.logData[v].catName = "羽毛球";
             ap_html += "<li id='li_item'> " +
                 "<p class='dataItem'>" +
                 "<span class='date'>" + data.logData[v].addtime + "</span>" +
@@ -118,7 +119,7 @@ function adapter_profit(data) {
 
 function showDateSelect() {
     resetCatPosition();
-    $("#datePicker").animate({top: "16.18rem", height: "8.5rem"});
+    $("#datePicker").animate({top: "14.18rem", height: "8.5rem"});
 }
 
 function resetDatePosition() {
@@ -129,7 +130,7 @@ function resetDatePosition() {
 function showCatSelect() {
     resetDatePosition();
     var targetHeight = (catNum + 1) * 1.7;
-    var targetTop = 28.44 - targetHeight - 4;
+    var targetTop = 28.44 - targetHeight - 6;
     $("#catList").animate({top: targetTop + "rem", height: targetHeight + "rem"});
 }
 
