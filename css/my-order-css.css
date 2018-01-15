@@ -21,7 +21,7 @@
 }
 
 .page {
-    height: 8.5rem;
+    height: 7.5rem;
     /*width: 14.2666rem;*/
     margin-right: 0.8592rem;
     margin-left: 0.874rem;
@@ -31,6 +31,7 @@
     border-radius: 0.1888rem;
     position: relative;
 }
+
 .page-1 {
     height: 7.5rem;
     width: 14.2666rem;
@@ -72,7 +73,7 @@
 
 .img-pictrue {
     width: 3.185185rem;
-    height: 2.7111rem;
+    height: 4.2111rem;
     margin-left: 1.437rem;
 }
 
@@ -81,4 +82,59 @@
     /*width: 6.4888rem;*/
     float: left;
     margin-left: 0.4444rem;
+}
+
+.d-details p {
+    font-size: 0.474rem;
+    color: black;
+
+}
+
+.orderDetail {
+    width: 14rem;
+}
+
+.layer_title {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0.56rem;
+    background-color: #2a6fe1;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.ticketUl {
+    overflow-y: scroll;
+    max-height: 12rem;
+    padding-bottom: 0.5rem;
+}
+
+.ticketUl li {
+    padding-top: 0.5rem;
+    border-top: dashed #2a6fe1;
+    border-width: 0.02rem;
+    width: 13rem;
+    margin-left: 0.5rem;
+    height: 2.5rem;
+    font-size: 0.4rem;
+}
+
+.ticketUl li div {
+    height: 0.5rem;
+}
+
+.ticketUl li div p span{
+    font-weight: normal;
+}
+
+.ticketUl li div p {
+    font-weight: bold;
+    width: 6.5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    vertical-align: middle;
 }
