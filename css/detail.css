@@ -116,6 +116,12 @@ td {
     height: 1rem;
 }
 
+th {
+    border-right: 0.05rem solid #000;
+    border-bottom: 0.05rem solid #000;
+    height: 1rem;
+}
+
 table a {
     color: #545454;
 }
