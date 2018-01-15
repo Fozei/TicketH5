@@ -38,7 +38,7 @@ function clssify_data(userID, page, startTime, catID, endTime) {
             'endTime': endTime
         },
         type: "POST",
-        async: false,
+        async: true,
         dataType: "json",
         success: function (data) {
             if (data.code === 'success') {
