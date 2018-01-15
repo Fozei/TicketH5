@@ -55,7 +55,7 @@ function clssify_data(userID, page, startTime, catID, endTime) {
                 adapter_profit(data);
                 currentCat = targetCat;
                 console.log(data)
-                $('#total').text(data.income+'元')
+                $('#total').text(data.income + '元')
             } else {
                 layer.open({
                     content: "获取数据失败：" + data.message
@@ -103,7 +103,6 @@ function adapter_profit(data) {
             "</li>";
     } else {
         $.each(data.logData, function (v) {
-            data.logData[v].catName = "羽毛球";
             ap_html += "<li id='li_item'> " +
                 "<p class='dataItem'>" +
                 "<span class='date'>" + data.logData[v].addtime + "</span>" +
