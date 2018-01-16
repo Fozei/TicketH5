@@ -367,3 +367,8 @@ footer li p {
     background-color: black;
     opacity: 0.3;
 }
+
+.qrWrapper img {
+    width: 6.148148rem;
+    height: 6.148148rem;
+}
