@@ -105,12 +105,14 @@ setTimeout(function () {
     };
 
     function showPosition(position) {
-        document.getElementById('geographic').innerHTML = position.city;
+        // document.getElementById('geographic').innerHTML = position.city;
+        document.getElementById('geographic').innerHTML = "蓬莱";
     }
 
     geolocation.getLocation(showPosition, showErr, options)
 
     function showErr() {
-        document.getElementById('geographic').innerHTML = "等位失败！";
+        // document.getElementById('geographic').innerHTML = "等位失败！";
+        document.getElementById('geographic').innerHTML = "蓬莱";
     }
 }, 500);
