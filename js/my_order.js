@@ -129,8 +129,7 @@ function showTicketList(index) {
             anim: 2,
             shade: [0.9, '#a8c4f2'],
             shadeClose: true, //开启遮罩关闭
-            area: ['851px', '851px'],
-            content: content
+            content: content,
         });
 
     } else {

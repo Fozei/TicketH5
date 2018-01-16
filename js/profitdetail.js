@@ -108,23 +108,22 @@ function adapter_profit(data) {
 
 function showDateSelect() {
     resetCatPosition();
-    $("#datePicker").animate({top: "14.18rem", height: "8.5rem"});
+    $("#datePicker").animate({height: "8.5rem"});
 }
 
 function resetDatePosition() {
-    $("#datePicker").animate({top: "28rem", height: "0rem"});
+    $("#datePicker").animate({height: "0rem"});
 }
 
 //展示分类选择器
 function showCatSelect() {
     resetDatePosition();
     var targetHeight = (catNum + 1) * 1.7;
-    var targetTop = 28.44 - targetHeight - 6;
-    $("#catList").animate({top: targetTop + "rem", height: targetHeight + "rem"});
+    $("#catList").animate({height: targetHeight + "rem"});
 }
 
 function resetCatPosition() {
-    $("#catList").animate({top: "28rem", height: "0rem"});
+    $("#catList").animate({height: "0rem"});
     if (targetCat !== undefined && targetCat !== currentCat) {
         $('#list .listContent').empty()
         setTimeout(function () {
@@ -149,7 +148,7 @@ function requestByDate() {
     } else {
         clssify_data(USERID, 1, getLocalTime(st_time), null, getLocalTime(ed_time));
     }
-    $("#datePicker").animate({top: "28rem", height: "0rem"});
+    $("#datePicker").animate({height: "0rem"});
 }
 
 // 时间戳转换成       年-月-日
