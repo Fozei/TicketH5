@@ -36,7 +36,7 @@ function parseDetailData(data) {
             var turn = timeList[i].turn;
             var team = timeList[i].team;
             var time = timeList[i].time;
-            table.append('<tr  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td style="background-color: #2c70e1"><a style="color: white" href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>');
+            table.append('<tr  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td class="btnSelectSeat"><a style="color: white" href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>');
         }
 
         $("#notice").html(desc);
