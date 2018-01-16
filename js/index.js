@@ -10,6 +10,8 @@ if (deviceID === undefined) {
     localStorage.deviceID = deviceID;
 }
 
+var makeCodeDone = false;
+
 $(function () {
     layer.load(0, {
         shade: [0.3, 'black']
@@ -96,4 +98,30 @@ function goUserCenter() {
     } else {
         location.href = "user_center.html";
     }
+}
+
+function showShareLink() {
+    var userId = getCookie(COOKIE_NAME_USER_ID);
+    if (userId === null || userId === undefined || userId === "") {
+        var qrcode = new QRCode(document.getElementById(
+            "qrcode"), {
+            width: 415,
+            height: 415,
+        });
+
+        if (!makeCodeDone) {
+            qrcode.makeCode(H5_ADDRESS);
+            makeCodeDone = true;
+        }
+        $('.layer').show();
+        $('.shareTips').show();
+    } else {
+        location.href = "invitation_code.html";
+    }
+}
+
+function closeShare() {
+
+    $('.shareTips').hide();
+    $('.layer').hide();
 }
