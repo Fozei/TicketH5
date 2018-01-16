@@ -97,22 +97,3 @@ function goUserCenter() {
         location.href = "user_center.html";
     }
 }
-
-setTimeout(function () {
-    var geolocation = new qq.maps.Geolocation("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", "myapp");
-    var options = {
-        timeout: 4000
-    };
-
-    function showPosition(position) {
-        // document.getElementById('geographic').innerHTML = position.city;
-        document.getElementById('geographic').innerHTML = "蓬莱";
-    }
-
-    geolocation.getLocation(showPosition, showErr, options)
-
-    function showErr() {
-        // document.getElementById('geographic').innerHTML = "等位失败！";
-        document.getElementById('geographic').innerHTML = "蓬莱";
-    }
-}, 500);

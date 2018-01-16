@@ -138,3 +138,10 @@
     line-height: 0.5rem;
     vertical-align: middle;
 }
+.pauButton{
+	background-color:#2c70e1;
+	color:#fff;
+	border-radius: 0.1888rem;
+	padding:0.1rem 0.5rem;
+
+}
