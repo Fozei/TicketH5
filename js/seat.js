@@ -21,7 +21,7 @@ $(function () {
 	$('.main').on('click', '.seatingPlanCon>div', function () {
 		$('.seatListCon').empty();
 		area = $(this).attr('name');
-		$('.seatTit span').html(area);
+		 $('#checkedArea').html(area);
 		$(this).addClass('checked');
 		$(this).siblings().removeClass('checked');
 		seatView(area);
@@ -275,7 +275,7 @@ $(function () {
 				}
 				$('.seatListCon').html(str);
 				var m_t = top+3;
-				$('.seatMark').css({'margin-top':m_t+'rem'});
+				$('#empty_div').css({'margin-top':m_t+'rem'});
 			  }else if (type==1)
 			  {
 				  //中间是1的座位情况

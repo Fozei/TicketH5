@@ -496,6 +496,9 @@ input {
 
 /*.seatList #seatLoad{}*/
 .seatCon .seatMark {
+	position:absolute;
+    left:1.5rem;
+	top:0.5rem;
     width: 100%;
     text-align: center;
     display: flex;
@@ -520,7 +523,7 @@ input {
 }
 
 .seatMark > div.optional {
-    margin-left: 1.688888888888889rem;
+    margin-left: 0.688888888888889rem;
 }
 
 .seatMark > div > span {

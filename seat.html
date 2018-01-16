@@ -85,23 +85,25 @@
 			<!-- seating Plan end -->
 			<!-- pgc seat start -->
 			<div class="seatCon">
-				<div class="seatTit">
+				<div class="seatTit" style="position:relative;">
 					<span id="checkedArea">A1</span>区座位选择：
+					<div class="seatMark clearFix">
+						<div class="not">
+							<img src="images/not.png" />
+							<span>已售出座位</span>
+						</div>
+						<div class="optional">
+							<img src="images/optional.png" />
+							<span>可选择座位</span>
+						</div>
+					</div>
 				</div>
 				<div class="seatList" id="box">
 					<div class="seatListCon">	
 					</div>
+					<div id="empty_div"></div>
 				</div>
-				<div class="seatMark clearFix">
-					<div class="not">
-						<img src="images/not.png" />
-						<span>已售出座位</span>
-					</div>
-					<div class="optional">
-						<img src="images/optional.png" />
-						<span>可选择座位</span>
-					</div>
-				</div>
+				
 			</div>
 			<div class="checkSeat" style="display:none;">
 				<div class="checkSeatTit seatTit" >
@@ -126,7 +128,8 @@
 		<script type="text/javascript" src="js/common.js"></script>
 		<script type="text/javascript" src="js/utils.js"></script>
 		<script src="js/checklogin.js"></script>
-		<script type="text/javascript" src="js/seat.js"></script>
+		<script src="js/seat.js"></script>
+		
 
 	</body>
 
