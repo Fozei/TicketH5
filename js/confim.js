@@ -15,7 +15,7 @@ $(function () {
     url: DOMAIN + TICKET_ORDER,
     data: {
      		'ticketID': ticketID,
-     		'orderNum': orderNum,
+        'orderNum': orderNum,
      		'timeID': timeID
      	},
      	type: "POST",
