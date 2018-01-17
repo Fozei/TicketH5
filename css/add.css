@@ -94,9 +94,34 @@
 	width:100%;
 	text-align:center;
 	bottom:0;
+	z-index:100;
 }
 .button img{
 	width: 12.28148rem;
     height: 2.37037rem;
+}
+.flowDiv{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2000;
+	
+}
+.flowDiv p{
+	color:#fff;
+	font-size:0.7111111111rem;
+	position:absolute;
+	top:2.2rem;
+	right:5.3rem;
+}
+.flowDiv img{
+	width: 3.82222222222rem;
+    height: 1.748148148rem;
+	position:absolute;
+	top:0.7rem;
+	right:1.3rem;
 }
 

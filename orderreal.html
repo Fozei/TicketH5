@@ -31,7 +31,11 @@
 </head>
 
 <body>
-	
+	<!--蒙曾-->
+	<div class="flowDiv" style="display:none;">
+		<p>请打开浏览器填写信息</p>
+		<img src="images/tip.png" class="img" alt="" />
+	</div>
 	<div class="header_r header_r_no_bg totalWidth">
         <img src="images/fanhui.png" onclick="history.back()" class="back-img back" alt=""/>
         填写信息
@@ -39,7 +43,6 @@
     <div class="compert-img">
         <div class="tab-order">
 			<div class="content_div">
-				
 				
 				<p class="input_div">
 					<label>手&#8194机&#8194号</label>
@@ -52,6 +55,7 @@
 		<img src="images/submit.png"  onClick="submit();" />
 		<input type="hidden" id="num" />
 	</div>
+	
 </body>
 <script src="js/jquery-1.12.0.min.js">
 </script>
@@ -60,17 +64,21 @@
 <script type="text/javascript">
 <!--
 var orderID = getQueryString('orderID');
-var index = layer.load(0, {
-    shade: [0.3, 'black'] //0.1透明度的白色背景
-});
 $(function(){
+	if (isWeiXin())
+	{
+		//加盟层
+		$('.flowDiv').show();
+	}
 	
 	if (orderID==null)
 	{
-		layer.close(index);
+
 		layer.msg('参数错误');
         return false;
 	}
+
+
 	$.ajax({
         url: DOMAIN + TICKET_SEAT_COUNT,
         data: {
@@ -80,7 +88,6 @@ $(function(){
         async: false,
         dataType: "json",
         success: function (data) {
-			 layer.close(index);
 			if (data.code=='success')
 			{
 				var n = data.num;
@@ -110,11 +117,19 @@ $(function(){
     });
 })
 
+function isWeiXin(){
+	var ua = window.navigator.userAgent.toLowerCase();
+	if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+		return true;
+	}else{
+		return false;
+	}
+} 
+
 function submit(){
 	var n = $('#num').val();
 	var tel = $('#tel').val();
 	var data=new Array();
-	alert(n);
 	if (n==0)
 	{
 		layer.msg('错误操作');
