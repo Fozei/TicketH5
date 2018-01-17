@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="css/my_agent.css"/>
     <script type="text/javascript" src="js/auto.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/constance.js"></script>
 </head>
 <body>
 <div class="myAgent">
@@ -28,7 +30,7 @@
     <!-- pgc nav start -->
     <div class="nav">
         <ul>
-            <li  class="active"><a href="javascript:;">我的邀请</a></li>
+            <li class="active"><a href="javascript:;">我的邀请</a></li>
             <li><a href="aggregate_recommend.html">累计推荐</a></li>
             <li><a href="agent_earnings.html">代理商收益</a></li>
         </ul>
@@ -64,7 +66,7 @@
                 </a>
             </li>
             <li>
-                <a href="invitation_code.html">
+                <a onclick="goShare()" href="javascript:;">
                     <i></i>
                     <span>扫我</span>
                 </a>
@@ -78,9 +80,9 @@
 </div>
 <script type="text/javascript" src="js/my_agent.js"></script>
 <script>
-  $('.head .backUp').on('touchstart',function(e) {
-    window.history.back();
-  });
+    $('.head .backUp').on('touchstart', function (e) {
+        window.history.back();
+    });
 </script>
 </body>
 </html>

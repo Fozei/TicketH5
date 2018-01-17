@@ -1,16 +1,20 @@
 $(function () {
     //邀请好友
+    var uid = getCookie(COOKIE_NAME_USER_ID);
+    if (uid === null || uid === undefined || uid === "") {
+        uid = getQueryString("uid");
+    }
     $.ajax({
         url: DOMAIN + INVITE_FRIEND,
         data: {
-            'userID': USERID,
+            'userID': uid,
         },
         type: "POST",
         async: false,
         dataType: "json",
         success: function (data) {
             // layer.close(index);
-            if (data.code == 'success') {
+            if (data.code === 'success') {
                 qr_code(data);
             } else {
                 alert("获取失败：" + data.message);
@@ -33,5 +37,4 @@ $(function () {
         qrcode.makeCode(qr_code);
     }
 
-
-})
+});

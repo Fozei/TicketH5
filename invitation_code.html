@@ -16,7 +16,6 @@
     <script type="text/javascript" src="js/auto.js"></script>
     <script src="js/constance.js"></script>
     <script src="js/utils.js"></script>
-    <script src="js/checklogin.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/qrcode/qrcode.js"></script>
     <script src="js/invitation_code.js"></script>
@@ -38,12 +37,12 @@
         <div class="mainCon">
             <img src="images/logopng.png" class="logo">
             <p class="mainTopTxt">您的朋友<span id="sp_number">***********</span>邀请您加入长颈乐票务系统，一起赚大钱</p>
-           <div class="code">
-               <div id="scanme">
-                   <!--<img id="qr_code_img" alt="">-->
-               </div>
-               <p>扫描二维码享受购票折扣</p>
-           </div>
+            <div class="code">
+                <div id="scanme">
+                    <!--<img id="qr_code_img" alt="">-->
+                </div>
+                <p>扫描二维码享受购票折扣</p>
+            </div>
             <div class="joinUs">
                 邀请伙伴一起赚钱赶紧加入吧！
             </div>
@@ -51,11 +50,11 @@
     </div>
 </div>
 <script>
-  $(function(){
-    $('.head .backUp').on('touchstart',function(e) {
-      window.history.back();
+    $(function () {
+        $('.head .backUp').on('touchstart', function (e) {
+            window.history.back();
+        })
     })
-  })
 </script>
 </body>
 </html>
