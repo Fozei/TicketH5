@@ -64,11 +64,13 @@
 <!--
 var orderID = getQueryString('orderID');
 $(function(){
+	/*
 	if (isWeiXin())
 	{
 		//加盟层
 		$('.flowDiv').show();
 	}
+	*/
 
 	if (orderID==null)
 	{
@@ -197,7 +199,7 @@ function submit(){
 			   var ticketID = data.orderData.ticket_id;
 			   var timeID = data.orderData.time_id;
 			   var order_num = data.orderData.order_num;
-			   location.href=DOMAIM_API+'web/ticketconfirm.php?ticketID='+ticketID+'&orderNum='+order_num+'&timeID='+timeID;
+			   location.href=DOMAIM_API+'ticketconfirm.php?ticketID='+ticketID+'&orderNum='+order_num+'&timeID='+timeID;
            }else{
 				layer.msg(data.message);
 				return false;

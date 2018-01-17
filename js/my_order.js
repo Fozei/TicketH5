@@ -57,7 +57,7 @@ function buildUpContent(pageDatum) {
         if (pageDatum.status === "1") {
             payStatus = "已支付";
         } else {
-            payStatus = "未支付 <a href=\""+DOMAIM_API+"web/ticketconfirm.php?ticketID="+ticketID+"&orderNum="+order_num+"&timeID="+timeID+"\" class=\"pauButton\">点击支付</a>";
+            payStatus = "未支付 <a href=\""+DOMAIM_API+"ticketconfirm.php?ticketID="+ticketID+"&orderNum="+order_num+"&timeID="+timeID+"\" class=\"pauButton\">点击支付</a>";
         }
 
         var matchDate = pageDatum.year_r + "\t" + pageDatum.match_time;

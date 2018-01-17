@@ -161,7 +161,7 @@ $(function() {
 					layer.msg(data.message);
 					return false;
 				} else {
-					location.href = DOMAIM_API + 'web/ticketconfirm.php?ticketID=' + ticketID + '&orderNum=' + data.orderNum + '&timeID=' + timeID;
+					location.href = DOMAIM_API + 'ticketconfirm.php?ticketID=' + ticketID + '&orderNum=' + data.orderNum + '&timeID=' + timeID;
 				}
 
 			}
