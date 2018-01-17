@@ -25,7 +25,10 @@ $(function() {
 		$('#checkedArea').html(area);
 		$(this).addClass('checked');
 		$(this).siblings().removeClass('checked');
+
 		seatView(area);
+
+
 
 	});
 	//选座
@@ -294,6 +297,16 @@ function seatView(area) {
 
 			}
 			layer.close(index);
+      $('.Seat ').each(function () {
+        var parentSid = $(this).attr('sid')
+        $('.setSite').each(function () {
+          if(parentSid == $(this).attr('sid')){
+            $(this).removeClass('optionalBg')
+            $(this).addClass('selected')
+					}
+
+        })
+      })
 
 		},
 		error: function(error) {
