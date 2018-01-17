@@ -75,6 +75,9 @@
 	 border-radius: 0.1962rem;
 	 background-color:#f5f2f3;
 }
+.tab-order .content_div .active{
+	border:1px #2c70e1 solid;
+}
 .tab-order .content_div .input_div label{
 	float:left;
 	margin-left:0.4296296296rem;
