@@ -66,14 +66,15 @@ input {
 /* head end */
 /* pgc seating Plan start */
 .seatingPlan {
-    width: 14.85925925925926rem;
-    height: 9.555555555555556rem;
+   width: 14.85925925925926rem;
     background-color: #fff;
     border-radius: 0.1185185185185185rem;
     margin-left: 0.5925925925925926rem;
     margin-right: 0.5481481481481481rem;
-    margin-bottom: 0.3407407407407407rem;
-    margin-top: -2.933333333333333rem;
+    margin-bottom: 0.2666666666666667rem;
+    margin-top: -2.044444444444444rem;
+    box-shadow: 0 0.1481481481481481rem 0.2962962962962963rem 0.0740740740740741rem #dbe2f5;
+    padding-bottom: 0.0740740740740741rem;
 }
 
 .seatingPlanTit {
@@ -86,8 +87,8 @@ input {
 }
 
 .seatingPlanCon {
-    width: 14.16296296296296rem;
-    height: 8.874074074074074rem;
+        width: 13.83703703703704rem;
+    height: 8.696296296296296rem;
     margin: 0 auto;
     background-image: url(../images/sketchmap.jpg);
     background-size: cover;
@@ -98,302 +99,57 @@ input {
 
 .seatingPlanCon > div {
     position: absolute;
+        font-size: 0.2666666666666667rem;
+    text-align: center;
+    color: #f3b306;
 }
 
-.areaA1 {
-    width: 1.22962962962963rem;
-    height: 0.8rem;
-    left: 0.7407407407407407rem;
-    top: 0.1777777777777778rem;
-}
+.areaA1{width: 1.22962962962963rem;height:0.8rem;line-height: 0.8rem;left: 0.7407407407407407rem;top: 0.1777777777777778rem;}
+.areaA2{width: 1.140740740740741rem;height: 0.8rem;line-height: 0.8rem;top:0.1777777777777778rem;left: 2.162962962962963rem;}
+.areaA3{width: 1.6rem;height: 0.8rem;line-height: 0.8rem;top:0.1777777777777778rem;left: 3.422222222222222rem;}
+.areaA4{width: 1.6rem;height: 1.022222222222222rem;line-height: 1.022222222222222rem;top:0.9777777777777778rem;left: 3.422222222222222rem;}
+.areaA5{width: 1.051851851851852rem;height: 0.8rem;line-height: 0.8rem;top:0.1777777777777778rem;left: 5.155555555555556rem;}
+.areaA6{width: 1.051851851851852rem;height:1.022222222222222rem;line-height: 1.022222222222222rem;top:0.9777777777777778rem;left: 5.155555555555556rem;}
+.areaA7{width: 1.777777777777778rem;height:0.8rem;line-height: 0.8rem;top:0.1777777777777778rem;left: 6.207407407407407rem;}
+.areaA8{width: 1.6rem;height:1.022222222222222rem;line-height: 1.022222222222222rem;top:0.9777777777777778rem;left: 6.311111111111111rem;}
+.areaA9{width: 1.051851851851852rem;height:0.8rem;line-height: 0.8rem;top:0.1777777777777778rem;left: 7.985185185185185rem;}
+.areaA10{width: 1.051851851851852rem;height:1.022222222222222rem;line-height: 1.022222222222222rem;top:0.9777777777777778rem;left: 7.985185185185185rem;}
+.areaA11{width: 1.57037037037037rem;height:0.8rem;line-height: 00.8rem;top:0.1777777777777778rem;left: 9.155555555555556rem;}
+.areaA12{width: 1.57037037037037rem;height:1.022222222222222rem;line-height: 1.022222222222222rem;top:0.9777777777777778rem;left: 9.155555555555556rem;}
+.areaA13{width: 1.155555555555556rem;height:0.8rem;line-height: 0.8rem;top:0.1777777777777778rem;left: 10.85925925925926rem;}
+.areaA14{width: 1.22962962962963rem;height:0.8rem ;line-height: 0.8rem;left: 12.17777777777778rem;top: 0.1777777777777778rem;}
 
-.areaA2 {
-    width: 1.140740740740741rem;
-    height: 0.8rem;
-    top: 0.1777777777777778rem;
-    left: 2.162962962962963rem;
-}
+.areaB1{width: 0.8rem;height:1.318518518518519rem;line-height:1.318518518518519rem;right: 0.1481481481481481rem;top: 0.7407407407407407rem;}
+.areaB2{width: 0.9777777777777778rem;height:1.303703703703704rem ;line-height:1.303703703703704rem ;right:1.037037037037037rem;top: 2.177777777777778rem;}
+.areaB3{width: 0.8rem;height:1.303703703703704rem ;line-height:1.303703703703704rem ;right: 0.1481481481481481rem;top: 2.177777777777778rem;}
+.areaB4{width: 0.9777777777777778rem;height:1.303703703703704rem ;line-height:1.303703703703704rem ;right:1.037037037037037rem;top: 3.6rem;}
+.areaB5{width: 0.8rem;height:1.333333333333333rem ;line-height:1.333333333333333rem ;right: 0.1481481481481481rem;top: 3.6rem;}
+.areaB6{width: 0.9777777777777778rem;height:1.303703703703704rem;line-height:1.303703703703704rem ;right:1.037037037037037rem;top: 5.051851851851852rem;}
+.areaB7{width: 0.8rem;height:1.288888888888889rem ;line-height:1.288888888888889rem;right: 0.1481481481481481rem;top: 5.051851851851852rem;}
+.areaB8{width: 0.8rem;height:1.333333333333333rem;line-height:1.333333333333333rem;right: 0.1481481481481481rem;top: 6.459259259259259rem;}
 
-.areaA3 {
-    width: 1.6rem;
-    height: 0.8rem;
-    top: 0.1777777777777778rem;
-    left: 3.422222222222222rem;
-}
+.areaC1{width: 1.303703703703704rem;height:0.7703703703703704rem ;line-height:0.7703703703703704rem ;left:0.6666666666666667rem;bottom: 0.5185185185185185rem;}
+.areaC2{width: 1.125925925925926rem;height:0.7703703703703704rem ;line-height:0.7703703703703704rem ;left:2.088888888888889rem;bottom: 0.5185185185185185rem;}
+.areaC3{width: 1.555555555555556rem;height:0.9777777777777778rem ;line-height:0.9777777777777778rem ;left:3.348148148148148rem;bottom: 1.377777777777778rem;}
 
-.areaA4 {
-    width: 1.6rem;
-    height: 1.022222222222222rem;
-    top: 0.9777777777777778rem;
-    left: 3.422222222222222rem;
-}
+.areaC4{width: 1.555555555555556rem;height:0.7703703703703704rem;line-height:0.7703703703703704rem;left:3.348148148148148rem;bottom: 0.5185185185185185rem;}
+.areaC5{width:1.955555555555556rem;height:0.9777777777777778rem;line-height:0.9777777777777778rem;left:5.037037037037037rem;bottom: 1.377777777777778rem;}
+.areaC6{width:1.955555555555556rem;height:0.7703703703703704rem ;line-height:0.7703703703703704rem ;left:5.037037037037037rem;bottom: 0.5185185185185185rem;}
+.areaC7{width:1.97037037037037rem;height:0.9777777777777778rem ;line-height:0.9777777777777778rem ;left:7.125925925925926rem;bottom:1.377777777777778rem;}
+.areaC8{width:1.97037037037037rem;height:0.7703703703703704rem ;line-height:0.7703703703703704rem ;left:7.125925925925926rem;bottom: 0.5185185185185185rem;}
+.areaC9{width:1.555555555555556rem;height:0.9777777777777778rem ;line-height:0.9777777777777778rem ;left:9.22962962962963rem;bottom: 1.377777777777778rem;}
+.areaC10{width:1.555555555555556rem;height:0.7703703703703704rem ;line-height:0.7703703703703704rem ;left:9.22962962962963rem;bottom: 0.5185185185185185rem;}
+.areaC11{width:1.125925925925926rem;height:0.7703703703703704rem ;line-height:0.7703703703703704rem ;left:10.91851851851852rem;bottom: 0.5185185185185185rem;}
 
-.areaA5 {
-    width: 1.051851851851852rem;
-    height: 0.8rem;
-    top: 0.1777777777777778rem;
-    left: 5.155555555555556rem;
-}
-
-.areaA6 {
-    width: 1.051851851851852rem;
-    height: 1.022222222222222rem;
-    top: 0.9777777777777778rem;
-    left: 5.155555555555556rem;
-}
-
-.areaA7 {
-    width: 1.777777777777778rem;
-    height: 0.8rem;
-    top: 0.1777777777777778rem;
-    left: 6.207407407407407rem;
-}
-
-.areaA8 {
-    width: 1.6rem;
-    height: 1.022222222222222rem;
-    top: 0.9777777777777778rem;
-    left: 6.311111111111111rem;
-}
-
-.areaA9 {
-    width: 1.051851851851852rem;
-    height: 0.8rem;
-    top: 0.1777777777777778rem;
-    left: 7.985185185185185rem;
-}
-
-.areaA10 {
-    width: 1.051851851851852rem;
-    height: 1.022222222222222rem;
-    top: 0.9777777777777778rem;
-    left: 7.985185185185185rem;
-}
-
-.areaA11 {
-    width: 1.57037037037037rem;
-    height: 0.8rem;
-    top: 0.1777777777777778rem;
-    left: 9.155555555555556rem;
-}
-
-.areaA12 {
-    width: 1.57037037037037rem;
-    height: 1.022222222222222rem;
-    top: 0.9777777777777778rem;
-    left: 9.155555555555556rem;
-}
-
-.areaA13 {
-    width: 1.155555555555556rem;
-    height: 0.8rem;
-    top: 0.1777777777777778rem;
-    left: 10.85925925925926rem;
-}
-
-.areaA14 {
-    width: 1.22962962962963rem;
-    height: 0.8rem;
-    left: 12.17777777777778rem;
-    top: 0.1777777777777778rem;
-}
-
-.areaB1 {
-    width: 0.8rem;
-    height: 1.318518518518519rem;
-    right: 0.1481481481481481rem;
-    top: 0.7407407407407407rem;
-}
-
-.areaB2 {
-    width: 0.9777777777777778rem;
-    height: 1.303703703703704rem;
-    right: 1.037037037037037rem;
-    top: 2.177777777777778rem;
-}
-
-.areaB3 {
-    width: 0.8rem;
-    height: 1.303703703703704rem;
-    right: 0.1481481481481481rem;
-    top: 2.177777777777778rem;
-}
-
-.areaB4 {
-    width: 0.9777777777777778rem;
-    height: 1.303703703703704rem;
-    right: 1.037037037037037rem;
-    top: 3.6rem;
-}
-
-.areaB5 {
-    width: 0.8rem;
-    height: 1.333333333333333rem;
-    right: 0.1481481481481481rem;
-    top: 3.6rem;
-}
-
-.areaB6 {
-    width: 0.9777777777777778rem;
-    height: 1.303703703703704rem;
-    right: 1.037037037037037rem;
-    top: 5.051851851851852rem;
-}
-
-.areaB7 {
-    width: 0.8rem;
-    height: 1.288888888888889rem;
-    right: 0.1481481481481481rem;
-    top: 5.051851851851852rem;
-}
-
-.areaB8 {
-    width: 0.8rem;
-    height: 1.333333333333333rem;
-    right: 0.1481481481481481rem;
-    top: 6.459259259259259rem;
-}
-
-.areaC1 {
-    width: 1.303703703703704rem;
-    height: 0.7703703703703704rem;
-    left: 0.6666666666666667rem;
-    bottom: 0.5185185185185185rem;
-}
-
-.areaC2 {
-    width: 1.125925925925926rem;
-    height: 0.7703703703703704rem;
-    left: 2.088888888888889rem;
-    bottom: 0.5185185185185185rem;
-}
-
-.areaC3 {
-    width: 1.555555555555556rem;
-    height: 0.9777777777777778rem;
-    left: 3.348148148148148rem;
-    bottom: 1.377777777777778rem;
-}
-
-.areaC4 {
-    width: 1.555555555555556rem;
-    height: 0.7703703703703704rem;
-    left: 3.348148148148148rem;
-    bottom: 0.5185185185185185rem;
-}
-
-.areaC5 {
-    width: 1.955555555555556rem;
-    height: 0.9777777777777778rem;
-    left: 5.037037037037037rem;
-    bottom: 1.377777777777778rem;
-}
-
-.areaC6 {
-    width: 1.955555555555556rem;
-    height: 0.7703703703703704rem;
-    left: 5.037037037037037rem;
-    bottom: 0.5185185185185185rem;
-}
-
-.areaC7 {
-    width: 1.97037037037037rem;
-    height: 0.9777777777777778rem;
-    left: 7.125925925925926rem;
-    bottom: 1.377777777777778rem;
-}
-
-.areaC8 {
-    width: 1.97037037037037rem;
-    height: 0.7703703703703704rem;
-    left: 7.125925925925926rem;
-    bottom: 0.5185185185185185rem;
-}
-
-.areaC9 {
-    width: 1.555555555555556rem;
-    height: 0.9777777777777778rem;
-    left: 9.22962962962963rem;
-    bottom: 1.377777777777778rem;
-}
-
-.areaC10 {
-    width: 1.555555555555556rem;
-    height: 0.7703703703703704rem;
-    left: 9.22962962962963rem;
-    bottom: 0.5185185185185185rem;
-}
-
-.areaC11 {
-    width: 1.125925925925926rem;
-    height: 0.7703703703703704rem;
-    left: 10.91851851851852rem;
-    bottom: 0.5185185185185185rem;
-}
-
-.areaC12 {
-    width: 1.303703703703704rem;
-    height: 0.7703703703703704rem;
-    right: 0.6666666666666667rem;
-    bottom: 0.5185185185185185rem;
-}
-
-.areaD1 {
-    width: 0.8rem;
-    height: 1.318518518518519rem;
-    left: 0.1481481481481481rem;
-    top: 0.7407407407407407rem;
-}
-
-.areaD2 {
-    width: 0.9777777777777778rem;
-    height: 1.303703703703704rem;
-    left: 1.037037037037037rem;
-    top: 2.177777777777778rem;
-}
-
-.areaD3 {
-    width: 0.8rem;
-    height: 1.303703703703704rem;
-    left: 0.1481481481481481rem;
-    top: 2.177777777777778rem;
-}
-
-.areaD4 {
-    width: 0.9777777777777778rem;
-    height: 1.303703703703704rem;
-    left: 1.037037037037037rem;
-    top: 3.6rem;
-}
-
-.areaD5 {
-    width: 0.8rem;
-    height: 1.333333333333333rem;
-    left: 0.1481481481481481rem;
-    top: 3.6rem;
-}
-
-.areaD6 {
-    width: 0.9777777777777778rem;
-    height: 1.303703703703704rem;
-    left: 1.037037037037037rem;
-    top: 5.051851851851852rem;
-}
-
-.areaD7 {
-    width: 0.8rem;
-    height: 1.288888888888889rem;
-    left: 0.1481481481481481rem;
-    top: 5.051851851851852rem;
-}
-
-.areaD8 {
-    width: 0.8rem;
-    height: 1.333333333333333rem;
-    left: 0.1481481481481481rem;
-    top: 6.459259259259259rem;
-}
-
+.areaC12{width: 1.303703703703704rem;height:0.7703703703703704rem ;line-height:0.7703703703703704rem ;right:0.6666666666666667rem;bottom: 0.5185185185185185rem;}
+.areaD1{width: 0.8rem;height:1.318518518518519rem ;line-height:1.318518518518519rem ;left: 0.1481481481481481rem;top: 0.7407407407407407rem;}
+.areaD2{width: 0.9777777777777778rem;height:1.303703703703704rem ;line-height:1.303703703703704rem ;left:1.037037037037037rem;top: 2.177777777777778rem;}
+.areaD3{width: 0.8rem;height:1.303703703703704rem ;line-height:1.303703703703704rem ;left: 0.1481481481481481rem;top: 2.177777777777778rem;}
+.areaD4{width: 0.9777777777777778rem;height:1.303703703703704rem ;line-height:1.303703703703704rem ;left:1.037037037037037rem;top: 3.6rem;}
+.areaD5{width: 0.8rem;height:1.333333333333333rem ;line-height:1.333333333333333rem ;left: 0.1481481481481481rem;top: 3.6rem;}
+.areaD6{width: 0.9777777777777778rem;height:1.303703703703704rem ;line-height:1.303703703703704rem ;left:1.037037037037037rem;top: 5.051851851851852rem;}
+.areaD7{width: 0.8rem;height:1.288888888888889rem ;line-height:1.288888888888889rem ;left: 0.1481481481481481rem;top: 5.051851851851852rem;}
+.areaD8{width: 0.8rem;height:1.333333333333333rem ;line-height:1.333333333333333rem ;left: 0.1481481481481481rem;top: 6.459259259259259rem;}
 .seatingPlan .mark {
     width: 100%;
     line-height: 0.3555555555555556rem;
@@ -402,20 +158,22 @@ input {
 }
 
 .seatingPlanCon > div.checked {
-    background: rgba(202, 216, 240, 0.9)
+    background:rgba(44,112,255,.8);
 }
 
 /* seating Plan end */
 /* pgc seatCon start */
 .seatCon {
-    width: 16rem;
+   width: 14.85925925925926rem;
     border-radius: 0.1185185185185185rem;
-    box-shadow: 0 0 .2222222222222222rem 0 #dae6fa;
+    box-shadow: 0 0 0.5185185185185185rem 0.1481481481481481rem #dae6fa;
     margin-left: 0.5925925925925926rem;
     margin-right: 0.5481481481481481rem;
     margin-bottom: 0.2666666666666667rem;
-    padding-bottom: 0.5rem;
-    overflow-x: auto;
+    padding-bottom: 0.2962962962962963rem;
+    position: relative;
+    height: auto;
+    /*max-height: 7.955555555555556rem;*/
 }
 .seatCon::-webkit-scrollbar{
     display: none;
@@ -424,19 +182,22 @@ input {
     display: none;
 }
 .seatTit {
-    height: 0.562962962962963rem;
-    line-height: 0.562962962962963rem;;
+   height: 0.562962962962963rem;
+    line-height: 0.562962962962963rem;
     color: #1a1a1a;
     font-size: 0.562962962962963rem;
-    text-indent: 0.6222222222222222rem;
+    text-indent: 0.7111111111111111rem;
     padding-top: .3555555555555556rem;
 }
 
 .seatCon .seatList {
-    padding: 0 .7703703703703704rem;
-    padding-top: 0.2074074074074074rem; /*display: flex;display: -webkit-flex;*/
+    margin-top: 0.2074074074074074rem;
     margin-bottom: 0.3407407407407407rem;
     position: relative;
+    width: 13.2rem;
+    overflow-x: auto;
+    margin-left: 1.362962962962963rem;
+    overflow-y: hidden;
 }
 
 .seatCon .seatList > .seatListCon {
@@ -462,29 +223,39 @@ input {
 
 /* 选择座位 */
 .seatCon .seatList > .seatListCon .seatLine {
-    height: 1.9111111111111111rem;
+    height: 1.318518518518519rem;
 
     position: absolute;
 }
 
 .seatCon .seatList > .seatListCon .seatLine_r {
-    height: 1.9111111111111111rem;
+    height: 1.318518518518519rem;
  
 }
-
+.seatRow{position: absolute;left: 0.3555555555555556rem;top:2.192592592592593rem;width: 0.5925925925925926rem;background-color: #cccccc;border-radius: 0.3259259259259259rem}
+.seatRow span{
+	display: block;
+    width: 0.5925925925925926rem;
+    font-size: 0.3259259259259259rem;
+    height: 1.066666666666667rem;
+    line-height: 1.392592592592593rem;
+    text-align: center;
+    padding-bottom: 0.2518518518518519rem;
+}
 .seatLine > div, .seatLine_r > div {
-    width: 1.711rem;
-    height: 1.578rem;
-    line-height: 1.578rem;
+       width: 1.303703703703704rem;
+    height: 1.066666666666667rem;
+    line-height: 1.4rem;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left top;
-    margin-right: 0.25rem;
+    margin-right: 0.2962962962962963rem;
     margin-bottom: 0.2518518518518519rem;
     color: #1A1A1A;
-    font-size: 0.5074074074074074rem;
-    float: left
+    font-size: 0.2962962962962963rem;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .layui-layer-loading .layui-layer-loading1 {
@@ -496,13 +267,10 @@ input {
 
 /*.seatList #seatLoad{}*/
 .seatCon .seatMark {
-	position:absolute;
-    left:1.5rem;
-	top:0.5rem;
     width: 100%;
+    padding: 0.2962962962962963rem 0;
     text-align: center;
-    display: flex;
-    display: -webkit-flex;
+    display: -webkit-box;
     -webkit-box-align: center;
     -webkit-box-pack: center;
 }
@@ -518,12 +286,9 @@ input {
     line-height: 0.4740740740740741rem;
 }
 
-.seatMark > div.not {
-    margin-left: 3.081481481481481rem;
-}
 
 .seatMark > div.optional {
-    margin-left: 0.688888888888889rem;
+    margin-left: 1.688888888888889rem;
 }
 
 .seatMark > div > span {
@@ -548,6 +313,7 @@ input {
     box-shadow: 0 0 .2222222222222222rem 0 #dae6fa;
     margin-left: 0.5925925925925926rem;
     margin-right: 0.5481481481481481rem;
+    padding-bottom: 0.2666666666666667rem;
 }
 
 .checkSeatTit {
