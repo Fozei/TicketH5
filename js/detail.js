@@ -28,7 +28,7 @@ function parseDetailData(data) {
         $("#matchListTitle").html(title + "<br/>" + "竞赛日程表");
         var table = $(".matchTable");
         //表头
-        table.append('<tr  matchId="title"><td>序号</td><td>日期</td><td>周</td><td>轮次</td><td>比赛队</td><td>比赛时间</td><td>选座购票</td></tr>');
+        table.append('<tr  matchId="title"><th>序号</th><th>日期</th><th>周</th><th>轮次</th><th>比赛队</th><th>比赛时间</th><th>选座购票</th></tr>');
         //表格数据
         for (var i = 0; i < timeList.length; i++) {
             var date = timeList[i].year_r;
@@ -36,7 +36,7 @@ function parseDetailData(data) {
             var turn = timeList[i].turn;
             var team = timeList[i].team;
             var time = timeList[i].time;
-            table.append('<tr  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td><a href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>');
+            table.append('<tr  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td class="btnSelectSeat"><a style="color: white" href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>');
         }
 
         $("#notice").html(desc);

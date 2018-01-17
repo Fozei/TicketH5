@@ -1,0 +1,6 @@
+ALTER TABLE `ticket_orderarea`
+ADD COLUMN `orderarea_seatstatus`  tinyint(1) NULL COMMENT '状态 1=已选 0=可选 2=已锁定' AFTER `orderarea_sex`;
+
+ALTER TABLE `ticket_orderarea`
+ADD COLUMN `orderarea_timeid`  int(10) NULL COMMENT '场次ID' AFTER `orderarea_seatstatus`;
+

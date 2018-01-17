@@ -116,18 +116,25 @@ td {
     height: 1rem;
 }
 
+th {
+    border-right: 0.05rem solid #000;
+    border-bottom: 0.05rem solid #000;
+    height: 1rem;
+}
+
 table a {
     color: #545454;
+}
+
+.btnSelectSeat {
+    background-color: #2c70e1;
+    border-radius: 1rem;
+    color: white;
 }
 
 .active {
     border: 0.05rem solid #2c70e1;
     color: #2c70e1;
-}
-
-.buttonSel {
-    background-color: #2c70e1;
-    color: white;
 }
 
 .animated {
@@ -263,4 +270,13 @@ table a {
 .fadeSlier-leave-active {
     animation-name: fadeOut;
     animation-duration: .3s;
+}
+
+#introduction p img {
+    /*display:inline-block;*/
+    /*width:100%;*/
+    /*height:auto;*/
+    display: inline-block;
+    width: 100% !important;
+    height: auto !important;
 }

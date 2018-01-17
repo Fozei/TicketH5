@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="author" content="订票系统"/>
+    <meta name="author" content="长颈乐票务"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-apple-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
@@ -11,10 +11,11 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>订票系统</title>
+    <title>长颈乐票务</title>
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/qrcode/qrcode.js"></script>
     <script src="js/layer/mobile/layer.js"></script>
     <script src="js/auto.js"></script>
     <script src="js/common.js"></script>
@@ -23,7 +24,6 @@
     <script src="js/utils.js"></script>
     <script src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
     <script src="js/index.js"></script>
-
 </head>
 <style>
     body {
@@ -34,20 +34,14 @@
     }
 </style>
 <body>
-<div class="totalWidth ">
-    <div class="areaDiv">
-        <div class="citySelect">
-            <p id="geographic">定位中...</p>
-            <ul id="selectValue" style="display:none;">
-            </ul>
-        </div>
-        <div class="seatchBox">
-            <input type="text" id="keyword" placeholder="搜素体育，演出，景点，美食" onsubmit="requestSearchResult()"/>
-            <img src="images/serch_bg.png" class="s_button" alt="" onclick="requestSearchResult()"/>
-        </div>
-        <div class="weatherBox">
-        </div>
-        <div class="clear"></div>
+<div class="pageHeader totalWidth clear">
+    <p id="geographic">蓬莱</p>
+    <div class="seatchBox">
+        <input type="text" id="keyword" placeholder="搜素体育，演出，景点，美食" onsubmit="requestSearchResult()"/>
+        <img src="images/serch_bg.png" class="s_button" alt="" onclick="requestSearchResult()"/>
+    </div>
+    <div class="shareLink">
+        <img onclick="showShareLink()" src="images/btn_share.jpg">
     </div>
 </div>
 <div class="mainContent totalWidth">
@@ -72,6 +66,18 @@
     <!--<div class="clear"></div>-->
     <!--</div>-->
 
+</div>
+
+<div class="layer"></div>
+<div class="shareTips">
+    <div onclick="closeShare()" class="close"></div>
+    <div class="content">
+        <p class="tips1">扫描二维码分享给好友</p>
+        <div class="qrWrapper">
+            <div id="qrcode"></div>
+        </div>
+
+    </div>
 </div>
 
 <div class="bottomPlaceHolder"></div>

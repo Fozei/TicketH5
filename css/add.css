@@ -1,0 +1,127 @@
+
+
+.header_r_no_bg {
+    background: none;
+}
+
+.header_r {
+    /*background: url("../images/header_bg.jpg") no-repeat;*/
+    height: 2.3851rem;
+    line-height: 2.3851rem;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7111rem;
+    overflow: hidden;
+    /*background: url("../images/header_bg.jpg") no-repeat;*/
+    /*height: 161px;*/
+    /*line-height: 161px;*/
+    /*position: relative;*/
+    /*text-align: center;*/
+    /*color: #ffffff;*/
+    /*font-size: 48px;*/
+    /*overflow: hidden;*/
+}
+
+.header_r .back {
+    position: absolute;
+    left: 0.5777rem;
+    top: 0.8888rem;
+}
+
+.back-img {
+    width: 0.4444rem;
+    height: 0.7111rem;
+}
+
+
+.tab-order {
+    width: 14.4592rem;
+    /*height: 960px;*/
+    background: #FFFFFF;
+    margin-left: 0.7703rem;
+    margin-right: 0.7703rem;
+    border-radius: 0.2962rem;
+    box-shadow: 0px 0.0888rem 0.5185rem 0px rgba(44, 112, 225, 0.25);
+    /*overflow: hidden;*/
+}
+.tab-order .content_div{
+	padding:0.9481481481rem 0.99259259259rem;
+	font-size:0.5629629629rem;
+}
+.tab-order .content_div h2{
+	color:#2c70e1;
+	font-size:0.5629629629rem;
+	background: url("../images/add.jpg") no-repeat left center;
+	background-size:0.607407407rem 0.607407407rem;
+	padding-left:0.9037037037rem;
+}
+.tab-order .content_div h2 span{
+	color:#545454;
+	margin-left:0.2rem;
+}
+.tab-order .content_div h3{
+	color:#1a1a1a;
+	margin-top:0.7259259259rem;
+	font-size:0.5629629629rem;
+	
+}
+.tab-order .content_div .input_div{
+	margin-top:0.7259259259rem;
+	height:1.777777777rem;
+	width:11.8222222rem;
+	line-height:1.777777777rem;
+	border:1px #cccccc solid;
+	 border-radius: 0.1962rem;
+	 background-color:#f5f2f3;
+}
+.tab-order .content_div .input_div label{
+	float:left;
+	margin-left:0.4296296296rem;
+}
+.tab-order .content_div .input_div .input{
+	height:1.777777777rem;
+	font-size:0.5629629629rem;
+	border:0;
+	line-height:1.777777777rem;
+	color:#999999;
+	background-color:#f5f2f3;
+	padding-left:0.4rem;
+}
+.button{
+	position: fixed;
+	left:0px;
+	width:100%;
+	text-align:center;
+	bottom:0;
+	z-index:100;
+}
+.button img{
+	width: 12.28148rem;
+    height: 2.37037rem;
+}
+.flowDiv{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2000;
+	
+}
+.flowDiv p{
+	color:#fff;
+	font-size:0.7111111111rem;
+	position:absolute;
+	top:2.2rem;
+	right:5.3rem;
+}
+.flowDiv img{
+	width: 3.82222222222rem;
+    height: 1.748148148rem;
+	position:absolute;
+	top:0.7rem;
+	right:1.3rem;
+}
+

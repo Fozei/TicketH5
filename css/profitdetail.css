@@ -47,7 +47,11 @@ header img {
     height: 13.65rem;
     overflow-y: auto;
 }
-.listContent::-webkit-scrollbar{display: none;}
+
+.listContent::-webkit-scrollbar {
+    display: none;
+}
+
 #total {
     height: 2.3rem;
     text-align: center;
@@ -89,7 +93,7 @@ span {
 }
 
 .cat {
-    width: 1.6rem;
+    width: 2rem;
 }
 
 .account {
@@ -131,12 +135,12 @@ footer div {
 }
 
 #catList {
-    top: 28rem;
     overflow: hidden;
     position: absolute;
     left: 0;
     height: 0rem;
     width: 16rem;
+    bottom: 2.5rem;
 }
 
 .catTitle {
@@ -186,8 +190,8 @@ footer div {
     overflow: hidden;
     position: absolute;
     width: 16rem;
-    top: 28rem;
     height: 0rem;
+    bottom: 2.5rem;
 }
 
 input {

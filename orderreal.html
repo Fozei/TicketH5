@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="author" content="长颈乐票务"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-apple-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/basic.css"/>
+	<link rel="stylesheet" href="css/add.css">
+	<style>
+		body {
+			background: url("images/bg4.jpg") no-repeat top left ;
+			background-size:16rem 5.76296rem;
+		}
+
+	</style>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/layer/mobile/layer.js"></script>
+    <script src="js/auto.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/layer/layer.js"></script>
+	<script src="js/constance.js"></script>
+
+</head>
+
+<body>
+	<!--蒙曾-->
+	<div class="flowDiv" style="display:none;">
+		<p>请打开浏览器填写信息</p>
+		<img src="images/tip.png" class="img" alt="" />
+	</div>
+	<div class="header_r header_r_no_bg totalWidth">
+        <img src="images/fanhui.png" onclick="history.back()" class="back-img back" alt=""/>
+        填写信息
+    </div>
+    <div class="compert-img">
+        <div class="tab-order">
+			<div class="content_div">
+				
+				<p class="input_div">
+					<label>手&#8194机&#8194号</label>
+					<input type="text" id="tel" class="input" placeholder="请输入手机号" />
+				</p>
+			</div>
+        </div>
+    </div>
+	<div class="button">
+		<img src="images/submit.png"  onClick="submit();" />
+		<input type="hidden" id="num" />
+	</div>
+	
+</body>
+<script src="js/jquery-1.12.0.min.js">
+</script>
+<script src="js/utils.js">
+</script>
+<script type="text/javascript">
+<!--
+var orderID = getQueryString('orderID');
+$(function(){
+	if (isWeiXin())
+	{
+		//加盟层
+		$('.flowDiv').show();
+	}
+	
+	if (orderID==null)
+	{
+
+		layer.msg('参数错误');
+        return false;
+	}
+
+
+	$.ajax({
+        url: DOMAIN + TICKET_SEAT_COUNT,
+        data: {
+            'orderID': orderID
+        },
+        type: "POST",
+        async: false,
+        dataType: "json",
+        success: function (data) {
+			if (data.code=='success')
+			{
+				var n = data.num;
+				var str = '<h2>购票人信息<span>(请填写三位购票人信息)</span></h2>';
+				var t=1;
+				for (var i = 0; i < n; i++) {
+				  str+='<h3>购票人'+t+'：</h3>';
+				   str+='<p class="input_div">';
+					str+='<label>姓　　名</label>';
+					str+='<input type="text" id="name'+i+'" class="input" placeholder="请输入真实姓名" />';
+					str+='</p>';
+					str+='<p class="input_div">';
+					str+='<label>身份证号</label>';
+					str+='<input type="text" id="idNumber'+i+'" class="input" placeholder="请输入有效身份证号码" />';
+					str+='</p>';
+					t++;
+				}
+				$('.content_div').prepend(str);
+				$('#num').val(n);
+			}else{
+				layer.msg(data.message);
+				 return false;
+			}
+            
+           
+        }
+    });
+})
+
+function isWeiXin(){
+	var ua = window.navigator.userAgent.toLowerCase();
+	if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+		return true;
+	}else{
+		return false;
+	}
+} 
+
+function submit(){
+	var n = $('#num').val();
+	var tel = $('#tel').val();
+	var data=new Array();
+	if (n==0)
+	{
+		layer.msg('错误操作');
+        return false;
+	}
+	for (var i = 0; i < n; i++) {
+        var name = $('#name'+i).val();
+		var idCard = $('#idNumber'+i).val();
+		data[i]= new Array(idCard,name);
+		i++;
+     }
+	 if (data.length==0)
+	{
+		layer.msg('请填写身份证');
+        return false;
+	}
+	for (var i=0;i<data.length;i++)
+	{
+			
+		if (data[i][0]=='')
+		{
+			layer.msg('请填写身份证');
+			return false;
+		}else if (!ChinaIdChecker_r(data[i][0]))
+		{
+			//layer.msg('请填写正确身份证');
+			//return false;
+		}
+		if (data[i][1]=='')
+		{
+			layer.msg('请填写姓名');
+			return false;
+		}
+	}
+	 if (tel=='')
+	{
+		layer.msg('手机号不能为空');
+        return false;
+	}
+	 if (orderID==null)
+	{
+		layer.msg('参数错误');
+        return false;
+	}
+	$.ajax({
+        url: DOMAIN + TICKET_ADDCARD,
+        data: {
+            'orderID': orderID,
+			'seatData':data,
+			'tel':tel
+        },
+        type: "POST",
+        async: false,
+        dataType: "json",
+        success: function (data) {
+           if (data.code=='success')
+           {
+			   var ticketID = data.orderData.ticket_id;
+			   var timeID = data.orderData.time_id;
+			   var order_num = data.orderData.order_num;
+			   location.href=DOMAIM_API+'web/ticketconfirm.php?ticketID='+ticketID+'&orderNum='+order_num+'&timeID='+timeID;
+           }else{
+				layer.msg(data.message);
+				return false;
+		   }
+			
+        }
+    });
+}
+//-->
+</script>
+</html>

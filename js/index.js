@@ -1,5 +1,6 @@
 // 首页初始化
 var deviceID = getQueryString('device');
+var qrcode;
 if (deviceID === undefined) {
     deviceID = localStorage.deviceID;
     if (deviceID === undefined) {
@@ -98,19 +99,61 @@ function goUserCenter() {
     }
 }
 
-setTimeout(function () {
-    var geolocation = new qq.maps.Geolocation("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", "myapp");
-    var options = {
-        timeout: 4000
-    };
-
-    function showPosition(position) {
-        document.getElementById('geographic').innerHTML = position.city;
+function makeQrCode() {
+    if (qrcode === null || qrcode === undefined) {
+        qrcode = new QRCode(document.getElementById(
+            "qrcode"), {
+            width: 415,
+            height: 415,
+        });
+        qrcode.makeCode(H5_ADDRESS);
     }
+}
 
-    geolocation.getLocation(showPosition, showErr, options)
+function showShareLink() {
+    var userId = getCookie(COOKIE_NAME_USER_ID);
+    if (userId === null || userId === undefined || userId === "") {
+        makeQrCode();
+        $('.layer').show();
+        $('.shareTips').show();
+    } else {
 
-    function showErr() {
-        document.getElementById('geographic').innerHTML = "等位失败！";
+        //检查用户类型
+        $.post(DOMAIN + GET_USR_LIST, {
+            userID: userId,
+        }).done(function (data) {
+            var data = eval("(" + data + ")");
+            if (data.code === "success") {
+                var userType = parseInt(data.userData.type);
+                if (userType !== 2) {
+                    makeQrCode();
+                    $('.layer').show();
+                    $('.shareTips').show();
+                } else {
+                    location.href = "invitation_code.html";
+                }
+
+            } else {
+                layer.open({
+                    content: data.message
+                    , skin: 'msg'
+                    , time: 2 //2秒后自动关闭
+                });
+            }
+        }).fail(function (xhr, status) {
+
+            layer.open({
+                content: '数据通信失败'
+                , skin: 'msg'
+                , time: 2 //2秒后自动关闭
+            });
+        }).always(function () {
+        });
     }
-}, 500);
+}
+
+function closeShare() {
+
+    $('.shareTips').hide();
+    $('.layer').hide();
+}

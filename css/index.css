@@ -1,14 +1,7 @@
-.areaDiv {
-    margin: 1.1111rem 0 0 0.59259rem;
+.pageHeader {
+    margin: 1rem 0 1rem 1rem;
     color: #ffffff;
-}
-
-.areaDiv .citySelect {
-    font-size: 0.7111rem;
-    float: left;
-    width: 2.8148rem;
-    position: relative;
-    z-index: 1000;
+    height: 1.1815rem;
 }
 
 .header {
@@ -22,13 +15,15 @@
     font-size: 0.7111rem;
 }
 
-.areaDiv .citySelect p {
-    width: 3rem;
-    /*background: url("../images/select_bg.png") no-repeat right center;*/
-    /*background-size: 0.4444rem 0.2666rem;*/
+#geographic {
+    width: 2.5rem;
+    font-size: 0.7111rem;
+    float: left;
+    position: relative;
+    z-index: 1000;
 }
 
-.areaDiv #selectValue {
+.pageHeader #selectValue {
     position: absolute;
     top: 0.7407rem;
     z-index: 50;
@@ -38,18 +33,10 @@
     width: 16rem;
 }
 
-.areaDiv #selectValue li {
-
-    padding: 0.148rem 0rem;
-    width: 1.9703rem;
-    border-bottom: 0.0148rem #cccccc solid;
-
-}
-
 .seatchBox {
     float: left;
     position: relative;
-    width: 9.57037rem;
+    width: 9rem;
 }
 
 .seatchBox #keyword {
@@ -73,9 +60,20 @@
     width: 0.7407rem;
 }
 
-.weatherBox {
+.shareLink {
     float: left;
-    width: 2.9333rem;
+    width: 2.5rem;
+    height: 1.1815rem;
+    line-height: 1.1815rem;
+}
+
+.shareLink img {
+    display: block;
+    margin-left: 1.74rem;
+    margin-top: 0.22rem;
+    height: 0.74rem;
+    width: 0.74rem;
+    vertical-align: middle;
 }
 
 .classDiv {
@@ -285,4 +283,92 @@ footer li img {
 
 footer li p {
     margin-top: -1.5rem;
+}
+
+.shareTips {
+    left: 1.9259259259259258rem;
+    top: 5.481481481481482rem;
+    position: absolute;
+    height: 12.888rem;
+    width: 11.7037rem;
+    display: none;
+}
+
+.close {
+    width: 1.066666rem;
+    height: 1.066666rem;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    margin-left: 5.54074rem;
+}
+
+.close:after, .close:before {
+    width: 0.533333rem;
+    height: 0.074074rem;
+    background-color: #2d70e1;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: center;
+}
+
+.close:after {
+    transform: rotate(45deg)
+}
+
+.close:before {
+    transform: rotate(-45deg)
+}
+
+.content {
+    position: relative;
+    padding-top: 1.037037rem;
+    height: 9.9259rem;
+    width: 100%;
+    margin-top: 0.74074rem;
+    background-color: white;
+}
+
+.tips1 {
+    position: relative;
+    width: 100%;
+    line-height: 0.71111rem;
+    text-align: center;
+    font-size: 0.711111rem;
+    color: #2d70e1;
+}
+
+.qrWrapper {
+    height: 6.222222rem;
+    width: 6.22222rem;
+    border: solid #2d70e1;
+    margin-top: 1.037037rem;
+    margin-left: 2.56666rem;
+    padding: 0.148148rem;
+}
+
+#qrcode {
+    height: 6.22222rem;
+    width: 6022222rem;
+}
+
+.layer {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+}
+
+.qrWrapper img {
+    width: 6.148148rem;
+    height: 6.148148rem;
 }

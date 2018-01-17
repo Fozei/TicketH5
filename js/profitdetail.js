@@ -24,16 +24,6 @@ $(function () {
     });
     //获取数据
     clssify_data(USERID, 1, null, null, null);
-
-    // 时间戳转换成       年-月-日
-    function getLocalTime(nS) {
-        var ad = new Date(parseInt(nS));
-        var Y = ad.getFullYear() + '-';
-        var M = (ad.getMonth() + 1) + '-';
-        var D = ad.getDate() + ' ';
-        ad = Y + M + D;
-        return ad;
-    }
 });
 
 function clssify_data(userID, page, startTime, catID, endTime) {
@@ -48,14 +38,14 @@ function clssify_data(userID, page, startTime, catID, endTime) {
             'endTime': endTime
         },
         type: "POST",
-        async: false,
+        async: true,
         dataType: "json",
         success: function (data) {
             if (data.code === 'success') {
                 adapter_profit(data);
                 currentCat = targetCat;
                 console.log(data)
-                $('#total').text(data.income+'元')
+                $('#total').text(data.income + '元')
             } else {
                 layer.open({
                     content: "获取数据失败：" + data.message
@@ -118,23 +108,22 @@ function adapter_profit(data) {
 
 function showDateSelect() {
     resetCatPosition();
-    $("#datePicker").animate({top: "16.18rem", height: "8.5rem"});
+    $("#datePicker").animate({height: "8.5rem"});
 }
 
 function resetDatePosition() {
-    $("#datePicker").animate({top: "28rem", height: "0rem"});
+    $("#datePicker").animate({height: "0rem"});
 }
 
 //展示分类选择器
 function showCatSelect() {
     resetDatePosition();
     var targetHeight = (catNum + 1) * 1.7;
-    var targetTop = 28.44 - targetHeight - 4;
-    $("#catList").animate({top: targetTop + "rem", height: targetHeight + "rem"});
+    $("#catList").animate({height: targetHeight + "rem"});
 }
 
 function resetCatPosition() {
-    $("#catList").animate({top: "28rem", height: "0rem"});
+    $("#catList").animate({height: "0rem"});
     if (targetCat !== undefined && targetCat !== currentCat) {
         $('#list .listContent').empty()
         setTimeout(function () {
@@ -159,5 +148,15 @@ function requestByDate() {
     } else {
         clssify_data(USERID, 1, getLocalTime(st_time), null, getLocalTime(ed_time));
     }
-    $("#datePicker").animate({top: "28rem", height: "0rem"});
+    $("#datePicker").animate({height: "0rem"});
+}
+
+// 时间戳转换成       年-月-日
+function getLocalTime(nS) {
+    var ad = new Date(parseInt(nS));
+    var Y = ad.getFullYear() + '-';
+    var M = (ad.getMonth() + 1) + '-';
+    var D = ad.getDate() + ' ';
+    ad = Y + M + D;
+    return ad;
 }
