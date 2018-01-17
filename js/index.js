@@ -10,7 +10,7 @@ if (deviceID === undefined) {
 } else {
     localStorage.deviceID = deviceID;
 }
-
+deviceID = 2
 $(function () {
     layer.load(0, {
         shade: [0.3, 'black']

@@ -199,9 +199,33 @@ input {
     margin-left: 1.362962962962963rem;
     overflow-y: hidden;
 }
-
+.seatList::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0);
+    border-left: 1px solid rgba(0, 0, 0, 0);
+}
+.seatList::-webkit-scrollbar {
+    width: 0.1481481481481481rem;
+    height: 0.1925925925925926rem;
+    -webkit-border-radius: 0.0740740740740741rem;
+    -moz-border-radius: 0.0740740740740741rem;
+    border-radius: 0.0740740740740741rem;
+}
+.seatList::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    background-clip: padding-box;
+    -webkit-border-radius:0.1481481481481481rem;
+    -moz-border-radius:  0.1481481481481481rem;
+    border-radius:0.1481481481481481rem;
+    min-height: 28px;
+}
+.seatList::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.0740740740740741rem;
+    -moz-border-radius:  0.0740740740740741rem;
+    border-radius:  0.0740740740740741rem;
+}
 .seatCon .seatList > .seatListCon {
-	width:68rem;
+	width:30rem;
     position: relative;
 }
 
@@ -407,12 +431,9 @@ input {
 /* seatCon end */
 /* pgc buy Button start */
 .buy {
-
-    
     margin: auto;
-	margin-top:0.5rem;
-
-
+	margin-top:0.2222222222222222rem;
+    padding-bottom: 0.25rem;
 }
 #buyBtn{
     width: 12.26666666666667rem;
@@ -442,5 +463,4 @@ input {
 /* buy Button end */
 .seatListCon .seat_left {
     float: left;
-
 }

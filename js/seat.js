@@ -65,7 +65,7 @@ $(function() {
 						var timeList = data.timeList;
 						var seatList = data.seatList;
 						$('.checkSeat').show();
-						$('.checkSeatList').append('<div class="Seat seat' + seatId + '" aid="' + areaID + '" sid="' + seatId + '">\n' +
+						$('.checkSeatList').prepend('<div class="Seat seat' + seatId + '" aid="' + areaID + '" sid="' + seatId + '">\n' +
 							'\t\t\t\t\t\t<div class="seatInformation">\n' +
 							'\t\t\t\t\t\t\t<span class="colorBlue">' + timeList.year_r + '&nbsp;周' + timeList.week + '&nbsp;' + timeList.time + '</span><span class="colorBlue marLeft">' + seatList.areaName + '区' + seatList.line + '排' + seatList.column + '座' + '</span><span class="price marLeft">' + seatList.price + '元</span>\n' +
 							'\t\t\t\t\t\t</div>\n' +

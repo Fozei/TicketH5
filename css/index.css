@@ -1,7 +1,8 @@
 .pageHeader {
-    margin: 1rem 0 1rem 1rem;
+    margin: 1rem 0 1rem 0rem;
     color: #ffffff;
     height: 1.1815rem;
+    padding-left: 1rem;
 }
 
 .header {
@@ -30,7 +31,7 @@
 }
 
 .totalWidth {
-    width: 16rem;
+    /*width: 16rem;*/
 }
 
 .seatchBox {
