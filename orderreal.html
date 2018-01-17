@@ -43,7 +43,6 @@
     <div class="compert-img">
         <div class="tab-order">
 			<div class="content_div">
-				
 				<p class="input_div">
 					<label>手&#8194机&#8194号</label>
 					<input type="text" id="tel" class="input" placeholder="请输入手机号" />
@@ -70,7 +69,7 @@ $(function(){
 		//加盟层
 		$('.flowDiv').show();
 	}
-	
+
 	if (orderID==null)
 	{
 
@@ -115,6 +114,14 @@ $(function(){
            
         }
     });
+
+
+	$('.content_div').on('focus','.input',function(){
+		$(this).parent().addClass('active');
+	});
+	$('.content_div').on('blur','.input',function(){
+		$(this).parent().removeClass('active');
+	})
 })
 
 function isWeiXin(){
