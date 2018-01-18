@@ -1,6 +1,6 @@
 $(function () {
   $('.head .backUp').on('touchstart',function(e) {
-    window.history.back();
+    location.href='user_center.html';
   });
   // url: DOMAIN + AGENT_EARNING,
     //代理商收益

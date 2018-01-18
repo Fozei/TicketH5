@@ -3,7 +3,7 @@ $('.nav li').on('touchstart',function(e) {
   $(this).siblings().removeClass('active')
 });
 $('.head .backUp').on('touchstart',function(e) {
-  window.history.back();
+  location.href='user_center.html';
 });
 
 var myscroll;
