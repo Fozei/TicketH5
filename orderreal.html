@@ -43,9 +43,10 @@
     <div class="compert-img">
         <div class="tab-order">
 			<div class="content_div">
+				<h3 style="margin-top:1.5rem;">请填写一位购票人联系方式</h3>
 				<p class="input_div">
 					<label>手&#8194机&#8194号</label>
-					<input type="text" id="tel" class="input" placeholder="请输入手机号" />
+					<input type="number" id="tel" class="input" placeholder="请输入手机号" />
 				</p>
 			</div>
         </div>
@@ -92,7 +93,7 @@ $(function(){
 			if (data.code=='success')
 			{
 				var n = data.num;
-				var str = '<h2>购票人信息<span>(请填写三位购票人信息)</span></h2>';
+				var str = '<h2>购票人信息<span>(请填写购票人信息)</span></h2>';
 				var t=1;
 				for (var i = 0; i < n; i++) {
 				  str+='<h3>购票人'+t+'：</h3>';
@@ -102,7 +103,7 @@ $(function(){
 					str+='</p>';
 					str+='<p class="input_div">';
 					str+='<label>身份证号</label>';
-					str+='<input type="text" id="idNumber'+i+'" class="input" placeholder="请输入有效身份证号码" />';
+					str+='<input type="number" id="idNumber'+i+'" class="input" placeholder="请输入有效身份证号码" />';
 					str+='</p>';
 					t++;
 				}
@@ -164,8 +165,8 @@ function submit(){
 			return false;
 		}else if (!ChinaIdChecker_r(data[i][0]))
 		{
-			//layer.msg('请填写正确身份证');
-			//return false;
+			layer.msg('请填写正确身份证');
+			return false;
 		}
 		if (data[i][1]=='')
 		{
@@ -177,7 +178,10 @@ function submit(){
 	{
 		layer.msg('手机号不能为空');
         return false;
-	}
+	}else if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(tel))) {
+        layer.msg('请输入正确的账号或密码');
+        return false;
+    }
 	 if (orderID==null)
 	{
 		layer.msg('参数错误');
