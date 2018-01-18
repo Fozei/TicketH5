@@ -41,7 +41,7 @@
         <div class="mark-content">
             <div class="mark-time" id="time_box"></div>
             <!--<div class="mark-button">-->
-                <!--<a href="#" id="sure_btn">确定</a>-->
+            <!--<a href="#" id="sure_btn">确定</a>-->
             <!--</div>-->
         </div>
     </div>
@@ -52,29 +52,29 @@
         <form>
             <div>
                 <label><img src="images/shoujihao.png" alt=""></label>
-                <input id="phone" type="text" placeholder="请输入手机号" autocomplete="off" />
+                <input id="phone" type="number" placeholder="请输入手机号" autocomplete="off"/>
             </div>
             <div>
                 <label><img src="images/xiaosuo.png" alt=""></label>
-                <input id="pwd" type="password" placeholder="输入登录密码（6-18位数字、字母）" autocomplete="off" />
+                <input id="pwd" type="password" placeholder="输入登录密码（6-18位数字、字母）" autocomplete="off"/>
             </div>
             <div>
                 <label><img src="images/xiaosuo.png" alt=""></label>
-                <input id="input_code" type="text" placeholder="输入验证码" autocomplete="off" />
+                <input id="input_code" type="text" placeholder="输入验证码" autocomplete="off"/>
                 <span id="get_code" class="getCode">获取验证码</span>
             </div>
             <div>
-                <input id="submit_register" type="button" value="免费注册" />
+                <input id="submit_register" type="button" value="免费注册"/>
             </div>
         </form>
     </div>
 </div>
 <script>
-  $(function(){
-    $('.head .backUp').on('touchstart',function(e) {
-      window.history.back();
+    $(function () {
+        $('.head .backUp').on('touchstart', function (e) {
+            window.history.back();
+        })
     })
-  })
 </script>
 </body>
 </html>
