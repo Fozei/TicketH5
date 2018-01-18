@@ -81,7 +81,7 @@ $(function () {
               $('.tipListsCon>ul').append(' <li>\n' +
                 '                        <span>'+item.addtime+'</span>\n' +
                 '                        <span>'+item.account+'</span>\n' +
-                '                        <span>'+item.discount+'</span>\n' +
+                '                        <span>'+item.discount+'折</span>\n' +
                 '                        <span>'+item.money+'</span>\n' +
                 '                    </li>')
             })

@@ -8,11 +8,16 @@ $(function () {
         if (data.code === "success") {
             initView(data);
         } else {
-            layer.open({
-                content: data.message
-                , skin: 'msg'
-                , time: 2 //2秒后自动关闭
-            });
+			if (data.message=='用户不存在')
+			{
+				location.href='login.html';
+			}else{
+				layer.open({
+					content: data.message
+					, skin: 'msg'
+					, time: 2 //2秒后自动关闭
+				});
+			}
         }
     }).fail(function (xhr, status) {
 

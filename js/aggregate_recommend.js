@@ -43,7 +43,7 @@ $(function () {
                   '                    <span>'+num+'</span>\n' +
                   '                    <span>'+item.addtime+'</span>\n' +
                   '                    <span>'+item.account+'</span>\n' +
-                  '                    <span>'+item.discount+'</span>\n' +
+                  '                    <span>'+item.discount+'折</span>\n' +
                   '                </li>')
           })
           if(data.agentData == 0){
