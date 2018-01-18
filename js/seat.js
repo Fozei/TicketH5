@@ -77,7 +77,7 @@ $(function() {
 							'\t\t\t\t\t\t\t\t</div>\n' +
 							'\t\t\t\t\t\t\t\t<div>\n' +
 							'\t\t\t\t\t\t\t\t\t<label>身份证号</label>\n' +
-							'\t\t\t\t\t\t\t\t\t<input type="text" id="idNumber' + seatId + '" value="" />\n' +
+							'\t\t\t\t\t\t\t\t\t<input type="number" id="idNumber' + seatId + '" value="" />\n' +
 							'\t\t\t\t\t\t\t\t</div>\n' +
 							'\t\t\t\t\t\t\t</div>\n' +
 							'\t\t\t\t\t\t\t<div class="left save_delete_btn">\n' +

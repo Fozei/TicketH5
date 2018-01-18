@@ -15,5 +15,5 @@ git log
 
 9/git pull origin dev
 
-git mege lujx
+git merge lujx
 git push origin dev
