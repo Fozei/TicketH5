@@ -51,14 +51,23 @@ header img {
 
 .right_intro #title {
     margin-top: 0.5rem;
+    height: 2rem;
+    line-height: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .right_intro #area {
     margin-top: 0.88rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .right_intro #price {
-    margin-top: 1.75rem;
+    margin-top: 1.5rem;
     color: #ee1c63;
     font-size: 0.7rem;
 }
