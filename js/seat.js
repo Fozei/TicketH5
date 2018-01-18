@@ -190,6 +190,10 @@ function seatView(area) {
 				return false;
 			} else {
 				// seatList = data.seatList.reverse()
+        var tit =data.timeList
+        // console.log(tit)
+        var gameTit = tit.year_r+" 周"+tit.week+' '+tit.team+' '+tit.time+' 第'+tit.turn
+        $('.seatingPlanTit').text(gameTit)
 				seatList = data.seatList;
 				var oddSeatList = data.oddSeatList;
 				var areaList = data.areaList;

@@ -75,7 +75,7 @@ header img {
     border: 0.01rem white solid;
     background-color: #fff;
 }
-
+.dataBox p>span{font-weight: bold;font-size: 0.56rem;}
 #introduction img {
     max-width: 13.5rem !important;
 }
@@ -113,23 +113,24 @@ table {
 td {
     border-right: 0.05rem solid #000;
     border-bottom: 0.05rem solid #000;
-    height: 1rem;
+    height: 1.4rem;
 }
 
 th {
     border-right: 0.05rem solid #000;
     border-bottom: 0.05rem solid #000;
-    height: 1rem;
+    height: 1.4rem;
 }
-
-table a {
-    color: #545454;
-}
-
-.btnSelectSeat {
+.btnSelectSeat a{ color: #545454;}
+.btnSelectSeat a{
+    display: block;
     background-color: #2c70e1;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     color: white;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    height: 1rem;
+    line-height: 1rem;
 }
 
 .active {

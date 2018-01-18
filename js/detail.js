@@ -20,8 +20,8 @@ function parseDetailData(data) {
         $("#title").text(title);
         $("#area").text(address);
         $("#price").text(price);
-        $("#date").append(date);
-        $("#matchArea").append(address);
+        $(".date").append(date);
+        $(".matchArea").append(address);
         $("#introduction").html(content);
 
         //表格标题
