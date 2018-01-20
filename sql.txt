@@ -4,3 +4,14 @@ ADD COLUMN `orderarea_seatstatus`  tinyint(1) NULL COMMENT '状态 1=已选 0=可选 2
 ALTER TABLE `ticket_orderarea`
 ADD COLUMN `orderarea_timeid`  int(10) NULL COMMENT '场次ID' AFTER `orderarea_seatstatus`;
 
+
+ALTER TABLE `ticket_orderarea`
+ADD COLUMN `orderarea_checktime`  int(10) NULL COMMENT '验票时间' AFTER `orderarea_age`,
+ADD COLUMN `orderarea_addtime`  int(10) NULL COMMENT '添加时间' AFTER `orderarea_checktime`;
+
+
+ALTER TABLE `ticket_orderarea`
+ADD COLUMN `orderarea_seatprice`  decimal(10,2) NULL DEFAULT 0.00 COMMENT '价格' AFTER `orderarea_addtime`;
+
+
+
