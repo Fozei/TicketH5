@@ -148,3 +148,5 @@ function goCashHistory() {
         location.href = "cash_history.html";
     }
 }
+
+			

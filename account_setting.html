@@ -12,6 +12,9 @@
     <script src="js/utils.js"></script>
     <script src="js/checklogin.js"></script>
     <script src="js/account_setting.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		 <script type="text/javascript" src="js/upload.js"></script>
+
     <style>
         body {
             background: url("images/bg4.jpg") no-repeat top left;
@@ -33,8 +36,9 @@
             <div class="settting-picture">
                 <span class="select-type">头像 </span>
                 <img class="img-picture-jt" src="images/jt.jpg" style="float: right">
-                <img id="portrait" onclick="selectImage()" class="img-picture" src="images/head-picture.jpg"
+                <img id="portrait" class="img-picture" src="images/head-picture.jpg"
                      style="float: right">
+					 <input type="file" name="picfile" id="picfile" style="display:none;" />
             </div>
             <!--<img style="height: 0.0296rem; width: 12rem;margin-left: 1.17037rem;" src="images/line-setting.jpg" >-->
 
@@ -74,84 +78,8 @@
     </div>
     <!--action为要请求的路径-->
     <form id="uploadForm" enctype="multipart/form-data" method="post" action="XXXXXX">
-        <input type="file" id="imgSelector" onchange="javascript:setNewImage();"/>
+        <input type="file" id="imgSelector"  name="imgSelector" onchange="javascript:setNewImage();"/>
     </form>
 </body>
-<script type="text/javascript">
-    function selectImage() {
-        $("#imgSelector").click();
-    }
 
-    function upLoadFile() {
-        var file = document.getElementById('imgSelector').files[0];    //读取文件
-        var reader = new FileReader(), image = new Image(),
-            canvas = document.createElement("canvas"), ctx = canvas.getContext("2d");
-        startFileLoad(reader, image, canvas, ctx);
-    }
-
-    function startFileLoad(file, reader, image, canvas, ctx) {    //文件加载
-        /*开始进行网络加载*/
-        reader.onload = function () {        //文件加载完成
-            var url = reader.result;
-            image.src = url;
-        };
-        image.onload = function () {        //图片加载完成
-            var w = image.naturalWidth, h = image.naturalHeight,
-                scale = 3;        //图片缩放比例，这里是把图片大小高宽均缩小3倍
-            canvas.width = w / scale;
-            canvas.height = h / scale;
-            ctx.drawImage(image, 0, 0, w, h,
-                0, 0, canvas.width, canvas.height);
-            fileUpload();
-        };
-        reader.readAsDataURL(file);        //用文件加载器加载文件
-
-        function fileUpload() {        //文件上传方法
-            var quality = 0.3;        //图片的质量，这里设置的是0.3
-            var data = canvas.toDataURL("image/jpeg", quality);//获取画布图片，并且要jpg格式
-            data = data.split(',')[1];
-            data = window.atob(data);
-            var ia = new Uint8Array(data.length);
-            for (var i = 0; i < data.length; i++) {
-                ia[i] = data.charCodeAt(i);
-            }
-            var blob = new Blob([ia], {            //以上均为二进制参数处理，从而获取一个blob对象
-                type: "image/jpeg"
-            });
-            var fd = new FormData(document.getElementById("uploadForm"));
-
-            fd.append("XXX", blob, "upload.jpg");    //向form中加入图片数据，name属性是XXX，文件名是upload.jpg
-            var xhr = new XMLHttpRequest();
-            xhr.addEventListener('load', function (resUpload) {
-                //请求成功
-            }, false);
-            xhr.addEventListener('error', function () {
-                //请求失败
-            }, false);
-            xhr.addEventListener('abort', function () {
-                //上传终止
-            }, false);
-            xhr.open('POST', "http://XXXXXXXXXXXXX");//请求地址
-            xhr.send(fd);//发送
-        }
-    }
-
-    function setNewImage() {
-        var imageSelector = document.getElementById("imgSelector");
-        var picture;
-        picture = imageSelector.value;
-        if (!picture.match(/.jpg|.gif|.png|.bmp/i)) {
-            return alert("您上传的图片格式不正确，请重新选择！");
-        }
-        if (imageSelector.files && imageSelector.files[0]) {
-            var isChrOrSaf = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1;
-            document.getElementById("portrait").src = isChrOrSaf ? window.webkitURL.createObjectURL(imageSelector.files[0]) : window.URL.createObjectURL(imageSelector.files[0]);
-            upLoadFile(picture)
-        } else {
-            return alert("您上传的图片格式不正确，请重新选择！");
-        }
-    }
-
-
-</script>
 </html>
