@@ -8,16 +8,15 @@ $(function () {
         if (data.code === "success") {
             initView(data);
         } else {
-			if (data.message=='用户不存在')
-			{
-				location.href='login.html';
-			}else{
-				layer.open({
-					content: data.message
-					, skin: 'msg'
-					, time: 2 //2秒后自动关闭
-				});
-			}
+            if (data.message == '用户不存在') {
+                location.href = 'login.html';
+            } else {
+                layer.open({
+                    content: data.message
+                    , skin: 'msg'
+                    , time: 2 //2秒后自动关闭
+                });
+            }
         }
     }).fail(function (xhr, status) {
 
@@ -31,6 +30,10 @@ $(function () {
 });
 
 function initView(data) {
+    //设置头像
+    if (data.userData.pic !== null && data.userData.pic !== undefined && data.userData.pic !== "") {
+        $('#portrait').attr("src", data.userData.pic);
+    }
     //1=普通用户 2=代理人
     userType = parseInt(data.userData.type);
     if (userType === 1) {//普通人
@@ -120,26 +123,25 @@ function goMyAgent() {
 
 function goAgent() {
     if (userType === 1) {
-		 $.ajax({
-			url: DOMAIN + GET_USR_LIST,
-			data:{
-				userID:USERID
-			},
-			type: "POST",
-			dataType: "json",
-			success: function (data) {
-				var userList = data.userData;
-				if (userList.name=='' || userList.idcard=='' || userList.name==null || userList.idcard==null)
-				{
-					alert("请您先完善身份证和姓名信息");
-					setTimeout("location.href = 'account_setting.html'",1000)
-				}else{
-					location.href = "application_agent.html";
-				}
+        $.ajax({
+            url: DOMAIN + GET_USR_LIST,
+            data: {
+                userID: USERID
+            },
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                var userList = data.userData;
+                if (userList.name == '' || userList.idcard == '' || userList.name == null || userList.idcard == null) {
+                    alert("请您先完善身份证和姓名信息");
+                    setTimeout("location.href = 'account_setting.html'", 1000)
+                } else {
+                    location.href = "application_agent.html";
+                }
 
-			}
-		});
-        
+            }
+        });
+
     }
 }
 
