@@ -120,7 +120,26 @@ function goMyAgent() {
 
 function goAgent() {
     if (userType === 1) {
-        location.href = "application_agent.html";
+		 $.ajax({
+			url: DOMAIN + GET_USR_LIST,
+			data:{
+				userID:USERID
+			},
+			type: "POST",
+			dataType: "json",
+			success: function (data) {
+				var userList = data.userData;
+				if (userList.name=='' || userList.idcard=='' || userList.name==null || userList.idcard==null)
+				{
+					alert("请您先完善身份证和姓名信息");
+					setTimeout("location.href = 'account_setting.html'",1000)
+				}else{
+					location.href = "application_agent.html";
+				}
+
+			}
+		});
+        
     }
 }
 
