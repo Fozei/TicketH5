@@ -1,4 +1,4 @@
-如果我在dev上修改的
+如果我在dev上修改的 修改方法   
 在dev 上
 1、add
 2、commit
@@ -17,3 +17,35 @@ git log
 
 git merge lujx
 git push origin dev
+////////////////////////////////////////////////////////////////
+
+
+git 基本操作
+
+1、git checkout dev 
+2、git push origin dev //获取dev上最新的
+
+ 如果有更新
+  git checkout lujx
+  git rebase dev  //把dev上最新的更新到自己分支
+  git checkout dev
+  git pull origin dev  //获取dev上最新的
+  如果没有更新
+  git merge luix  自己跟新的合并到dev上
+  git push origin dev  //推到远程dev上
+
+  3、删除 自己分支
+  4、重新建自己分支
+
+
+  如果有冲突，解决完冲突在lujx 自己分支上 git add -A
+  git rebase --continue
+
+
+  删除分支
+  git push origin --delete lujx  删除远程
+  git branch -D lujx  删除本地
+  建立自己的分支
+  git branch lujx
+  回到自己分支
+  git push origin lujx
