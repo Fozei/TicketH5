@@ -65,26 +65,12 @@ $(function() {
 						var timeList = data.timeList;
 						var seatList = data.seatList;
 						$('.checkSeat').show();
-						$('.checkSeatList').prepend('<div class="Seat seat' + seatId + '" aid="' + areaID + '" sid="' + seatId + '">\n' +
-							'\t\t\t\t\t\t<div class="seatInformation">\n' +
-							'\t\t\t\t\t\t\t<span class="colorBlue">' + timeList.year_r + '&nbsp;周' + timeList.week + '&nbsp;' + timeList.time + '</span><span class="colorBlue marLeft">' + seatList.areaName + '区' + seatList.line + '排' + seatList.column + '座' + '</span><span class="price marLeft">' + seatList.price + '元</span>\n' +
-							'\t\t\t\t\t\t</div>\n' +
-							'\t\t\t\t\t\t<div class="information clearFix">\n' +
-							'\t\t\t\t\t\t\t<div class="left name_idNum">\n' +
-							'\t\t\t\t\t\t\t\t<div>\n' +
-							'\t\t\t\t\t\t\t\t\t<label class="clearFix"><span class="left">姓</span><span class="right">名</span></label>\n' +
-							'\t\t\t\t\t\t\t\t\t<input type="text" id="name' + seatId + '" value="" />\n' +
-							'\t\t\t\t\t\t\t\t</div>\n' +
-							'\t\t\t\t\t\t\t\t<div>\n' +
-							'\t\t\t\t\t\t\t\t\t<label>身份证号</label>\n' +
-							'\t\t\t\t\t\t\t\t\t<input type="number" id="idNumber' + seatId + '" value="" />\n' +
-							'\t\t\t\t\t\t\t\t</div>\n' +
-							'\t\t\t\t\t\t\t</div>\n' +
-							'\t\t\t\t\t\t\t<div class="left save_delete_btn">\n' +
-							'\t\t\t\t\t\t\t\t<input type="button" id="delete" class="deleteCheckSeat" value="删除" />\n' +
-							'\t\t\t\t\t\t\t</div>\n' +
-							'\t\t\t\t\t\t</div>\n' +
-							'\t\t\t\t\t</div>');
+						 $('.checkSeatList').prepend(' <div class="coord seat' + seatId + '"  aid="'+areaID+'" sid="'+seatId+'">\n' +
+              '                <span>'+seatList.areaName+'区'+seatList.line+'排'+seatList.column+'座'+'</span>\n' +
+              '                <em>'+'￥'+seatList.price+'</em>\n' +
+              '                <i class="deleteCheckSeat"></i>\n' +
+              '            </div>');
+						  //$('.checkSeatList').append('<div class="Seat seat' + seatId + '" aid="' + areaID + '" sid="' + seatId + '"></div>');
 
 					} else {
 
@@ -106,45 +92,31 @@ $(function() {
 		}
 	});
 	//点击删除，删除座位
-	$('.main').on('click', '.deleteCheckSeat', function() {
-		var sid = $(this).parents('.Seat').attr('sid');
-		$(this).parents('.Seat').remove();
-		$('.setSeat' + sid).removeClass('selected');
-		$('.setSeat' + sid).addClass('optionalBg');
-		if($('.checkSeatList').children('.Seat').length == 0) {
-			$('.checkSeat').hide()
-		}
-	});
+  $('.main').on('click', '.deleteCheckSeat', function () {
+    var sid = $(this).parent('.coord').attr('sid');
+    $(this).parent('.coord').remove();
+    $('.setSeat' + sid).removeClass('selected');
+    $('.setSeat' + sid).addClass('optionalBg');
+    $('.seat' + sid).remove();
+    if($('.checkSeatList').children('.coord').length=='0'){
+      $('.checkSeat').hide();
+    }
+  });
 	//点击购买按钮
 	$('#buyBtn').click(function() {
 		var data = new Array();
 		var i = 0;
-		$(".Seat").each(function() {
+		$(".coord").each(function() {
 			var aid = $(this).attr('aid');
 			var sid = $(this).attr('sid');
-			var name = $('#name' + sid).val();
-			var idCard = $('#idNumber' + sid).val();
-			data[i] = new Array(aid, sid, idCard, name);
+			data[i] = new Array(aid, sid, '', '');
 			i++;
 		});
 		if(data.length == 0) {
 			layer.msg('请选择座位');
 			return false;
 		}
-		for(var i = 0; i < data.length; i++) {
-
-			if(data[i][2] == '') {
-				layer.msg('请填写身份证');
-				return false;
-			} else if(!ChinaIdChecker_r(data[i][2])) {
-				layer.msg('请填写正确身份证');
-				return false;
-			}
-			if(data[i][3] == '') {
-				layer.msg('请填写姓名');
-				return false;
-			}
-		}
+		
 		$.ajax({
 			url: DOMAIN + TICKET_ADDORDER,
 			data: {
@@ -161,7 +133,7 @@ $(function() {
 					layer.msg(data.message);
 					return false;
 				} else {
-					location.href = DOMAIM_API + 'ticketconfirm.php?ticketID=' + ticketID + '&orderNum=' + data.orderNum + '&timeID=' + timeID;
+					location.href = data.codeUrl;
 				}
 
 			}
@@ -301,7 +273,7 @@ function seatView(area) {
 
 			}
 			layer.close(index);
-      $('.Seat ').each(function () {
+      $('.coord').each(function () {
         var parentSid = $(this).attr('sid')
         $('.setSite').each(function () {
           if(parentSid == $(this).attr('sid')){
