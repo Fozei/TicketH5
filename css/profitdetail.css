@@ -160,10 +160,13 @@ footer div {
 }
 
 .category {
+    height: 10rem;
     background-color: #dbe0e6;
     padding-right: 1rem;
     padding-left: 1rem;
     overflow-y: scroll;
+    /*overflow-y: auto;*/
+    /*overflow-x: hidden;*/
 }
 
 .category .p_none {

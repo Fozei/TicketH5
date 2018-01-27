@@ -62,11 +62,11 @@ function setupCategory(data) {
     catNum = data.catData.length;
     var ap_html = '';
     $.each(data.catData, function (v) {
-        if (v === 0) {
-            ap_html += "<p class='p_none' data=" + data.catData[v].id + ">" + data.catData[v].name + "</p>";
-        } else {
+        // if (v === 0) {
+        //     ap_html += "<p class='p_none' data=" + data.catData[v].id + ">" + data.catData[v].name + "</p>";
+        // } else {
             ap_html += "<p class='p_vis' data=" + data.catData[v].id + ">" + data.catData[v].name + "</p>";
-        }
+        // }
     })
     $('#classify').append(ap_html);
     setUpListener();
@@ -103,6 +103,7 @@ function adapter_profit(data) {
                 "</li>";
         });
     }
+    $('#list .listContent').empty();
     $('#list .listContent').append(ap_html);
 }
 
