@@ -72,18 +72,7 @@ $(function(){
 		$('.flowDiv').show();
 	}
 	*/
-    if (/Android/gi.test(navigator.userAgent)) {
-//        alert('01');
-        window.addEventListener('resize', function () {
-//            alert('02');
-            if (document.activeElement.tagName == 'tel' || document.activeElement.tagName == 'idNumber' || document.activeElement.tagName == 'name') {
-                window.setTimeout(function () {
-//                    alert('03');
-                    document.activeElement.scrollIntoViewIfNeeded();
-                }, 0);
-            }
-        })
-    }
+
 
 
 	if (orderID==null)
