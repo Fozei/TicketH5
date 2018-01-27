@@ -1,5 +1,5 @@
 var COOKIE_NAME_USER_ID = "ewedouserID";
-var DOMAIM_API='http://192.168.1.78/ticket/';
+var DOMAIM_API='http://www.ewedo.net/ticket/';
 var DOMAIN = DOMAIM_API+"api";
 var MALL_ADDRESS =
     "http://sdyigou.sdevnet.com/topics/api/dev/index.html#/device/";
@@ -45,5 +45,4 @@ var TICKET_ADDORDER = '/addorder.php';
 
 var TICKET_SEAT_COUNT = '/getordercount.php'; //得到座位数量
 var TICKET_ADDCARD = '/cardadd.php';    //添加身份证
-
 var GET_SIGN = '/getsign.php'  //获取签名
