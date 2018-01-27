@@ -262,6 +262,7 @@ footer {
     position: fixed;
     bottom: 0;
     background-color: white;
+    border-top: 0.05rem solid #d5d4d4;
 }
 
 footer ul {
