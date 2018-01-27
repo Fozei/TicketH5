@@ -54,7 +54,7 @@
 		<img src="images/submit.png"  onClick="submit();" />
 		<input type="hidden" id="num" />
 	</div>
-	
+
 </body>
 <script src="js/jquery-1.12.0.min.js">
 </script>
@@ -71,10 +71,22 @@ $(function(){
 		$('.flowDiv').show();
 	}
 	*/
+    if (/Android/gi.test(navigator.userAgent)) {
+//        alert('01');
+        window.addEventListener('resize', function () {
+//            alert('02');
+            if (document.activeElement.tagName == 'tel' || document.activeElement.tagName == 'idNumber' || document.activeElement.tagName == 'name') {
+                window.setTimeout(function () {
+//                    alert('03');
+                    document.activeElement.scrollIntoViewIfNeeded();
+                }, 0);
+            }
+        })
+    }
+
 
 	if (orderID==null)
 	{
-
 		layer.msg('参数错误');
         return false;
 	}
@@ -103,15 +115,15 @@ $(function(){
 					str+='<input type="number" id="idNumber" class="input" placeholder="请输入有效身份证号码" />';
 					str+='</p>';
 					t++;
-				
+
 				$('.content_div').prepend(str);
 				$('#num').val(n);
 			}else{
 				layer.msg(data.message);
 				 return false;
 			}
-            
-           
+
+
         }
     });
 
@@ -131,7 +143,7 @@ function isWeiXin(){
 	}else{
 		return false;
 	}
-} 
+}
 
 function submit(){
 	var n = $('#num').val();
@@ -147,7 +159,7 @@ function submit(){
 	}
 	for (var i=0;i<data.length;i++)
 	{
-			
+
 		if (data[i][0]=='')
 		{
 			layer.msg('请填写身份证');
@@ -197,7 +209,7 @@ function submit(){
 				layer.msg(data.message);
 				return false;
 		   }
-			
+
         }
     });
 }
