@@ -61,6 +61,14 @@ function buildUpContent(pageDatum) {
         }
 
         var matchDate = pageDatum.year_r + "\t" + pageDatum.match_time;
+		if (seatInfo.idcard==null)
+		{
+			seatInfo.idcard='';
+		}
+		if (seatInfo.name==null)
+		{
+			seatInfo.name='';
+		}
 
         var str = "<li style=\"margin-top: 0.5rem\">\n" +
             "        <div>\n" +
