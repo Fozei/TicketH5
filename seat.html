@@ -3,7 +3,8 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 		<title>选座购票</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/seat.css" />
@@ -14,7 +15,8 @@
     	author：pgc
     	time：2018-01-03
     	describe：Choose a ticket 1.0.0
-   -->
+
+		 <img id="targetObj2" style="position:absolute;width:5rem;height:5rem;z-index:99999;right:0px;" src="images/seat1.jpg"  />   -->
 		<div class="main">
 
 			<!-- pgc head start -->
@@ -27,9 +29,9 @@
 			</div>
 			<!-- head end -->
 			<!-- pgc seating Plan start -->
-			<div class="seatingPlan">
+			<div class="seatingPlan" >
 				<div class="seatingPlanTit">蓬莱市体育场馆座位图</div>
-				<div class="seatingPlanCon">
+				<div class="seatingPlanCon" >
 					<div class="areaA1 areaColor_a checked" name="A1">A1区</div>
 					<div class="areaA2 areaColor_a" name="A2">A2区</div>
 					<div class="areaA3 areaColor_a" name="A3">A3区</div>
@@ -105,7 +107,7 @@
 				</div>
 				<div class="seatRow"></div>
 				<div class="seatList" id="box">
-					<div class="seatListCon">
+					<div class="seatListCon" style="z-index:1000;">
 					</div>
 					<div id="empty_div"></div>
 				</div>
@@ -134,6 +136,9 @@
 		<script type="text/javascript" src="js/common.js"></script>
 		<script type="text/javascript" src="js/utils.js"></script>
 		<script src="js/checklogin.js"></script>
+		<script type="text/javascript" src="js/touchjs/touch.min.js"></script>
+    <script type="text/javascript" src="js/touchjs/cat.touchjs.js"></script>
+    <script type="text/javascript" src="js/touchjs/jquery-1.10.2.min.js"></script>
 		<script src="js/seat.js"></script>
 
 	</body>

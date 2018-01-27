@@ -99,9 +99,9 @@ input {
 
 .seatingPlanCon > div {
     position: absolute;
-        font-size: 0.2666666666666667rem;
+        font-size: 0.3266666666666667rem;
     text-align: center;
-    color: #f3b306;
+    color: #000000;
 }
 
 .areaA1{width: 1.22962962962963rem;height:0.8rem;line-height: 0.8rem;left: 0.7407407407407407rem;top: 0.1777777777777778rem;}

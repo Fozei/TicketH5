@@ -17,7 +17,7 @@ $(function() {
 	//加载默认座位
 	seatView('');
 	//根据区域生成座位
-	$('.main').on('click', '.seatingPlanCon>div', function() {
+	$('.main').on('touchstart', '.seatingPlanCon>div', function() {
 		$('.seatListCon').empty();
 		$('.seatRow').empty();
 		$('.seatRow').css('height','0')
@@ -25,7 +25,6 @@ $(function() {
 		$('#checkedArea').html(area);
 		$(this).addClass('checked');
 		$(this).siblings().removeClass('checked');
-
 		seatView(area);
 
 
@@ -355,3 +354,5 @@ function showSeat(end, s_list_2, type, areaID) {
 
 	return str;
 }
+
+
