@@ -5,8 +5,8 @@ html,body{width: 100%;height: 100%;}
 .header{height: 1.007407407407407rem;line-height: 1.007407407407407rem;text-align: center;font-size: 0.7111111111111111rem;color: #fff;position: relative}
 .head .backUp{position: absolute;left:0.5481481481481481rem;width: 0.8592592592592593rem;height: 1.007407407407407rem;top:0;bottom: 0;margin: auto;}
 .head .backUp:after,.head .backUp:before{content: '';position: absolute;left: 0;width:0.4444444444444444rem ;height: 0.0444444444444444rem;background-color: #fff;transform-origin: left  center;}
-.head .backUp:after{top: 0.47rem;transform: rotate(-30deg);bottom: 0;}
-.head .backUp:before{transform: rotate(30deg);bottom: 0.51rem;}
+.head .backUp:after{top: 0.47rem;transform: rotate(-45deg);bottom: 0;}
+.head .backUp:before{transform: rotate(45deg);bottom: 0.51rem;}
 /* head end */
 /* main start */
 .main{width: 12.26666666666667rem;margin: 0 auto;padding-top: 13.86666666666667rem;}
