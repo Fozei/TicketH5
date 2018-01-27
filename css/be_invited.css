@@ -10,8 +10,8 @@ html,body{width: 100%;height: 100%;}
 /* head end */
 /* main start */
 .main{width: 12.26666666666667rem;margin: 0 auto;padding-top: 11.5rem;}
-.main .hint{color: #fff;font-size: 0.3rem;width: 10.94814814814815rem;margin: 0 auto;text-align: center;margin-bottom: 0.5185185185185185rem;}
-.main form>div{margin-left:auto; margin-right: auto; width: 10rem;height: 1.6rem;border: 0.0444444444444444rem solid #b3b3b3;border-radius: 0.8740740740740741rem;display: flex;display: -webkit-flex;padding: 0 0.2962962962962963rem;margin-bottom:0.5925925925925926rem}
+.main .hint{color: #fff;font-size: 0.48rem;width: 10.94814814814815rem;margin: 0 auto;text-align: center;margin-bottom: 0.5185185185185185rem;}
+.main form>div{margin-left:auto; margin-right: auto; width: 10rem;height: 1.6rem;border: 0.0444444444444444rem solid #b3b3b3;border-radius: 0.8740740740740741rem;display: flex;display: -webkit-flex;padding: 0 0.2962962962962963rem;margin-bottom:0.35rem}
 .main form>div label{display: block;width: 1.407407407407407rem;height: 100%;position: relative;}
 .main form>div label img{position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;width: 0.7407407407407407rem;height: 0.7407407407407407rem;}
 .main form>div input{display: block;height: 0.562962962962963rem;line-height: 0.562962962962963rem;font-size: 0.562962962962963rem;border: none;padding-top: 0.5925925925925926rem;padding-bottom: 0.5925925925925926rem;background-color: transparent;flex: 1;-webkit-flex: 1;color: #ccc}
