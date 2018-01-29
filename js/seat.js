@@ -196,6 +196,7 @@ function seatView(area) {
 				} else if(type == 0) {
 					end = (parseInt(end_seat) - parseInt(start_seat)) / 2 + 1;
 				}
+				//118 = 座位的宽度+右边的间距
 				var seatLineWidth = (118 ) * end/67.5;
 				if(type != 1) {
 					if(increase == 1) {
@@ -266,6 +267,7 @@ function seatView(area) {
 					//左边是偶数座位，右边是奇数座位
 
 					end = (parseInt(even_end_seat) - 2) / 2 + 1;
+					//119 = 座位的宽度+右边的间距+1
 					var seatLineWidth1 = (119 ) * end/67.5;
 					str += showSeat(end, seatList, 2, areaID);
 					end = (odd_end_seat - 1) / 2 + 1;
