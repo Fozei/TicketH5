@@ -27,6 +27,11 @@ function initView(data) {
     // data.list.map(function (t, number, ts) {
     //     console.log(t + "::" + number + "::" + ts)
     // });
+	if (data.list==0)
+	{
+		$('#list').append('<li style="font-size:0.6rem;text-align:center;padding-top:2rem;">暂无信息</li>');
+		return false;
+	}
     $(data.list).each(function (index, dataItem) {
         var status = parseInt(dataItem.status);
         var remark, className;

@@ -215,7 +215,7 @@ th {
 }
 
 .notLogin {
-    width: 4.2rem;
+    width: 10.2rem;
     height: 2rem;
     background-color: #fff;
     border-radius: 0.2222222222222222rem;
@@ -226,12 +226,13 @@ th {
     bottom: 0;
     margin: auto;
     padding: 0.5rem 0.4rem;
-    font-size: 0.3555555555555556rem;
+    font-size: 0.6555555555555556rem;
     animation-duration: 0.4s !important;
     transition: all 0.5s cubic-bezier(.22, -0.86, .97, .58);
     box-shadow: 0 0 0.0740740740740741rem #ccc;
     z-index: 10;
-    display: none
+    display: none;
+	text-align:center;
 }
 
 .notLogin .notLoginTit {
@@ -290,3 +291,4 @@ th {
     width: 100% !important;
     height: auto !important;
 }
+

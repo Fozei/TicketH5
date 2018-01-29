@@ -31,7 +31,16 @@ $(function () {
 function withDrawSendCode() {
     //验证金额
     var amount = $.trim($('#amount').val());
-    if (amount < 200 || parseFloat($('#balanceAvailable').text()) < amount) {
+	if (parseFloat($('#balanceAvailable').text()) < amount)
+	{
+		layer.open({
+            content: '你最多可提现'+$('#balanceAvailable').text()
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
+        return;
+	}
+    if (amount < 200) {
         layer.open({
             content: '单次提现金额必须大于200'
             , skin: 'msg'
@@ -90,7 +99,16 @@ function withDrawSendCode() {
 function submitRequest() {
     //验证金额
     var amount = parseFloat($('#amount').val());
-    if (amount < 200 || parseFloat($('#balanceAvailable').text()) < amount) {
+	if (parseFloat($('#balanceAvailable').text()) < amount)
+	{
+		layer.open({
+            content: '你最多可提现'+$('#balanceAvailable').text()
+            , skin: 'msg'
+            , time: 2 //2秒后自动关闭
+        });
+        return;
+	}
+    if (amount < 200) {
         layer.open({
             content: '单次提现金额必须大于200'
             , skin: 'msg'
