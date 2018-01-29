@@ -196,12 +196,14 @@ function seatView(area) {
 				} else if(type == 0) {
 					end = (parseInt(end_seat) - parseInt(start_seat)) / 2 + 1;
 				}
+				var seatLineWidth = (118 ) * end/67.5;
 				if(type != 1) {
 					if(increase == 1) {
 						var k = 0;
 
 						for(var m = parseInt(start_row); m <= parseInt(end_row); m++) {
 							lineData[k] = end + k;
+							seatLineWidth = (118 ) * (end + k)/67.5;
 							k++;
 						}
 
@@ -209,20 +211,21 @@ function seatView(area) {
 
 					}
 					var lin = 0;
+					 $('.seatListCon').css('width', seatLineWidth + 'rem');
 					for(var i = 0; i < seatList.length; i++) {
 
 						if(increase == 1) {
 
 							if(s == 1) {
 								var top = 1.318518518518519 * u;
-								str += '<div class="seatLine  clearFix" style="top:' + top + 'rem">';
+								str += '<div class="seatLine  clearFix" style="top:' + top + 'rem;width:'+seatLineWidth+'rem">';
 								lineStr += '<span>' + seatList[i].line + '</span>';
 								lin++
 							}
 						} else {
 							if(s == 1 || (s - 1) % end == 0) {
 								var top = 1.318518518518519 * u;
-								str += '<div class="seatLine  clearFix" style="top:' + top + 'rem">';
+								str += '<div class="seatLine  clearFix" style="top:' + top + 'rem;width:'+seatLineWidth+'rem">';
 								lineStr += '<span>' + seatList[i].line + '</span>';
 								lin++
 							}
@@ -263,10 +266,13 @@ function seatView(area) {
 					//左边是偶数座位，右边是奇数座位
 
 					end = (parseInt(even_end_seat) - 2) / 2 + 1;
+					var seatLineWidth1 = (119 ) * end/67.5;
 					str += showSeat(end, seatList, 2, areaID);
 					end = (odd_end_seat - 1) / 2 + 1;
+					seatLineWidth1+=(119 ) * end/67.5;
 					str += showSeat(end, oddSeatList, 1, areaID);
 					$('.seatListCon').html(str);
+					$('.seatListCon').css('width', seatLineWidth1 + 'rem');
 
 				}
 
@@ -349,7 +355,6 @@ function showSeat(end, s_list_2, type, areaID) {
 	if(type == 2) {
 		$('.seatRow').html(lineStr);
 		$('.seatRow').css('height', (lin * 89) / 67.5 + 'rem')
-		 $('.seatListCon').css('width', 27.2 + 'rem')
 	}
 
 	return str;
