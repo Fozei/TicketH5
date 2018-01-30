@@ -10,7 +10,7 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <title>我的代理商</title>
+    <title></title>
     <link rel="stylesheet" type="text/css" href="css/basic.css"/>
     <link rel="stylesheet" type="text/css" href="css/my_agent.css"/>
     <script type="text/javascript" src="js/auto.js"></script>
@@ -23,6 +23,12 @@
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
+	<!--蒙曾-->
+	<div class="flowDiv" style="display:none;">
+		<p class="tip_title">请点击右上角的“...”分享</p>
+		<img src="images/tip.png" class="img" alt="" />
+		<div class="nextbt">我知道了</div>
+	</div>
 <div class="myAgent">
     <!-- pgc head start -->
     <div class="head">
@@ -87,7 +93,27 @@
     $('.head .backUp').on('touchstart', function (e) {
         location.href='user_center.html';
     });
+	$('.subShare1').click(function(){
+		$('.flowDiv').show();
+	});
+	$('.subShare2').click(function(){
+		$('.flowDiv').show();
+	});
+	$('.subShare3').click(function(){
+		$('.flowDiv').show();
+	});
+	$('.nextbt').click(function(){
+		$('.flowDiv').hide();
+	});
+
+	if (!isWeiXin())
+	{
+		$('.tip_title').html('请在微信里打开分享给好友~~');
+		$('.tip_title').css('right','3rem');
+		$('.img').hide();
+	}
 	var url='';
+	var account ='';
 	
 	$(function(){
 		//获取签名
@@ -101,8 +127,10 @@
 				dataType:"json",
 				success:function(data){
 					url = data.inviteUrl;
+					account = data.account;
+					
 					wx.config({
-						debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+						debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 						appId: data.appid, // 必填，公众号的唯一标识
 						timestamp: data.timestamp, // 必填，生成签名的时间戳
 						nonceStr: data.noncestr, // 必填，生成签名的随机串
@@ -113,22 +141,77 @@
 
 				}
 			});
-
-		//分享1
-		$('.subShare1').click(function(){
+		
+		wx.ready(function(){
+			var title='您的朋友'+account+'邀您在长颈乐票务系统，一起赚大钱';
+			var imgUrl = 'http://www.ewedo.net/ticket/h5/images/lianjie.png';
+			var desc = '享受票务折扣，还可以邀请小伙伴一起赚钱！快来加入！';
+			//分享到朋友圈
 			wx.onMenuShareTimeline({
-					title: '邀请伙伴一起赚钱', // 分享标题
+					title: title, // 分享标题
 					link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-					imgUrl: '', // 分享图标
+					imgUrl: imgUrl, // 分享图标
 					success: function () {
 					// 用户确认分享后执行的回调函数
 				},cancel: function () {
 					// 用户取消分享后执行的回调函数
 					}
 				});
+				//分享给朋友
+				wx.onMenuShareAppMessage({
+					title: title, // 分享标题
+					desc: desc, // 分享描述
+					link: url, // 分享链接，该链接域名必须与当前企业的可信域名一致
+					imgUrl: imgUrl, // 分享图标
+					type: '', // 分享类型,music、video或link，不填默认为link
+					dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+					success: function () {
+						// 用户确认分享后执行的回调函数
+					},
+					cancel: function () {
+						// 用户取消分享后执行的回调函数
+					}
+				});
+				//分享到QQ
+				wx.onMenuShareQQ({
+					title: title, // 分享标题
+					desc: desc, // 分享描述
+					link: url, // 分享链接
+					imgUrl: imgUrl, // 分享图标
+					success: function () {
+					   // 用户确认分享后执行的回调函数
+					},
+					cancel: function () {
+					   // 用户取消分享后执行的回调函数
+					}
+				});
+				wx.onMenuShareQZone({
+					title: title, // 分享标题
+					desc: desc, // 分享描述
+					link: url, // 分享链接
+					imgUrl: imgUrl, // 分享图标
+					success: function () { 
+					   // 用户确认分享后执行的回调函数
+					},
+					cancel: function () { 
+						// 用户取消分享后执行的回调函数
+					}
+				});
 		})
 
+		
+
 	})
+
+
+	function isWeiXin(){
+		var ua = window.navigator.userAgent.toLowerCase();
+		if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	
 	
 

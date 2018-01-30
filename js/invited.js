@@ -35,32 +35,69 @@ $(function () {
     function register(data) {
         $('#sp_account').html(data.userData.account);
     }
-
-
-    $('#get_code').click(function () {
-        if (!isHead) return;
-        var tel = $("#phone").val();
-        if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(tel)))) {
-            layer.open({
-                content: '请输入正确的账号或密码'
-                , skin: 'msg'
-                , time: 2 //2秒后自动关闭
-            });
-            return false;
-        }
-        //获取验证码
+	$("#phone").blur(function(){
+	  //获取验证码
         $.ajax({
-            url: DOMAIN + GET_REG_CODE,
+            url: DOMAIN + CHECK_PHONE,
             data: {
-                'tel': tel,
+                'tel': $(this).val()
             },
             type: "POST",
             async: false,
             dataType: "json",
             success: function (data) {
+					if (data.code=='error')
+					{
+						$('#code').val('yes');
+						layer.open({
+							content: data.message
+							, skin: 'msg'
+							, time: 2 //2秒后自动关闭
+						});
+					}else{
+						$('#code').val('');
+					}
             }
         });
-        setTime();
+	});
+
+
+    $('#get_code').click(function () {
+		if ($('#code').val()=='')
+		{
+			if (!isHead) return;
+			var tel = $("#phone").val();
+			if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(tel)))) {
+				layer.open({
+					content: '请输入正确的手机号'
+					, skin: 'msg'
+					, time: 2 //2秒后自动关闭
+				});
+				return false;
+			}
+			//获取验证码
+			$.ajax({
+				url: DOMAIN + GET_REG_CODE,
+				data: {
+					'tel': tel
+				},
+				type: "POST",
+				async: false,
+				dataType: "json",
+				success: function (data) {
+						
+				}
+			});
+			setTime();
+		}else{
+			layer.open({
+					content: '手机号已注册'
+					, skin: 'msg'
+					, time: 2 //2秒后自动关闭
+			});
+		}
+       
+       
     });
 
     $('#submit_register').click(function () {
