@@ -103,10 +103,8 @@ $(function () {
     $('#submit_register').click(function () {
 
         var phone = $("#phone").val();
-        // var phone = '13146575509';
         var pwd = $("#pwd").val();
         var code = $("#input_code").val();
-        // var pwd = '123456';
         if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test($.trim(phone))) || pwd.length < 6) {
             layer.open({
                 content: '请输入正确的账号或密码'
@@ -139,6 +137,7 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 if (data.code == 'success') {
+					setCookie(COOKIE_NAME_USER_ID, data.userID, 30);
                     skip();
                 } else {
                     layer.open({
