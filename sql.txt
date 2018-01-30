@@ -26,3 +26,9 @@ ADD COLUMN `order_idcard`  varchar(20) NULL COMMENT '身份证' AFTER `order_age`,
 ADD COLUMN `order_name`  varchar(10) NULL COMMENT '姓名' AFTER `order_idcard`;
 
 
+ALTER TABLE `ticket_order`
+ADD COLUMN `order_source`  tinyint(1) NULL COMMENT '来源 1=设备 2=手机h5' AFTER `order_name`;
+
+
+ALTER TABLE `ticket_orderarea`
+ADD COLUMN `orderarea_source`  tinyint(1) NULL COMMENT '来源 1=设备 2=手机h5' ;

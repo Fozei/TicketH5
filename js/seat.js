@@ -122,7 +122,8 @@ $(function() {
 				'ticketID': ticketID,
 				'seatData': data,
 				'timeID': timeID,
-				'userID': USERID
+				'userID': USERID,
+				'source':2
 			},
 			type: "POST",
 			async: false,
