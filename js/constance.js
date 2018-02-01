@@ -49,3 +49,4 @@ var TICKET_ADDCARD = '/cardadd.php';    //添加身份证
 
 var GET_SIGN = '/getsign.php'  //获取签名
 var CHECK_PHONE = '/checkphone.php'  //检测手机是否注册
+var DEL_ORDERAREA = '/orderareadel.php'; //删除选的座位

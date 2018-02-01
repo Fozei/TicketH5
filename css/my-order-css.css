@@ -121,6 +121,7 @@
     margin-left: 0.5rem;
     height: 2.5rem;
     font-size: 0.4rem;
+	position:relative;
 }
 
 .ticketUl li div {
@@ -144,4 +145,11 @@
 	border-radius: 0.1888rem;
 	padding:0.1rem 0.5rem;
 
+}
+.ticketUl .delImg{
+	position:absolute;
+	top:0.1rem;
+	right:0.1rem;
+	width:0.6962962962rem;
+	height:0.6962962962rem;
 }

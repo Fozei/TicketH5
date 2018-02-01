@@ -23,6 +23,36 @@ $(function () {
             }
         }
     });
+	//删除座位
+	$(document).on('click', '.delImg', function() {
+		var t = $(this);
+		var orderareaID = $(this).attr('orderareaID');
+		$.ajax({
+			url: DOMAIN + DEL_ORDERAREA,
+			data: {
+				'userID': USERID,
+				'id': orderareaID,
+			},
+			type: "POST",
+			async: false,
+			dataType: "json",
+			success: function (data) {
+				if (data.code === 'success') {
+					if (data.type=='last')
+					{
+						location.reload();
+					}else{
+						t.parent('li').remove();
+					}
+				} else {
+					alert("删除失败");
+				}
+			}
+		});
+		
+		
+
+	});
 
     function create_details_data(data) {
         var htmls = '';
@@ -54,11 +84,14 @@ function buildUpContent(pageDatum) {
         var seatArea = seatInfo.areaName + "区" + seatInfo.matchseat_line + "排" + seatInfo.area_id + "座";
 
         var payStatus;
+		var del='';
         if (pageDatum.status === "1") {
             payStatus = "已支付";
         } else {
             payStatus = "未支付 <a href=\""+DOMAIM_API+"ticketconfirm.php?ticketID="+ticketID+"&orderNum="+order_num+"&timeID="+timeID+"\" class=\"pauButton\">点击支付</a>";
-        }
+			del='<img orderareaID="'+seatInfo.id+'" class="delImg" src="images/del.png" />';
+		
+		}
 
         var matchDate = pageDatum.year_r + "\t" + pageDatum.match_time;
 		if (seatInfo.idcard==null)
@@ -70,7 +103,7 @@ function buildUpContent(pageDatum) {
 			seatInfo.name='';
 		}
 
-        var str = "<li style=\"margin-top: 0.5rem\">\n" +
+        var str = "<li style=\"margin-top: 0.5rem\">"+del+"\n" +
             "        <div>\n" +
             "        <p class=\"left\">比赛时间：<span>" + matchDate + "</span></p>\n" +
             "    <p class=\"right\">座&#8194位&#8194号：<span>" + seatArea + "</span></p>\n" +
