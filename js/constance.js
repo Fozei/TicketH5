@@ -1,6 +1,6 @@
 var COOKIE_NAME_USER_ID = "ewedouserID";
- var DOMAIM_API='http://192.168.1.78/ticket/';
-//var DOMAIM_API='http://www.ewedo.net/ticket/';
+//var DOMAIM_API='http://192.168.1.78/ticket/';
+var DOMAIM_API='http://www.ewedo.net/ticket/';
 var DOMAIN = DOMAIM_API+"api";
 var MALL_ADDRESS =
     "http://sdyigou.sdevnet.com/topics/api/dev/index.html#/device/";
@@ -50,3 +50,25 @@ var TICKET_ADDCARD = '/cardadd.php';    //添加身份证
 var GET_SIGN = '/getsign.php'  //获取签名
 var CHECK_PHONE = '/checkphone.php'  //检测手机是否注册
 var DEL_ORDERAREA = '/orderareadel.php'; //删除选的座位
+var GET_DISCOUNT_STATUS = '/getdiscountstatus.php'; //得到折扣状态
+
+
+//系统加载时检测折扣是否审核
+$(function(){
+	$.ajax({
+		type        : 'POST',
+		url :        DOMAIN+GET_DISCOUNT_STATUS,
+		dataType:     'json',
+		success :     function(data){
+			if (data.status==0)
+			{
+				layer.msg('系统设置未完成!',{
+					shade: [0.8, '#393D49'],
+					time:0
+				});
+				return false;
+			}
+											
+		}
+	});
+})
