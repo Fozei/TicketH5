@@ -14,6 +14,7 @@ function parseDetailData(data) {
         var desc = data.data.notice;
         var content = data.data.content;
         var timeList = data.timeList;
+		var catName = data.data.catName;
         $('#is_buy').val(data.data.is_buy);
         //设置海报
         $("#poster").attr("src", pic);
@@ -28,7 +29,15 @@ function parseDetailData(data) {
         $("#matchListTitle").html(title + "<br/>" + "竞赛日程表");
         var table = $(".matchTable");
         //表头
-        table.append('<tr  matchId="title"><th>序号</th><th>日期</th><th>周</th><th>轮次</th><th>比赛队</th><th>比赛时间</th><th>选座购票</th></tr>');
+		var tableStr='<tr  matchId="title"><th>序号</th><th>日期</th><th>周</th>';
+		if (catName!='体操')
+		{
+			tableStr+='<th>轮次</th><th>比赛队</th>';
+		}
+		
+		tableStr+='<th>比赛时间</th><th>选座购票</th></tr>';
+        table.append(tableStr);
+		var c_str='';
         //表格数据
         for (var i = 0; i < timeList.length; i++) {
             var date = timeList[i].year_r;
@@ -36,7 +45,13 @@ function parseDetailData(data) {
             var turn = timeList[i].turn;
             var team = timeList[i].team;
             var time = timeList[i].time;
-            table.append('<tr  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '>' + date + '</td><td>' + week + '</td><td>' + turn + '</td><td>' + team + '</td><td>' + time + '</td><td class="btnSelectSeat"><a style="color: white" href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>');
+			c_str='<tr  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '>' + date + '</td><td>' + week + '</td>';
+			if (catName!='体操')
+			{
+				c_str+='<td>' + turn + '</td><td>' + team + '</td>';
+			}
+			c_str+='<td>' + time + '</td><td class="btnSelectSeat"><a style="color: white" href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>';
+            table.append(c_str);
         }
 
         $("#notice").html(desc);

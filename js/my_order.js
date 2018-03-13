@@ -177,9 +177,9 @@ function showTicketList(index) {
 
     } else {
         layer.open({
-            content: '糟糕，页面出错'
-            , skin: 'msg'
-            , time: 2 //2秒后自动关闭
+            content: '糟糕，页面出错',
+			skin: 'msg',
+			time: 2 //2秒后自动关闭
         });
     }
 }
