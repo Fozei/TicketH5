@@ -90,7 +90,7 @@ input {
         width: 13.83703703703704rem;
     height: 8.696296296296296rem;
     margin: 0 auto;
-    background-image: url(../images/sketchmap.jpg);
+    background-image: url(../images/sketchmapbj.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left top;
@@ -103,7 +103,11 @@ input {
     text-align: center;
     color: #000000;
 }
-
+.siteImg{width: 7.155555555555556rem;height: 4.148148148148148rem;top: 2.103703703703704rem;left: 0;right: 0;margin: auto;}
+.siteImg img{
+    width: 100%;
+    height: 100%;
+}
 .areaA1{width: 1.22962962962963rem;height:0.8rem;line-height: 0.8rem;left: 0.7407407407407407rem;top: 0.1777777777777778rem;}
 .areaA2{width: 1.140740740740741rem;height: 0.8rem;line-height: 0.8rem;top:0.1777777777777778rem;left: 2.162962962962963rem;}
 .areaA3{width: 1.6rem;height: 0.8rem;line-height: 0.8rem;top:0.1777777777777778rem;left: 3.422222222222222rem;}

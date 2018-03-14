@@ -156,11 +156,18 @@ function seatView(area) {
 
 		},
 		success: function(data) {
+			console.log(data)
 			if(data.code == 'error') {
 				layer.msg(data.message);
 				layer.close(index);
 				return false;
 			} else {
+
+        if(area==''){
+          var siteImg = data.playcenterPic
+          var imgNode = '<img src="'+siteImg+'" />'
+          $('.siteImg').append(imgNode);
+        }
 				// seatList = data.seatList.reverse()
         var tit =data.timeList
         // console.log(tit)
