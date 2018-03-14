@@ -1,5 +1,5 @@
 var COOKIE_NAME_USER_ID = "ewedouserID";
-//var DOMAIM_API='http://192.168.1.78/ticket/';
+// var DOMAIM_API='http://192.168.1.78/ticket/';
 var DOMAIM_API='http://www.ewedo.net/ticket/';
 var DOMAIN = DOMAIM_API+"api";
 var MALL_ADDRESS =
