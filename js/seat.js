@@ -218,6 +218,9 @@ function seatView(area) {
 							seatLineWidth = (118 ) * (end + k)/67.5;
 							 if (((l+1)%2==0 ) && two_equally==1){
 								 k++;
+							  }else if (two_equally==0)
+							  {
+								   k++;
 							  }
 							  b++;
 							  l++;
