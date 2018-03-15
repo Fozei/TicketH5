@@ -26,9 +26,6 @@ $(function() {
 		$(this).addClass('checked');
 		$(this).siblings().removeClass('checked');
 		seatView(area);
-
-
-
 	});
 	//选座
 	$('.main').on('click', '.setSite', function() {
