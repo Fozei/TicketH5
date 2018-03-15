@@ -186,6 +186,7 @@ function seatView(area) {
 				var increase = areaList.increase;
 				var odd_end_seat = areaList.odd_end_seat;
 				var even_end_seat = areaList.even_end_seat;
+				var two_equally = areaList.two_equally;
 				var end = '';
 				$('#checkedArea').html(areaName);
 				$('.area' + areaName).addClass('checked');
@@ -209,11 +210,17 @@ function seatView(area) {
 				if(type != 1) {
 					if(increase == 1) {
 						var k = 0;
+						var l = 1;
+						var b=0
 
 						for(var m = parseInt(start_row); m <= parseInt(end_row); m++) {
-							lineData[k] = end + k;
+							lineData[b] = end + k;
 							seatLineWidth = (118 ) * (end + k)/67.5;
-							k++;
+							 if (((l+1)%2==0 ) && two_equally==1){
+								 k++;
+							  }
+							  b++;
+							  l++;
 						}
 
 						first = lineData.shift();
