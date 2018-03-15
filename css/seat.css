@@ -144,6 +144,7 @@ input {
 .areaC11{width:1.022222222222222rem;left:10.66666666666667rem;}
 .areaC12{width: 1.185185185185185rem;right:0.7703703703703704rem;}
 .areaC4,.areaC6,.areaC8,.areaC10,.areaC11,.areaC12{height:0.6666666666666667rem;line-height:0.6666666666666667rem;bottom: 0.562962962962963rem;}
+
 /* end */
 /* D区 start */
 .areaD1{width: 0.8rem;height:0.8rem ;line-height:0.8rem ;top: 1.259259259259259rem;}
@@ -165,6 +166,7 @@ input {
 
 .seatingPlanCon > div.checked {
     background:rgba(44,112,255,.8);
+    color: #fff;
 }
 
 /* seating Plan end */
