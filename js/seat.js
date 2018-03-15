@@ -17,7 +17,7 @@ $(function() {
 	//加载默认座位
 	seatView('');
 	//根据区域生成座位
-	$('.main').on('touchstart', '.seatingPlanCon>div', function() {
+	$('.main').on('touchstart', '.seatingPlanCon .areaC', function() {
 		$('.seatListCon').empty();
 		$('.seatRow').empty();
 		$('.seatRow').css('height','0')
@@ -27,6 +27,15 @@ $(function() {
 		$(this).siblings().removeClass('checked');
 		seatView(area);
 	});
+  $('.main').on('touchstart', '.seatingPlanCon .restarea', function () {
+    layer.msg('该区域为休闲区');
+    layer.close(index);
+  });
+
+  $('.main').on('touchstart', '.seatingPlanCon .unauthorized', function () {
+    layer.msg('该区域未授权');
+    layer.close(index);
+  });
 	//选座
 	$('.main').on('click', '.setSite', function() {
 
@@ -162,7 +171,7 @@ function seatView(area) {
 				// seatList = data.seatList.reverse()
         var tit =data.timeList
         // console.log(tit)
-        var gameTit = tit.year_r+" 周"+tit.week+' '+tit.time+' '+tit.team+' '+' '+tit.turn
+        var gameTit = tit.year_r+" 周"+tit.week+' '+tit.time
         $('.seatingPlanTit').text(gameTit)
 				seatList = data.seatList;
 				var oddSeatList = data.oddSeatList;
