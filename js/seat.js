@@ -33,7 +33,7 @@ $(function() {
   });
 
   $('.main').on('touchstart', '.seatingPlanCon .unauthorized', function () {
-    layer.msg('该区域未授权');
+    layer.msg('该区域已售完');
     layer.close(index);
   });
 	//选座
