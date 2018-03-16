@@ -172,7 +172,7 @@ function seatView(area) {
         var tit =data.timeList
         // console.log(tit)
         var gameTit = tit.year_r+" 周"+tit.week+' '+tit.time
-        $('.seatingPlanTit').text(gameTit)
+        $('.seatingPlanTit span').text(gameTit)
 				seatList = data.seatList;
 				var oddSeatList = data.oddSeatList;
 				var areaList = data.areaList;
