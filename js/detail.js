@@ -9,8 +9,9 @@ function parseDetailData(data) {
         var address = data.data.address;
         var pic = data.data.pic;
         var title = data.data.title;
-        var price = data.data.price1 + " - " + data.data.price2 + "元";
-        var date = data.data.starttime + " 至 " + data.data.endtime;
+        var price = data.data.price1 + "元";
+      // var price = data.data.price1 + " - " + data.data.price2 + "元";
+      var date = data.data.starttime + " 至 " + data.data.endtime;
         var desc = data.data.notice;
         var content = data.data.content;
         var timeList = data.timeList;
