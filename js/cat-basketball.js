@@ -95,7 +95,7 @@
 
 				str+='<div class="action">';
 				str+='<div class="price left">';
-				str+='<span class="price">'+data_r[i]["price2"]+'元</span>';
+				str+='<span class="price">'+data_r[i]["price1"]+'元</span>';
 				str+='<span class="status" style="margin-left:0.148148148rem;">售票中</span>';
 				str+='</div>';
 				str+='<div class="book right">';

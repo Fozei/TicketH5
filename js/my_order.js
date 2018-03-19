@@ -118,7 +118,7 @@ function buildUpContent(pageDatum) {
             "    </div>\n" +
             "    <div>\n" +
             "    <p class=\"left\">电话号码：<span>" + pageDatum.tel + "</span></p>\n" +
-            "    <p class=\"right\">身份证号：<span>" + seatInfo.idcard + "</span></p>\n" +
+            //"    <p class=\"right\">身份证号：<span>" + seatInfo.idcard + "</span></p>\n" +
             "    </div>\n" +
             "    </li>";
 

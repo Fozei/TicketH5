@@ -101,10 +101,11 @@ $(function(){
 					str+='<label>姓　　名</label>';
 					str+='<input type="text" id="name" class="input" placeholder="请输入真实姓名" />';
 					str+='</p>';
+					/*
 					str+='<p class="input_div">';
 					str+='<label>身份证号</label>';
 					str+='<input type="text" id="idNumber" class="input" placeholder="请输入有效身份证号码" />';
-					str+='</p>';
+					str+='</p>';*/
 					t++;
 
 				$('.content_div').prepend(str);
@@ -141,8 +142,10 @@ function submit(){
 	var tel = $('#tel').val();
 	var data=new Array();
 	var name = $('#name').val();
-	var idCard = $('#idNumber').val();
+	//var idCard = $('#idNumber').val();
+	var idCard = '';
 	data[0]= new Array(idCard,name);
+	/*
 	 if (data.length==0)
 	{
 		layer.msg('请填写身份证');
@@ -166,6 +169,7 @@ function submit(){
 			return false;
 		}
 	}
+	*/
 	 if (tel=='')
 	{
 		layer.msg('手机号不能为空');
