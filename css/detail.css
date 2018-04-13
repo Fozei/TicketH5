@@ -291,4 +291,12 @@ th {
     width: 100% !important;
     height: auto !important;
 }
+#notice p img{
+    /*display:inline-block;*/
+    /*width:100%;*/
+    /*height:auto;*/
+    display:inline-block;
+    width:100%!important;
+    height:auto!important;
+}
 

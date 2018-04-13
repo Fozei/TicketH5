@@ -33,10 +33,10 @@ function parseDetailData(data) {
 		var tableStr='<tr  matchId="title"><th>序号</th><th>日期</th><th>周</th>';
 		if (catName!='体操')
 		{
-			tableStr+='<th>轮次</th><th>比赛队</th>';
+			tableStr+='<th>比赛队</th>';
 		}
 		
-		tableStr+='<th>比赛时间</th><th>选座购票</th></tr>';
+		tableStr+='<th>比赛时间</th><th>类别</th><th>选座购票</th></tr>';
         table.append(tableStr);
 		var c_str='';
         //表格数据
@@ -49,9 +49,9 @@ function parseDetailData(data) {
 			c_str='<tr  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '><td>' + (i + 1) + '</td><td  matchId=' + targetId + ' timeID=' + timeList[i]['id'] + '>' + date + '</td><td>' + week + '</td>';
 			if (catName!='体操')
 			{
-				c_str+='<td>' + turn + '</td><td>' + team + '</td>';
+				c_str+='<td>' + team + '</td>';
 			}
-			c_str+='<td>' + time + '</td><td class="btnSelectSeat"><a style="color: white" href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>';
+			c_str+='<td>' + time + '</td><td>' + turn + '</td><td class="btnSelectSeat"><a style="color: white" href="javascript:;" targetid="' + targetId + '" timeid="' + timeList[i].id + '">选座购票</a></td></tr>';
             table.append(c_str);
         }
 
